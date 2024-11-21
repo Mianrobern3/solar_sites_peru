@@ -1,0 +1,3081 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7c49a1eea8174c223fd681676d67ad64 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div style="
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1000;
+                background: white;
+                padding: 15px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                max-width: 340px;
+            ">
+                <h2 style="margin: 0 0 10px 0;">ANÁLISIS DEL SECTOR ELÉCTRICO DE PERÚ</h2>
+                <p style="margin: 5px 0;"><strong>DATOS:</strong></p>
+                <ul style="margin: 5px 0; padding-left: 20px;">
+                    <li>Subestaciones Eléctricas</li>
+                    <li>Áreas de Cobertura 50 km </li>
+                    <li>Sitios Solares Potenciales</li>
+                    <li>Áreas de análisis 10km de la SE más cercana</li>
+                </ul>
+                <p style="margin: 5px 0; font-size: 0.8em;">Fuente: OSINERGMIN, COES</p>
+                <p style="margin: 5px 0; font-size: 0.8em;">Elaborado por: <a href="https://github.com/mianrobern3" target="_blank">Miguel Angel Rodriguez</a></p>
+                <p style="margin: 5px 0; font-size: 0.8em;">Elaborado para: Recurrent Energy</p>
+            </div>
+
+            <div style="
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                z-index: 1000;
+                background: white;
+                padding: 15px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            ">
+                <h4 style="margin: 0 0 10px 0;">Leyenda</h4>
+                <div style="margin: 5px 0;"><i class="fa fa-bolt" style="color: red;"></i> SET 500 kV</div>
+                <div style="margin: 5px 0;"><i class="fa fa-bolt" style="color: blue;"></i> SET 220 kV</div>
+                <div style="margin: 5px 0;"><i class="fa fa-bolt" style="color: green;"></i> SET 138 kV</div>
+                <div style="margin: 5px 0;"><i class="fa fa-circle" style="color: rgba(0,0,0,0.3);"></i> Área de Cobertura</div>
+                <div style="margin: 5px 0;"><i class="fa fa-circle" style="color: #d35400;"></i> Sitios Solares</div>
+            </div>
+            
+    
+            <div class="folium-map" id="map_7c49a1eea8174c223fd681676d67ad64" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7c49a1eea8174c223fd681676d67ad64 = L.map(
+                "map_7c49a1eea8174c223fd681676d67ad64",
+                {
+                    center: [-14.0678, -75.7286],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_40c6f15f41c67124134c4d45da391581 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var feature_group_0a38ab6a743d7f265efa5d9b48bad251 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var marker_ac5db4bf954f49193f1112f0e470f46a = L.marker(
+                [-12.5167, -76.7333],
+                {}
+            ).addTo(feature_group_0a38ab6a743d7f265efa5d9b48bad251);
+        
+    
+            var icon_36294f80da265677cdcc7bd134da7ab3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ac5db4bf954f49193f1112f0e470f46a.setIcon(icon_36294f80da265677cdcc7bd134da7ab3);
+        
+    
+        var popup_61d4dbf6b410c18783f44246f8eac53e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1c8f35aa1c0e06ad9b7d103151df2283 = $(`<div id="html_1c8f35aa1c0e06ad9b7d103151df2283" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-500">SE Chilca 1</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 500 kV<br>                         <span class="popup-label">Región:</span> Lima<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.5167<br>                         Lon: -76.7333                     </div>                 </div>             </div>`)[0];
+                popup_61d4dbf6b410c18783f44246f8eac53e.setContent(html_1c8f35aa1c0e06ad9b7d103151df2283);
+            
+        
+
+        marker_ac5db4bf954f49193f1112f0e470f46a.bindPopup(popup_61d4dbf6b410c18783f44246f8eac53e)
+        ;
+
+        
+    
+    
+            var marker_aab9246c8dd26827898b166cd1ce3cf5 = L.marker(
+                [-17.1333, -70.8333],
+                {}
+            ).addTo(feature_group_0a38ab6a743d7f265efa5d9b48bad251);
+        
+    
+            var icon_49cb63d0ed143e65555a7920927ee916 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_aab9246c8dd26827898b166cd1ce3cf5.setIcon(icon_49cb63d0ed143e65555a7920927ee916);
+        
+    
+        var popup_6d797c41e8a5b91f51504c90e48904b9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_638e2ac27320c42df6f2bc4fda384196 = $(`<div id="html_638e2ac27320c42df6f2bc4fda384196" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-500">SE Montalvo</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 500 kV<br>                         <span class="popup-label">Región:</span> Arequipa<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.1333<br>                         Lon: -70.8333                     </div>                 </div>             </div>`)[0];
+                popup_6d797c41e8a5b91f51504c90e48904b9.setContent(html_638e2ac27320c42df6f2bc4fda384196);
+            
+        
+
+        marker_aab9246c8dd26827898b166cd1ce3cf5.bindPopup(popup_6d797c41e8a5b91f51504c90e48904b9)
+        ;
+
+        
+    
+    
+            var marker_fd33660d0fd4e1ba9b1d5075617589fa = L.marker(
+                [-17.1917, -70.9306],
+                {}
+            ).addTo(feature_group_0a38ab6a743d7f265efa5d9b48bad251);
+        
+    
+            var icon_78ba0d9a57c0417edfc95710f2c22cb0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_fd33660d0fd4e1ba9b1d5075617589fa.setIcon(icon_78ba0d9a57c0417edfc95710f2c22cb0);
+        
+    
+        var popup_45a0202bf48230d5f807462e2bb61983 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_97b4412463233ebff2926c5e5a38346e = $(`<div id="html_97b4412463233ebff2926c5e5a38346e" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-500">SE Moquegua</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 500 kV<br>                         <span class="popup-label">Región:</span> Moquegua<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.1917<br>                         Lon: -70.9306                     </div>                 </div>             </div>`)[0];
+                popup_45a0202bf48230d5f807462e2bb61983.setContent(html_97b4412463233ebff2926c5e5a38346e);
+            
+        
+
+        marker_fd33660d0fd4e1ba9b1d5075617589fa.bindPopup(popup_45a0202bf48230d5f807462e2bb61983)
+        ;
+
+        
+    
+    
+            var feature_group_9d0e3960015de40a6ca0f983faf07a53 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var marker_c8f0f139f4f2db009045dbee737668db = L.marker(
+                [-12.52, -76.7367],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_2463d7b9729acb3b03ab5157ad45fdb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c8f0f139f4f2db009045dbee737668db.setIcon(icon_2463d7b9729acb3b03ab5157ad45fdb6);
+        
+    
+        var popup_6e86c6416d2cbc641c15d83116a5f0ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4ec126c529faefd395ae0dbb13be55b = $(`<div id="html_f4ec126c529faefd395ae0dbb13be55b" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Chilca REP</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Lima<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.5200<br>                         Lon: -76.7367                     </div>                 </div>             </div>`)[0];
+                popup_6e86c6416d2cbc641c15d83116a5f0ca.setContent(html_f4ec126c529faefd395ae0dbb13be55b);
+            
+        
+
+        marker_c8f0f139f4f2db009045dbee737668db.bindPopup(popup_6e86c6416d2cbc641c15d83116a5f0ca)
+        ;
+
+        
+    
+    
+            var marker_afae1ac5d136c51a60ad3ce0ce0bc1aa = L.marker(
+                [-13.7167, -76.0167],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_db29c5c06c6c639276015131a597bfb6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_afae1ac5d136c51a60ad3ce0ce0bc1aa.setIcon(icon_db29c5c06c6c639276015131a597bfb6);
+        
+    
+        var popup_bf984d514701f1ee1cd1dc2082b292d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_101d035d00aefba1b46c54241b6d8579 = $(`<div id="html_101d035d00aefba1b46c54241b6d8579" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Independencia</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Ica<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.7167<br>                         Lon: -76.0167                     </div>                 </div>             </div>`)[0];
+                popup_bf984d514701f1ee1cd1dc2082b292d2.setContent(html_101d035d00aefba1b46c54241b6d8579);
+            
+        
+
+        marker_afae1ac5d136c51a60ad3ce0ce0bc1aa.bindPopup(popup_bf984d514701f1ee1cd1dc2082b292d2)
+        ;
+
+        
+    
+    
+            var marker_276563c022d2a7ebe094bb2d591fe061 = L.marker(
+                [-15.3667, -75.0833],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_2b7d981460db5fc32edcfdb35e224be8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_276563c022d2a7ebe094bb2d591fe061.setIcon(icon_2b7d981460db5fc32edcfdb35e224be8);
+        
+    
+        var popup_d59102b563ddbca654b2ae3f812712d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21733f0cb18c9cffe0886fb7867b1622 = $(`<div id="html_21733f0cb18c9cffe0886fb7867b1622" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Marcona</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Ica<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.3667<br>                         Lon: -75.0833                     </div>                 </div>             </div>`)[0];
+                popup_d59102b563ddbca654b2ae3f812712d5.setContent(html_21733f0cb18c9cffe0886fb7867b1622);
+            
+        
+
+        marker_276563c022d2a7ebe094bb2d591fe061.bindPopup(popup_d59102b563ddbca654b2ae3f812712d5)
+        ;
+
+        
+    
+    
+            var marker_389e20cf4180349fa38736fc3f12d4d2 = L.marker(
+                [-16.4333, -71.5333],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_61df930da6650e6075ad8eb6329a6912 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_389e20cf4180349fa38736fc3f12d4d2.setIcon(icon_61df930da6650e6075ad8eb6329a6912);
+        
+    
+        var popup_8ace9a8146b4bfbac513aaa5a4238e39 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_54b80d0fd91d5e633ca1c613500e0809 = $(`<div id="html_54b80d0fd91d5e633ca1c613500e0809" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Socabaya</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Arequipa<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.4333<br>                         Lon: -71.5333                     </div>                 </div>             </div>`)[0];
+                popup_8ace9a8146b4bfbac513aaa5a4238e39.setContent(html_54b80d0fd91d5e633ca1c613500e0809);
+            
+        
+
+        marker_389e20cf4180349fa38736fc3f12d4d2.bindPopup(popup_8ace9a8146b4bfbac513aaa5a4238e39)
+        ;
+
+        
+    
+    
+            var marker_1704961579363e81de9b9e15ad620636 = L.marker(
+                [-16.5167, -71.5833],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_615966c1e6a8893b2b62a88cf00da3fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_1704961579363e81de9b9e15ad620636.setIcon(icon_615966c1e6a8893b2b62a88cf00da3fe);
+        
+    
+        var popup_f49a16f56320563f0adc305bc32ed7d9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66a1477abc0600b9ce16063396f5807f = $(`<div id="html_66a1477abc0600b9ce16063396f5807f" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Cerro Verde 1</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Arequipa<br>                         <span class="popup-label">Operador:</span> CERRO VERDE<br>                         <span class="popup-label">Tipo:</span> Cliente Libre<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.5167<br>                         Lon: -71.5833                     </div>                 </div>             </div>`)[0];
+                popup_f49a16f56320563f0adc305bc32ed7d9.setContent(html_66a1477abc0600b9ce16063396f5807f);
+            
+        
+
+        marker_1704961579363e81de9b9e15ad620636.bindPopup(popup_f49a16f56320563f0adc305bc32ed7d9)
+        ;
+
+        
+    
+    
+            var marker_7b779e818e2e26fcb89b1760be248b11 = L.marker(
+                [-17.65, -71.3333],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_d283cfb71ec3f0d6f6991ace58f1e77c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7b779e818e2e26fcb89b1760be248b11.setIcon(icon_d283cfb71ec3f0d6f6991ace58f1e77c);
+        
+    
+        var popup_c02058c7eef9e2a139e573663cd1eb84 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_28747f938cc6b3cfd83567861c9961a5 = $(`<div id="html_28747f938cc6b3cfd83567861c9961a5" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Ilo 1</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Moquegua<br>                         <span class="popup-label">Operador:</span> ENERSUR<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.6500<br>                         Lon: -71.3333                     </div>                 </div>             </div>`)[0];
+                popup_c02058c7eef9e2a139e573663cd1eb84.setContent(html_28747f938cc6b3cfd83567861c9961a5);
+            
+        
+
+        marker_7b779e818e2e26fcb89b1760be248b11.bindPopup(popup_c02058c7eef9e2a139e573663cd1eb84)
+        ;
+
+        
+    
+    
+            var marker_12d8b478b317bc1966b5f1b53b259f84 = L.marker(
+                [-18.0167, -70.25],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_91a4e37da7e40075cfadacf50db6621b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_12d8b478b317bc1966b5f1b53b259f84.setIcon(icon_91a4e37da7e40075cfadacf50db6621b);
+        
+    
+        var popup_f3dced7b971d9bce208be860206a5d97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3c5c1f6e7f8503cc4c6294ec59b4f904 = $(`<div id="html_3c5c1f6e7f8503cc4c6294ec59b4f904" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Los Héroes</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Tacna<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -18.0167<br>                         Lon: -70.2500                     </div>                 </div>             </div>`)[0];
+                popup_f3dced7b971d9bce208be860206a5d97.setContent(html_3c5c1f6e7f8503cc4c6294ec59b4f904);
+            
+        
+
+        marker_12d8b478b317bc1966b5f1b53b259f84.bindPopup(popup_f3dced7b971d9bce208be860206a5d97)
+        ;
+
+        
+    
+    
+            var marker_15c0d2b730fe2c25f44dabf9548fd1b1 = L.marker(
+                [-13.5333, -71.9333],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_6227a4890f35d9d353447e2795f4bfe8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_15c0d2b730fe2c25f44dabf9548fd1b1.setIcon(icon_6227a4890f35d9d353447e2795f4bfe8);
+        
+    
+        var popup_74d3767623dd855323cd8bbdf3e90354 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef5e32128fb59cdcc801c425759d3d0d = $(`<div id="html_ef5e32128fb59cdcc801c425759d3d0d" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Quencoro</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Cusco<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.5333<br>                         Lon: -71.9333                     </div>                 </div>             </div>`)[0];
+                popup_74d3767623dd855323cd8bbdf3e90354.setContent(html_ef5e32128fb59cdcc801c425759d3d0d);
+            
+        
+
+        marker_15c0d2b730fe2c25f44dabf9548fd1b1.bindPopup(popup_74d3767623dd855323cd8bbdf3e90354)
+        ;
+
+        
+    
+    
+            var marker_3d8b9e3d15718dc405b05526327cc3e4 = L.marker(
+                [-14.9167, -71.3],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_8e1b84f89688ed8b065614afa143ea88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3d8b9e3d15718dc405b05526327cc3e4.setIcon(icon_8e1b84f89688ed8b065614afa143ea88);
+        
+    
+        var popup_88bbc6d0a4856a5c42be300f7add91a9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b7b06d3d3038f6091f6ffaefeb06a836 = $(`<div id="html_b7b06d3d3038f6091f6ffaefeb06a836" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Tintaya</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Cusco<br>                         <span class="popup-label">Operador:</span> ANTAPACCAY<br>                         <span class="popup-label">Tipo:</span> Cliente Libre<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.9167<br>                         Lon: -71.3000                     </div>                 </div>             </div>`)[0];
+                popup_88bbc6d0a4856a5c42be300f7add91a9.setContent(html_b7b06d3d3038f6091f6ffaefeb06a836);
+            
+        
+
+        marker_3d8b9e3d15718dc405b05526327cc3e4.bindPopup(popup_88bbc6d0a4856a5c42be300f7add91a9)
+        ;
+
+        
+    
+    
+            var marker_e2bc38d9896b505d5383dcfc17738918 = L.marker(
+                [-15.8333, -70.0167],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_899e37de82717f4ca38ecb6d8a50c6f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e2bc38d9896b505d5383dcfc17738918.setIcon(icon_899e37de82717f4ca38ecb6d8a50c6f2);
+        
+    
+        var popup_4dbd58f6fa304760fa7fcbcba4527422 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c0dc3d7eea19ded2557f5874ed2de9c7 = $(`<div id="html_c0dc3d7eea19ded2557f5874ed2de9c7" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Puno</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Puno<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.8333<br>                         Lon: -70.0167                     </div>                 </div>             </div>`)[0];
+                popup_4dbd58f6fa304760fa7fcbcba4527422.setContent(html_c0dc3d7eea19ded2557f5874ed2de9c7);
+            
+        
+
+        marker_e2bc38d9896b505d5383dcfc17738918.bindPopup(popup_4dbd58f6fa304760fa7fcbcba4527422)
+        ;
+
+        
+    
+    
+            var marker_b27a407ec582380eaec1eb6ddabe2a50 = L.marker(
+                [-15.5, -70.1333],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_0a6716e29066c34652506e52828011d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b27a407ec582380eaec1eb6ddabe2a50.setIcon(icon_0a6716e29066c34652506e52828011d6);
+        
+    
+        var popup_86079591b8406519fe9d313bbdcaa25d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52a368c4f4d9aa9d33224d496a9082f6 = $(`<div id="html_52a368c4f4d9aa9d33224d496a9082f6" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Juliaca</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Puno<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.5000<br>                         Lon: -70.1333                     </div>                 </div>             </div>`)[0];
+                popup_86079591b8406519fe9d313bbdcaa25d.setContent(html_52a368c4f4d9aa9d33224d496a9082f6);
+            
+        
+
+        marker_b27a407ec582380eaec1eb6ddabe2a50.bindPopup(popup_86079591b8406519fe9d313bbdcaa25d)
+        ;
+
+        
+    
+    
+            var marker_f91f9839bce8ba20b97885b6d7ec0df7 = L.marker(
+                [-13.6333, -72.8833],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_786f0b6dc7cc2d09a6a2b7ed1e6ed637 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f91f9839bce8ba20b97885b6d7ec0df7.setIcon(icon_786f0b6dc7cc2d09a6a2b7ed1e6ed637);
+        
+    
+        var popup_5ffef2e075ea9e9ce10065d51180c191 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e9075bd133bdd1e8ea225647459ccb1b = $(`<div id="html_e9075bd133bdd1e8ea225647459ccb1b" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Abancay Nueva</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Apurímac<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.6333<br>                         Lon: -72.8833                     </div>                 </div>             </div>`)[0];
+                popup_5ffef2e075ea9e9ce10065d51180c191.setContent(html_e9075bd133bdd1e8ea225647459ccb1b);
+            
+        
+
+        marker_f91f9839bce8ba20b97885b6d7ec0df7.bindPopup(popup_5ffef2e075ea9e9ce10065d51180c191)
+        ;
+
+        
+    
+    
+            var marker_270f53b265bb2900e57328625b03cf95 = L.marker(
+                [-14.3167, -73.2],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_ee1025f1cd328a3b6ded1e598c9b60cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_270f53b265bb2900e57328625b03cf95.setIcon(icon_ee1025f1cd328a3b6ded1e598c9b60cd);
+        
+    
+        var popup_db351aea41bb5acb4142d914cb78807d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_10578ace037c427a188625ef35c51693 = $(`<div id="html_10578ace037c427a188625ef35c51693" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Cotaruse</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Apurímac<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Compensación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.3167<br>                         Lon: -73.2000                     </div>                 </div>             </div>`)[0];
+                popup_db351aea41bb5acb4142d914cb78807d.setContent(html_10578ace037c427a188625ef35c51693);
+            
+        
+
+        marker_270f53b265bb2900e57328625b03cf95.bindPopup(popup_db351aea41bb5acb4142d914cb78807d)
+        ;
+
+        
+    
+    
+            var marker_4b5878983acd41a691683ac9e21da26c = L.marker(
+                [-10.6667, -77.8333],
+                {}
+            ).addTo(feature_group_9d0e3960015de40a6ca0f983faf07a53);
+        
+    
+            var icon_31312aa516e7c3370885c0bfad4b10f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4b5878983acd41a691683ac9e21da26c.setIcon(icon_31312aa516e7c3370885c0bfad4b10f3);
+        
+    
+        var popup_93d096cfbab35191ace8e1bd20a8bbbe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_635a487d31c1992d2daf2255e8b8da74 = $(`<div id="html_635a487d31c1992d2daf2255e8b8da74" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-220">SE Paramonga Nueva</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 220 kV<br>                         <span class="popup-label">Región:</span> Lima<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -10.6667<br>                         Lon: -77.8333                     </div>                 </div>             </div>`)[0];
+                popup_93d096cfbab35191ace8e1bd20a8bbbe.setContent(html_635a487d31c1992d2daf2255e8b8da74);
+            
+        
+
+        marker_4b5878983acd41a691683ac9e21da26c.bindPopup(popup_93d096cfbab35191ace8e1bd20a8bbbe)
+        ;
+
+        
+    
+    
+            var feature_group_023cdb0edf254ad158e3098c93e3aef1 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var marker_013e0d65824053704b0582721c05b481 = L.marker(
+                [-16.52, -71.5867],
+                {}
+            ).addTo(feature_group_023cdb0edf254ad158e3098c93e3aef1);
+        
+    
+            var icon_54c13872e59f365514421d217f4deb98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_013e0d65824053704b0582721c05b481.setIcon(icon_54c13872e59f365514421d217f4deb98);
+        
+    
+        var popup_7e8c299deea8eb635f15df7bcd58b751 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66ffae9d8c1185df92403f80b8969298 = $(`<div id="html_66ffae9d8c1185df92403f80b8969298" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-138">SE Cerro Verde 2</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 138 kV<br>                         <span class="popup-label">Región:</span> Arequipa<br>                         <span class="popup-label">Operador:</span> CERRO VERDE<br>                         <span class="popup-label">Tipo:</span> Cliente Libre<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.5200<br>                         Lon: -71.5867                     </div>                 </div>             </div>`)[0];
+                popup_7e8c299deea8eb635f15df7bcd58b751.setContent(html_66ffae9d8c1185df92403f80b8969298);
+            
+        
+
+        marker_013e0d65824053704b0582721c05b481.bindPopup(popup_7e8c299deea8eb635f15df7bcd58b751)
+        ;
+
+        
+    
+    
+            var marker_5e0e85bdeefa03a1f4da47a23c8bcb35 = L.marker(
+                [-17.6533, -71.3367],
+                {}
+            ).addTo(feature_group_023cdb0edf254ad158e3098c93e3aef1);
+        
+    
+            var icon_cd59df72772d8bc43af0845a03e5a5b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5e0e85bdeefa03a1f4da47a23c8bcb35.setIcon(icon_cd59df72772d8bc43af0845a03e5a5b1);
+        
+    
+        var popup_6c662a2ae9ddc1f57424a3ce413693c5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3e3386761c8555788ca1d4263ad8ec90 = $(`<div id="html_3e3386761c8555788ca1d4263ad8ec90" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-138">SE Ilo 2</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 138 kV<br>                         <span class="popup-label">Región:</span> Moquegua<br>                         <span class="popup-label">Operador:</span> ENERSUR<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.6533<br>                         Lon: -71.3367                     </div>                 </div>             </div>`)[0];
+                popup_6c662a2ae9ddc1f57424a3ce413693c5.setContent(html_3e3386761c8555788ca1d4263ad8ec90);
+            
+        
+
+        marker_5e0e85bdeefa03a1f4da47a23c8bcb35.bindPopup(popup_6c662a2ae9ddc1f57424a3ce413693c5)
+        ;
+
+        
+    
+    
+            var marker_17560c355231acfef60fcbf69552be47 = L.marker(
+                [-18.05, -70.2333],
+                {}
+            ).addTo(feature_group_023cdb0edf254ad158e3098c93e3aef1);
+        
+    
+            var icon_d4dcd4025c5441adba4e93f84e0dca21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_17560c355231acfef60fcbf69552be47.setIcon(icon_d4dcd4025c5441adba4e93f84e0dca21);
+        
+    
+        var popup_4b7a16d63127c1a210ffe8716ccaee63 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f8d812b72e269890b83369b0bcae587 = $(`<div id="html_1f8d812b72e269890b83369b0bcae587" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-138">SE Tacna</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 138 kV<br>                         <span class="popup-label">Región:</span> Tacna<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -18.0500<br>                         Lon: -70.2333                     </div>                 </div>             </div>`)[0];
+                popup_4b7a16d63127c1a210ffe8716ccaee63.setContent(html_1f8d812b72e269890b83369b0bcae587);
+            
+        
+
+        marker_17560c355231acfef60fcbf69552be47.bindPopup(popup_4b7a16d63127c1a210ffe8716ccaee63)
+        ;
+
+        
+    
+    
+            var marker_f81258421f983b21609280c823b1a9f5 = L.marker(
+                [-14.25, -71.75],
+                {}
+            ).addTo(feature_group_023cdb0edf254ad158e3098c93e3aef1);
+        
+    
+            var icon_050283cea8788e5bf905d0da6eb06455 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f81258421f983b21609280c823b1a9f5.setIcon(icon_050283cea8788e5bf905d0da6eb06455);
+        
+    
+        var popup_f880756583b65d50344ec97387aa0cb3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21307152bbf41f137dc619e689299342 = $(`<div id="html_21307152bbf41f137dc619e689299342" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-138">SE Onocora</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 138 kV<br>                         <span class="popup-label">Región:</span> Cusco<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.2500<br>                         Lon: -71.7500                     </div>                 </div>             </div>`)[0];
+                popup_f880756583b65d50344ec97387aa0cb3.setContent(html_21307152bbf41f137dc619e689299342);
+            
+        
+
+        marker_f81258421f983b21609280c823b1a9f5.bindPopup(popup_f880756583b65d50344ec97387aa0cb3)
+        ;
+
+        
+    
+    
+            var marker_85af774c9dbe29558899ecb742c63f88 = L.marker(
+                [-14.9167, -70.1917],
+                {}
+            ).addTo(feature_group_023cdb0edf254ad158e3098c93e3aef1);
+        
+    
+            var icon_ecc11e7b60962bccef63fa944823e4ca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_85af774c9dbe29558899ecb742c63f88.setIcon(icon_ecc11e7b60962bccef63fa944823e4ca);
+        
+    
+        var popup_217c0080c7ff138cd022e7b7329d692e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fe40bb4564c038e4b5f8403dc9752ae6 = $(`<div id="html_fe40bb4564c038e4b5f8403dc9752ae6" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title voltage-138">SE Azángaro</h4>                     <div class="popup-content">                         <span class="popup-label">Voltaje:</span> 138 kV<br>                         <span class="popup-label">Región:</span> Puno<br>                         <span class="popup-label">Operador:</span> REP<br>                         <span class="popup-label">Tipo:</span> Transformación<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.9167<br>                         Lon: -70.1917                     </div>                 </div>             </div>`)[0];
+                popup_217c0080c7ff138cd022e7b7329d692e.setContent(html_fe40bb4564c038e4b5f8403dc9752ae6);
+            
+        
+
+        marker_85af774c9dbe29558899ecb742c63f88.bindPopup(popup_217c0080c7ff138cd022e7b7329d692e)
+        ;
+
+        
+    
+    
+            var feature_group_fe18f742c47dde1ce766c48a16c8d204 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var circle_53dab766e3b242209eef739f692abfb9 = L.circle(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_84c5ef6181b6f2b287ff380fe155de7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b5dc1f18f61c2a4c279f7b7c74c341f = $(`<div id="html_5b5dc1f18f61c2a4c279f7b7c74c341f" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Chilca 1</div>`)[0];
+                popup_84c5ef6181b6f2b287ff380fe155de7f.setContent(html_5b5dc1f18f61c2a4c279f7b7c74c341f);
+            
+        
+
+        circle_53dab766e3b242209eef739f692abfb9.bindPopup(popup_84c5ef6181b6f2b287ff380fe155de7f)
+        ;
+
+        
+    
+    
+            var circle_3979806bc89bdfbaf079fe7d934dec5b = L.circle(
+                [-12.52, -76.7367],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_9d345a3949663a6906b25d3de320528b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ccf7fbd3aa9826df8b9d537dfabaf4f7 = $(`<div id="html_ccf7fbd3aa9826df8b9d537dfabaf4f7" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Chilca REP</div>`)[0];
+                popup_9d345a3949663a6906b25d3de320528b.setContent(html_ccf7fbd3aa9826df8b9d537dfabaf4f7);
+            
+        
+
+        circle_3979806bc89bdfbaf079fe7d934dec5b.bindPopup(popup_9d345a3949663a6906b25d3de320528b)
+        ;
+
+        
+    
+    
+            var circle_9152b7dc6c27c10c9d93a9d2b97beed3 = L.circle(
+                [-13.7167, -76.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_5b2e8cb6eba5564ba1ffbea118051897 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b45d58bffc0ff980f43b2a06fc9815d8 = $(`<div id="html_b45d58bffc0ff980f43b2a06fc9815d8" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Independencia</div>`)[0];
+                popup_5b2e8cb6eba5564ba1ffbea118051897.setContent(html_b45d58bffc0ff980f43b2a06fc9815d8);
+            
+        
+
+        circle_9152b7dc6c27c10c9d93a9d2b97beed3.bindPopup(popup_5b2e8cb6eba5564ba1ffbea118051897)
+        ;
+
+        
+    
+    
+            var circle_481dd0eed913779eb06ab84b1c8299b8 = L.circle(
+                [-15.3667, -75.0833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_e2812750e8551c93ab181bd14523fbb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f77e0d8f218ad6205bcb5e5b9ab39d9 = $(`<div id="html_9f77e0d8f218ad6205bcb5e5b9ab39d9" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Marcona</div>`)[0];
+                popup_e2812750e8551c93ab181bd14523fbb3.setContent(html_9f77e0d8f218ad6205bcb5e5b9ab39d9);
+            
+        
+
+        circle_481dd0eed913779eb06ab84b1c8299b8.bindPopup(popup_e2812750e8551c93ab181bd14523fbb3)
+        ;
+
+        
+    
+    
+            var circle_995620961998a05381693e20f7fffe85 = L.circle(
+                [-17.1333, -70.8333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_31de9cd0d2cbd765ad484b582740403c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd96a43f532775b64c48bf3c34527b53 = $(`<div id="html_cd96a43f532775b64c48bf3c34527b53" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Montalvo</div>`)[0];
+                popup_31de9cd0d2cbd765ad484b582740403c.setContent(html_cd96a43f532775b64c48bf3c34527b53);
+            
+        
+
+        circle_995620961998a05381693e20f7fffe85.bindPopup(popup_31de9cd0d2cbd765ad484b582740403c)
+        ;
+
+        
+    
+    
+            var circle_213169d92a8f9190d2e2cb3f22af3cd0 = L.circle(
+                [-16.4333, -71.5333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_d80ae8822576350d05a912a93b901f85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd8616f3939b6000c4769162a875fda5 = $(`<div id="html_fd8616f3939b6000c4769162a875fda5" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Socabaya</div>`)[0];
+                popup_d80ae8822576350d05a912a93b901f85.setContent(html_fd8616f3939b6000c4769162a875fda5);
+            
+        
+
+        circle_213169d92a8f9190d2e2cb3f22af3cd0.bindPopup(popup_d80ae8822576350d05a912a93b901f85)
+        ;
+
+        
+    
+    
+            var circle_32a8e23c8bf104996afc459595627db5 = L.circle(
+                [-16.5167, -71.5833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_a06a16fcaae6395ab075ab449caada0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1743d95bd58a208e59eb3094019089a8 = $(`<div id="html_1743d95bd58a208e59eb3094019089a8" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cerro Verde 1</div>`)[0];
+                popup_a06a16fcaae6395ab075ab449caada0e.setContent(html_1743d95bd58a208e59eb3094019089a8);
+            
+        
+
+        circle_32a8e23c8bf104996afc459595627db5.bindPopup(popup_a06a16fcaae6395ab075ab449caada0e)
+        ;
+
+        
+    
+    
+            var circle_ec6f71defa914ecf909310514756c536 = L.circle(
+                [-16.52, -71.5867],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_7b0a2fafab039d7a7f46d3079dc8b892 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_19e63ee741f58d1b933263437d619695 = $(`<div id="html_19e63ee741f58d1b933263437d619695" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cerro Verde 2</div>`)[0];
+                popup_7b0a2fafab039d7a7f46d3079dc8b892.setContent(html_19e63ee741f58d1b933263437d619695);
+            
+        
+
+        circle_ec6f71defa914ecf909310514756c536.bindPopup(popup_7b0a2fafab039d7a7f46d3079dc8b892)
+        ;
+
+        
+    
+    
+            var circle_db0dae4e5421fc68a043741184309180 = L.circle(
+                [-17.1917, -70.9306],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_89ce20a2c53929cf7c2b8dda1c59ea8b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49390c72bc574b26f8baffd369746cbf = $(`<div id="html_49390c72bc574b26f8baffd369746cbf" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Moquegua</div>`)[0];
+                popup_89ce20a2c53929cf7c2b8dda1c59ea8b.setContent(html_49390c72bc574b26f8baffd369746cbf);
+            
+        
+
+        circle_db0dae4e5421fc68a043741184309180.bindPopup(popup_89ce20a2c53929cf7c2b8dda1c59ea8b)
+        ;
+
+        
+    
+    
+            var circle_eb6639414a0c643d03dece4fe0382368 = L.circle(
+                [-17.65, -71.3333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_373b5c8b101b0166dca91c208d6f0397 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b146f663b143b2686dcc160af0a7501d = $(`<div id="html_b146f663b143b2686dcc160af0a7501d" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Ilo 1</div>`)[0];
+                popup_373b5c8b101b0166dca91c208d6f0397.setContent(html_b146f663b143b2686dcc160af0a7501d);
+            
+        
+
+        circle_eb6639414a0c643d03dece4fe0382368.bindPopup(popup_373b5c8b101b0166dca91c208d6f0397)
+        ;
+
+        
+    
+    
+            var circle_0b5316fe3d022edadafa967071b89188 = L.circle(
+                [-17.6533, -71.3367],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_887360961e9c12e721341b51d0e1d0ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8b69da626f0a93a9c33fa58cbf93c2a = $(`<div id="html_e8b69da626f0a93a9c33fa58cbf93c2a" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Ilo 2</div>`)[0];
+                popup_887360961e9c12e721341b51d0e1d0ba.setContent(html_e8b69da626f0a93a9c33fa58cbf93c2a);
+            
+        
+
+        circle_0b5316fe3d022edadafa967071b89188.bindPopup(popup_887360961e9c12e721341b51d0e1d0ba)
+        ;
+
+        
+    
+    
+            var circle_b9201745fa95a398cee68794712f2eb7 = L.circle(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_c23720d11aa54e38c8b1ccf1b0f8b7f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ef63857d96730daf6838c4017ee6ec9 = $(`<div id="html_6ef63857d96730daf6838c4017ee6ec9" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Los Héroes</div>`)[0];
+                popup_c23720d11aa54e38c8b1ccf1b0f8b7f6.setContent(html_6ef63857d96730daf6838c4017ee6ec9);
+            
+        
+
+        circle_b9201745fa95a398cee68794712f2eb7.bindPopup(popup_c23720d11aa54e38c8b1ccf1b0f8b7f6)
+        ;
+
+        
+    
+    
+            var circle_0a346c8118379e0780e46dda8fe3ec5a = L.circle(
+                [-18.05, -70.2333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_c02819319e8139e46dacb95a2f0e16c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b38d860058bc8048e0b1d1788e604bd = $(`<div id="html_4b38d860058bc8048e0b1d1788e604bd" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Tacna</div>`)[0];
+                popup_c02819319e8139e46dacb95a2f0e16c5.setContent(html_4b38d860058bc8048e0b1d1788e604bd);
+            
+        
+
+        circle_0a346c8118379e0780e46dda8fe3ec5a.bindPopup(popup_c02819319e8139e46dacb95a2f0e16c5)
+        ;
+
+        
+    
+    
+            var circle_72a4d4b269e38ad24c99ce9b015eb3c6 = L.circle(
+                [-13.5333, -71.9333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_53d23f19f03790d6bfa24966d20b1bd8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9ae3cf6786605b7157eb10b74372ec0 = $(`<div id="html_c9ae3cf6786605b7157eb10b74372ec0" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Quencoro</div>`)[0];
+                popup_53d23f19f03790d6bfa24966d20b1bd8.setContent(html_c9ae3cf6786605b7157eb10b74372ec0);
+            
+        
+
+        circle_72a4d4b269e38ad24c99ce9b015eb3c6.bindPopup(popup_53d23f19f03790d6bfa24966d20b1bd8)
+        ;
+
+        
+    
+    
+            var circle_8a49314222507462b2e018aa3ceffa90 = L.circle(
+                [-14.9167, -71.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_405bb2f36587c682a7386866912ae4bf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_94f5edda53f9fb99e9e46b8862be6b4c = $(`<div id="html_94f5edda53f9fb99e9e46b8862be6b4c" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Tintaya</div>`)[0];
+                popup_405bb2f36587c682a7386866912ae4bf.setContent(html_94f5edda53f9fb99e9e46b8862be6b4c);
+            
+        
+
+        circle_8a49314222507462b2e018aa3ceffa90.bindPopup(popup_405bb2f36587c682a7386866912ae4bf)
+        ;
+
+        
+    
+    
+            var circle_9500787a51c4a9e0b01432afd37281ad = L.circle(
+                [-14.25, -71.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_481669ee0ee71712ce8b9669b1d24622 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6bb2ca75bfc93f1e018ba69c9353c20 = $(`<div id="html_e6bb2ca75bfc93f1e018ba69c9353c20" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Onocora</div>`)[0];
+                popup_481669ee0ee71712ce8b9669b1d24622.setContent(html_e6bb2ca75bfc93f1e018ba69c9353c20);
+            
+        
+
+        circle_9500787a51c4a9e0b01432afd37281ad.bindPopup(popup_481669ee0ee71712ce8b9669b1d24622)
+        ;
+
+        
+    
+    
+            var circle_00039c4a25577be36611e9ec81e637fe = L.circle(
+                [-15.8333, -70.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_760575502d49376d3c44b3ba246621fd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d097559448b1ded261c1c1332581289d = $(`<div id="html_d097559448b1ded261c1c1332581289d" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Puno</div>`)[0];
+                popup_760575502d49376d3c44b3ba246621fd.setContent(html_d097559448b1ded261c1c1332581289d);
+            
+        
+
+        circle_00039c4a25577be36611e9ec81e637fe.bindPopup(popup_760575502d49376d3c44b3ba246621fd)
+        ;
+
+        
+    
+    
+            var circle_a41b9259b0548ee19036e6d8ae40b9c2 = L.circle(
+                [-15.5, -70.1333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_ce9ff20f13434f0ec869385b06782285 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_889d46299b0d77f67faa01f8640f50ab = $(`<div id="html_889d46299b0d77f67faa01f8640f50ab" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Juliaca</div>`)[0];
+                popup_ce9ff20f13434f0ec869385b06782285.setContent(html_889d46299b0d77f67faa01f8640f50ab);
+            
+        
+
+        circle_a41b9259b0548ee19036e6d8ae40b9c2.bindPopup(popup_ce9ff20f13434f0ec869385b06782285)
+        ;
+
+        
+    
+    
+            var circle_5501741979595d060cfa94d57878bc40 = L.circle(
+                [-14.9167, -70.1917],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_1d74907708a288c2b927f2574a152e6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bcddfc3066f4007cf8954b09fb7631b7 = $(`<div id="html_bcddfc3066f4007cf8954b09fb7631b7" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Azángaro</div>`)[0];
+                popup_1d74907708a288c2b927f2574a152e6e.setContent(html_bcddfc3066f4007cf8954b09fb7631b7);
+            
+        
+
+        circle_5501741979595d060cfa94d57878bc40.bindPopup(popup_1d74907708a288c2b927f2574a152e6e)
+        ;
+
+        
+    
+    
+            var circle_e87fafe9d34f41ab62d0e8c3d841f954 = L.circle(
+                [-13.6333, -72.8833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_890273bb985560a036729c83dd35828c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd13af4dfdaccf96afa7dd23c8db4e71 = $(`<div id="html_cd13af4dfdaccf96afa7dd23c8db4e71" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Abancay Nueva</div>`)[0];
+                popup_890273bb985560a036729c83dd35828c.setContent(html_cd13af4dfdaccf96afa7dd23c8db4e71);
+            
+        
+
+        circle_e87fafe9d34f41ab62d0e8c3d841f954.bindPopup(popup_890273bb985560a036729c83dd35828c)
+        ;
+
+        
+    
+    
+            var circle_45b7e3170b0fa330ad1b080ca35272c3 = L.circle(
+                [-14.3167, -73.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_87b2e7f4cfefda438ecc7ea83285df41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47364e47a1d35a88b857eb0f7abaf943 = $(`<div id="html_47364e47a1d35a88b857eb0f7abaf943" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cotaruse</div>`)[0];
+                popup_87b2e7f4cfefda438ecc7ea83285df41.setContent(html_47364e47a1d35a88b857eb0f7abaf943);
+            
+        
+
+        circle_45b7e3170b0fa330ad1b080ca35272c3.bindPopup(popup_87b2e7f4cfefda438ecc7ea83285df41)
+        ;
+
+        
+    
+    
+            var circle_733ec22dfc6eb2ba141c011a48e80036 = L.circle(
+                [-10.6667, -77.8333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fe18f742c47dde1ce766c48a16c8d204);
+        
+    
+        var popup_d09be7dd177841778812445f36ceaaa7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d0fa65565e5ba1109ae8daa3a2f29dd = $(`<div id="html_1d0fa65565e5ba1109ae8daa3a2f29dd" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Paramonga Nueva</div>`)[0];
+                popup_d09be7dd177841778812445f36ceaaa7.setContent(html_1d0fa65565e5ba1109ae8daa3a2f29dd);
+            
+        
+
+        circle_733ec22dfc6eb2ba141c011a48e80036.bindPopup(popup_d09be7dd177841778812445f36ceaaa7)
+        ;
+
+        
+    
+    
+            var feature_group_79f1e98892058eb11f3bdf8cf3779615 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var circle_marker_628793362fff9b794a6985348b3422df = L.circleMarker(
+                [-12.2686, -76.8936],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_513435ff97bed53f9eed8c03cf2bfca8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8b3f12502ae011a78030e972d0eb5c60 = $(`<div id="html_8b3f12502ae011a78030e972d0eb5c60" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Lurín Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.2686<br>                         Lon: -76.8936                                                                       </div>                 </div>             </div>`)[0];
+                popup_513435ff97bed53f9eed8c03cf2bfca8.setContent(html_8b3f12502ae011a78030e972d0eb5c60);
+            
+        
+
+        circle_marker_628793362fff9b794a6985348b3422df.bindPopup(popup_513435ff97bed53f9eed8c03cf2bfca8)
+        ;
+
+        
+    
+    
+            var circle_126f70e68210533b2c6f4a412971ba25 = L.circle(
+                [-12.2686, -76.8936],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_9b38645354abfe26234cc1a2b96deb9d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_609087664d2c15b33ac4de14ba2122b3 = $(`<div id="html_609087664d2c15b33ac4de14ba2122b3" style="width: 100.0%; height: 100.0%;">Área de análisis - Lurín Solar</div>`)[0];
+                popup_9b38645354abfe26234cc1a2b96deb9d.setContent(html_609087664d2c15b33ac4de14ba2122b3);
+            
+        
+
+        circle_126f70e68210533b2c6f4a412971ba25.bindPopup(popup_9b38645354abfe26234cc1a2b96deb9d)
+        ;
+
+        
+    
+    
+            var circle_marker_10f0734a17a878288401758f00bdbaf7 = L.circleMarker(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_efc30ff0f947c0ec5a97124dc83a367f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_40e9817597faecd4ef4b3f462c0dfba4 = $(`<div id="html_40e9817597faecd4ef4b3f462c0dfba4" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Chilca Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.10 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.5167<br>                         Lon: -76.7333                                                                       </div>                 </div>             </div>`)[0];
+                popup_efc30ff0f947c0ec5a97124dc83a367f.setContent(html_40e9817597faecd4ef4b3f462c0dfba4);
+            
+        
+
+        circle_marker_10f0734a17a878288401758f00bdbaf7.bindPopup(popup_efc30ff0f947c0ec5a97124dc83a367f)
+        ;
+
+        
+    
+    
+            var circle_cfc7df18902f8fd89e978d0544427f6f = L.circle(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_884fb5f4182f73c9b1fef70b8b3a7c34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9fdc038df322639fecbc3b183b10f241 = $(`<div id="html_9fdc038df322639fecbc3b183b10f241" style="width: 100.0%; height: 100.0%;">Área de análisis - Chilca Solar</div>`)[0];
+                popup_884fb5f4182f73c9b1fef70b8b3a7c34.setContent(html_9fdc038df322639fecbc3b183b10f241);
+            
+        
+
+        circle_cfc7df18902f8fd89e978d0544427f6f.bindPopup(popup_884fb5f4182f73c9b1fef70b8b3a7c34)
+        ;
+
+        
+    
+    
+            var circle_marker_5fd13993d2d1d3756e82719ce87239c7 = L.circleMarker(
+                [-12.8, -76.5],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_3863dda025ce3d55fd5cf15cceca89e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f8005e01c329241ef32338c982d020c1 = $(`<div id="html_f8005e01c329241ef32338c982d020c1" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Asia Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.8000<br>                         Lon: -76.5000                                                                       </div>                 </div>             </div>`)[0];
+                popup_3863dda025ce3d55fd5cf15cceca89e2.setContent(html_f8005e01c329241ef32338c982d020c1);
+            
+        
+
+        circle_marker_5fd13993d2d1d3756e82719ce87239c7.bindPopup(popup_3863dda025ce3d55fd5cf15cceca89e2)
+        ;
+
+        
+    
+    
+            var circle_b0e4e80e42cf83adc518cf544472f971 = L.circle(
+                [-12.8, -76.5],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_ed7cbc5cdcf6e635e2f80aa6cb1d1711 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ff434e75c1148c73cdb7505ab683f9e = $(`<div id="html_6ff434e75c1148c73cdb7505ab683f9e" style="width: 100.0%; height: 100.0%;">Área de análisis - Asia Solar</div>`)[0];
+                popup_ed7cbc5cdcf6e635e2f80aa6cb1d1711.setContent(html_6ff434e75c1148c73cdb7505ab683f9e);
+            
+        
+
+        circle_b0e4e80e42cf83adc518cf544472f971.bindPopup(popup_ed7cbc5cdcf6e635e2f80aa6cb1d1711)
+        ;
+
+        
+    
+    
+            var circle_marker_6e17e89b8ec952de1cf47a0ce4e7d5e7 = L.circleMarker(
+                [-14.0678, -75.7286],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_ecb105dab5f54589a7aaf0a09bbc2e64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9aa38e90ae3536c2274ac6ed10abfc2c = $(`<div id="html_9aa38e90ae3536c2274ac6ed10abfc2c" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ica Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.30 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.0678<br>                         Lon: -75.7286                                                                       </div>                 </div>             </div>`)[0];
+                popup_ecb105dab5f54589a7aaf0a09bbc2e64.setContent(html_9aa38e90ae3536c2274ac6ed10abfc2c);
+            
+        
+
+        circle_marker_6e17e89b8ec952de1cf47a0ce4e7d5e7.bindPopup(popup_ecb105dab5f54589a7aaf0a09bbc2e64)
+        ;
+
+        
+    
+    
+            var circle_237871a9fb2619eb7bdcd985a4706744 = L.circle(
+                [-14.0678, -75.7286],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_533a8071a7bdb6425c466a0169abdf98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1d29a050bdbbd402227f74c61c0a4e5 = $(`<div id="html_f1d29a050bdbbd402227f74c61c0a4e5" style="width: 100.0%; height: 100.0%;">Área de análisis - Ica Solar 1</div>`)[0];
+                popup_533a8071a7bdb6425c466a0169abdf98.setContent(html_f1d29a050bdbbd402227f74c61c0a4e5);
+            
+        
+
+        circle_237871a9fb2619eb7bdcd985a4706744.bindPopup(popup_533a8071a7bdb6425c466a0169abdf98)
+        ;
+
+        
+    
+    
+            var circle_marker_7018c814fc8f310055a7a43ddd9d89e2 = L.circleMarker(
+                [-14.1, -75.7],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_910bc992a5e975e8fbf1ba378b2d21d3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4ed7c1351a4e5cfdc8f329ac475ac6d = $(`<div id="html_f4ed7c1351a4e5cfdc8f329ac475ac6d" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ica Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.20 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.1000<br>                         Lon: -75.7000                                                                       </div>                 </div>             </div>`)[0];
+                popup_910bc992a5e975e8fbf1ba378b2d21d3.setContent(html_f4ed7c1351a4e5cfdc8f329ac475ac6d);
+            
+        
+
+        circle_marker_7018c814fc8f310055a7a43ddd9d89e2.bindPopup(popup_910bc992a5e975e8fbf1ba378b2d21d3)
+        ;
+
+        
+    
+    
+            var circle_3121f549442805ab72af87618bfafd23 = L.circle(
+                [-14.1, -75.7],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d7aae847a718704f0dd389b91e05653d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6aeb134d63017144bb3c1c5a449e7eb5 = $(`<div id="html_6aeb134d63017144bb3c1c5a449e7eb5" style="width: 100.0%; height: 100.0%;">Área de análisis - Ica Solar 2</div>`)[0];
+                popup_d7aae847a718704f0dd389b91e05653d.setContent(html_6aeb134d63017144bb3c1c5a449e7eb5);
+            
+        
+
+        circle_3121f549442805ab72af87618bfafd23.bindPopup(popup_d7aae847a718704f0dd389b91e05653d)
+        ;
+
+        
+    
+    
+            var circle_marker_6b9f808ab48025a772240ba53b538e2c = L.circleMarker(
+                [-14.8333, -74.9333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_02b3fe562c3150506cb41206ebda0802 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ac84d6f5339c5fc897bd1dae5bafacf = $(`<div id="html_1ac84d6f5339c5fc897bd1dae5bafacf" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Nazca Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.40 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.8333<br>                         Lon: -74.9333                                                                       </div>                 </div>             </div>`)[0];
+                popup_02b3fe562c3150506cb41206ebda0802.setContent(html_1ac84d6f5339c5fc897bd1dae5bafacf);
+            
+        
+
+        circle_marker_6b9f808ab48025a772240ba53b538e2c.bindPopup(popup_02b3fe562c3150506cb41206ebda0802)
+        ;
+
+        
+    
+    
+            var circle_454e8854a907e3d1b300d8b458be3028 = L.circle(
+                [-14.8333, -74.9333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_5063103f70fda8c548d79a304389163c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b27e70e0fc81b66145aa5e00a3e0342 = $(`<div id="html_0b27e70e0fc81b66145aa5e00a3e0342" style="width: 100.0%; height: 100.0%;">Área de análisis - Nazca Solar</div>`)[0];
+                popup_5063103f70fda8c548d79a304389163c.setContent(html_0b27e70e0fc81b66145aa5e00a3e0342);
+            
+        
+
+        circle_454e8854a907e3d1b300d8b458be3028.bindPopup(popup_5063103f70fda8c548d79a304389163c)
+        ;
+
+        
+    
+    
+            var circle_marker_e9131d66c53d980756458035a1156cca = L.circleMarker(
+                [-15.3667, -75.0833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_392765e83cebda391c17085024be4953 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6752ada66004fdf5f75b6ee09ac7a6b8 = $(`<div id="html_6752ada66004fdf5f75b6ee09ac7a6b8" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Marcona Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.50 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.3667<br>                         Lon: -75.0833                                                                       </div>                 </div>             </div>`)[0];
+                popup_392765e83cebda391c17085024be4953.setContent(html_6752ada66004fdf5f75b6ee09ac7a6b8);
+            
+        
+
+        circle_marker_e9131d66c53d980756458035a1156cca.bindPopup(popup_392765e83cebda391c17085024be4953)
+        ;
+
+        
+    
+    
+            var circle_b9c20b3c5e1fe362d4f35189247cd9a4 = L.circle(
+                [-15.3667, -75.0833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_38081ca08976ae69e07ba275b331dc4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd7eb954a32a94a7a8a2afc20d13f57e = $(`<div id="html_bd7eb954a32a94a7a8a2afc20d13f57e" style="width: 100.0%; height: 100.0%;">Área de análisis - Marcona Solar</div>`)[0];
+                popup_38081ca08976ae69e07ba275b331dc4a.setContent(html_bd7eb954a32a94a7a8a2afc20d13f57e);
+            
+        
+
+        circle_b9c20b3c5e1fe362d4f35189247cd9a4.bindPopup(popup_38081ca08976ae69e07ba275b331dc4a)
+        ;
+
+        
+    
+    
+            var circle_marker_9fffa2d93c914b7f0886d0cd57fa5d0c = L.circleMarker(
+                [-13.8333, -76.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_cb7e2c49550e28d98d05f06c31884bda = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2461264891080d257e4f5335ff65d53f = $(`<div id="html_2461264891080d257e4f5335ff65d53f" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Paracas Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.20 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.8333<br>                         Lon: -76.2500                                                                       </div>                 </div>             </div>`)[0];
+                popup_cb7e2c49550e28d98d05f06c31884bda.setContent(html_2461264891080d257e4f5335ff65d53f);
+            
+        
+
+        circle_marker_9fffa2d93c914b7f0886d0cd57fa5d0c.bindPopup(popup_cb7e2c49550e28d98d05f06c31884bda)
+        ;
+
+        
+    
+    
+            var circle_170bd465122de8667176babc5d915d9d = L.circle(
+                [-13.8333, -76.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_246e2cb6f0a32ac2f554448e79c53f26 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e217690c2d1d29b11360a81cd87bdabd = $(`<div id="html_e217690c2d1d29b11360a81cd87bdabd" style="width: 100.0%; height: 100.0%;">Área de análisis - Paracas Solar</div>`)[0];
+                popup_246e2cb6f0a32ac2f554448e79c53f26.setContent(html_e217690c2d1d29b11360a81cd87bdabd);
+            
+        
+
+        circle_170bd465122de8667176babc5d915d9d.bindPopup(popup_246e2cb6f0a32ac2f554448e79c53f26)
+        ;
+
+        
+    
+    
+            var circle_marker_f0e7483f0d7d74ddca67a938b7cba5c3 = L.circleMarker(
+                [-13.7167, -76.2],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d104475b2ee707de0ba1506bd2a1b73e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1badcb8b90e317c12c5b3d2e36ff7aa = $(`<div id="html_b1badcb8b90e317c12c5b3d2e36ff7aa" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Pisco Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.10 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.7167<br>                         Lon: -76.2000                                                                       </div>                 </div>             </div>`)[0];
+                popup_d104475b2ee707de0ba1506bd2a1b73e.setContent(html_b1badcb8b90e317c12c5b3d2e36ff7aa);
+            
+        
+
+        circle_marker_f0e7483f0d7d74ddca67a938b7cba5c3.bindPopup(popup_d104475b2ee707de0ba1506bd2a1b73e)
+        ;
+
+        
+    
+    
+            var circle_19885a09ae4561d0f0724f9d428ce961 = L.circle(
+                [-13.7167, -76.2],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_876c503ee4c141d7dc220599e4395cbf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e780e49def4eecb803f838e12e130044 = $(`<div id="html_e780e49def4eecb803f838e12e130044" style="width: 100.0%; height: 100.0%;">Área de análisis - Pisco Solar</div>`)[0];
+                popup_876c503ee4c141d7dc220599e4395cbf.setContent(html_e780e49def4eecb803f838e12e130044);
+            
+        
+
+        circle_19885a09ae4561d0f0724f9d428ce961.bindPopup(popup_876c503ee4c141d7dc220599e4395cbf)
+        ;
+
+        
+    
+    
+            var circle_marker_48304d4da1537ef123dc5b4a456d754e = L.circleMarker(
+                [-16.4352, -71.8757],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_cca9803a5f5a6bd4f185ea0107668742 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_646018e9df351865615e38237fa7b449 = $(`<div id="html_646018e9df351865615e38237fa7b449" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">La Joya Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.70 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.4352<br>                         Lon: -71.8757                                                                       </div>                 </div>             </div>`)[0];
+                popup_cca9803a5f5a6bd4f185ea0107668742.setContent(html_646018e9df351865615e38237fa7b449);
+            
+        
+
+        circle_marker_48304d4da1537ef123dc5b4a456d754e.bindPopup(popup_cca9803a5f5a6bd4f185ea0107668742)
+        ;
+
+        
+    
+    
+            var circle_509af7e24f87648ca61ca6a3203ac9f4 = L.circle(
+                [-16.4352, -71.8757],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_0003264d5d6073a47f5a58c36b355eb1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d3d4f0e3a5cdf0010a28e4082f771e1 = $(`<div id="html_2d3d4f0e3a5cdf0010a28e4082f771e1" style="width: 100.0%; height: 100.0%;">Área de análisis - La Joya Solar</div>`)[0];
+                popup_0003264d5d6073a47f5a58c36b355eb1.setContent(html_2d3d4f0e3a5cdf0010a28e4082f771e1);
+            
+        
+
+        circle_509af7e24f87648ca61ca6a3203ac9f4.bindPopup(popup_0003264d5d6073a47f5a58c36b355eb1)
+        ;
+
+        
+    
+    
+            var circle_marker_910ce69c0834acd0d0c3f40309bbf614 = L.circleMarker(
+                [-16.35, -72.15],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_a81bae278f005cefd60c7ab09dc12b3a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_70f857cb23ba39de2ecdfc5b28fb4735 = $(`<div id="html_70f857cb23ba39de2ecdfc5b28fb4735" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Majes Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.60 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.3500<br>                         Lon: -72.1500                                                                       </div>                 </div>             </div>`)[0];
+                popup_a81bae278f005cefd60c7ab09dc12b3a.setContent(html_70f857cb23ba39de2ecdfc5b28fb4735);
+            
+        
+
+        circle_marker_910ce69c0834acd0d0c3f40309bbf614.bindPopup(popup_a81bae278f005cefd60c7ab09dc12b3a)
+        ;
+
+        
+    
+    
+            var circle_bb3da340bdebbfc076675761bbe80281 = L.circle(
+                [-16.35, -72.15],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_e8b98c0156235e3d94ae4b44ab2f89a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4bfbbcc12b364087dba10f6c265a357c = $(`<div id="html_4bfbbcc12b364087dba10f6c265a357c" style="width: 100.0%; height: 100.0%;">Área de análisis - Majes Solar</div>`)[0];
+                popup_e8b98c0156235e3d94ae4b44ab2f89a4.setContent(html_4bfbbcc12b364087dba10f6c265a357c);
+            
+        
+
+        circle_bb3da340bdebbfc076675761bbe80281.bindPopup(popup_e8b98c0156235e3d94ae4b44ab2f89a4)
+        ;
+
+        
+    
+    
+            var circle_marker_8c568a8abaefaeddbfd8422d7a6ed967 = L.circleMarker(
+                [-16.4, -71.5],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_6b6b0cd8a6992e358fd0ed077a0f4bbb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8e6fbc9e69ab2a0808d1d449ae764df5 = $(`<div id="html_8e6fbc9e69ab2a0808d1d449ae764df5" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Arequipa Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.50 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.4000<br>                         Lon: -71.5000                                                                       </div>                 </div>             </div>`)[0];
+                popup_6b6b0cd8a6992e358fd0ed077a0f4bbb.setContent(html_8e6fbc9e69ab2a0808d1d449ae764df5);
+            
+        
+
+        circle_marker_8c568a8abaefaeddbfd8422d7a6ed967.bindPopup(popup_6b6b0cd8a6992e358fd0ed077a0f4bbb)
+        ;
+
+        
+    
+    
+            var circle_24897efc99129dc6888ebb856b24ce9f = L.circle(
+                [-16.4, -71.5],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_f177e41daa479ff7377f4e42b9893676 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9fdd9f896d5487b5e399a8f9463891b3 = $(`<div id="html_9fdd9f896d5487b5e399a8f9463891b3" style="width: 100.0%; height: 100.0%;">Área de análisis - Arequipa Solar 1</div>`)[0];
+                popup_f177e41daa479ff7377f4e42b9893676.setContent(html_9fdd9f896d5487b5e399a8f9463891b3);
+            
+        
+
+        circle_24897efc99129dc6888ebb856b24ce9f.bindPopup(popup_f177e41daa479ff7377f4e42b9893676)
+        ;
+
+        
+    
+    
+            var circle_marker_ad332465071c6e37a529dd9fba838dab = L.circleMarker(
+                [-16.42, -71.52],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_cdafce06fa8b96676e4db6679f28a364 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7063a2440e7da7cde2bf4433c4088023 = $(`<div id="html_7063a2440e7da7cde2bf4433c4088023" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Arequipa Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.40 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.4200<br>                         Lon: -71.5200                                                                       </div>                 </div>             </div>`)[0];
+                popup_cdafce06fa8b96676e4db6679f28a364.setContent(html_7063a2440e7da7cde2bf4433c4088023);
+            
+        
+
+        circle_marker_ad332465071c6e37a529dd9fba838dab.bindPopup(popup_cdafce06fa8b96676e4db6679f28a364)
+        ;
+
+        
+    
+    
+            var circle_b5c5ec6ebc742ea9c7f91c461f28d6b4 = L.circle(
+                [-16.42, -71.52],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_ee58290053e9094a552078bce9756d3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_791e0b77edc888dd6cb66cb9cbfa17dd = $(`<div id="html_791e0b77edc888dd6cb66cb9cbfa17dd" style="width: 100.0%; height: 100.0%;">Área de análisis - Arequipa Solar 2</div>`)[0];
+                popup_ee58290053e9094a552078bce9756d3e.setContent(html_791e0b77edc888dd6cb66cb9cbfa17dd);
+            
+        
+
+        circle_b5c5ec6ebc742ea9c7f91c461f28d6b4.bindPopup(popup_ee58290053e9094a552078bce9756d3e)
+        ;
+
+        
+    
+    
+            var circle_marker_7f26e984533b3840de35b6610e67e4d7 = L.circleMarker(
+                [-16.6167, -72.7167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_029423c85293c486755b1c415335d60d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3ad94ca7f8fb2d02406c1e17d03f02bc = $(`<div id="html_3ad94ca7f8fb2d02406c1e17d03f02bc" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Camaná Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.30 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -16.6167<br>                         Lon: -72.7167                                                                       </div>                 </div>             </div>`)[0];
+                popup_029423c85293c486755b1c415335d60d.setContent(html_3ad94ca7f8fb2d02406c1e17d03f02bc);
+            
+        
+
+        circle_marker_7f26e984533b3840de35b6610e67e4d7.bindPopup(popup_029423c85293c486755b1c415335d60d)
+        ;
+
+        
+    
+    
+            var circle_bbd1ecdd1ce07f5d25b86ccd5583c570 = L.circle(
+                [-16.6167, -72.7167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_f2a7fc6e164c12cea6ba04d5582eb015 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df8cfabea6325c1997c9d932bf7376ac = $(`<div id="html_df8cfabea6325c1997c9d932bf7376ac" style="width: 100.0%; height: 100.0%;">Área de análisis - Camaná Solar</div>`)[0];
+                popup_f2a7fc6e164c12cea6ba04d5582eb015.setContent(html_df8cfabea6325c1997c9d932bf7376ac);
+            
+        
+
+        circle_bbd1ecdd1ce07f5d25b86ccd5583c570.bindPopup(popup_f2a7fc6e164c12cea6ba04d5582eb015)
+        ;
+
+        
+    
+    
+            var circle_marker_a5e2eae8673f3bd9757ff15bfe69662f = L.circleMarker(
+                [-17.0333, -72.0167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_e00090b42dfe20983f639cea80d10997 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_80024aa83aaa4a5cfa59973faf471540 = $(`<div id="html_80024aa83aaa4a5cfa59973faf471540" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Mollendo Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.50 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.0333<br>                         Lon: -72.0167                                                                       </div>                 </div>             </div>`)[0];
+                popup_e00090b42dfe20983f639cea80d10997.setContent(html_80024aa83aaa4a5cfa59973faf471540);
+            
+        
+
+        circle_marker_a5e2eae8673f3bd9757ff15bfe69662f.bindPopup(popup_e00090b42dfe20983f639cea80d10997)
+        ;
+
+        
+    
+    
+            var circle_5ce73a944230d88a980a9d8bfb26a636 = L.circle(
+                [-17.0333, -72.0167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d7c124746cc0d76b63adaebdd773436c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3aefdf7cd280bec5c8be00d9e4c9a4bf = $(`<div id="html_3aefdf7cd280bec5c8be00d9e4c9a4bf" style="width: 100.0%; height: 100.0%;">Área de análisis - Mollendo Solar</div>`)[0];
+                popup_d7c124746cc0d76b63adaebdd773436c.setContent(html_3aefdf7cd280bec5c8be00d9e4c9a4bf);
+            
+        
+
+        circle_5ce73a944230d88a980a9d8bfb26a636.bindPopup(popup_d7c124746cc0d76b63adaebdd773436c)
+        ;
+
+        
+    
+    
+            var circle_marker_fa662098126d136d6222fe9e44bb63ad = L.circleMarker(
+                [-17.0011, -70.9814],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_22d3017e972ee8537e47cca624e251d7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8dec0518ba4a189f6cd10680c43eb3f2 = $(`<div id="html_8dec0518ba4a189f6cd10680c43eb3f2" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Moquegua Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.0011<br>                         Lon: -70.9814                                                                       </div>                 </div>             </div>`)[0];
+                popup_22d3017e972ee8537e47cca624e251d7.setContent(html_8dec0518ba4a189f6cd10680c43eb3f2);
+            
+        
+
+        circle_marker_fa662098126d136d6222fe9e44bb63ad.bindPopup(popup_22d3017e972ee8537e47cca624e251d7)
+        ;
+
+        
+    
+    
+            var circle_0548e896d9d13d167f952ff66753f1c4 = L.circle(
+                [-17.0011, -70.9814],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d299f6cf38e0b591afc048b15394fb98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba7d374857750d4224e2b6eaab069e0f = $(`<div id="html_ba7d374857750d4224e2b6eaab069e0f" style="width: 100.0%; height: 100.0%;">Área de análisis - Moquegua Solar 1</div>`)[0];
+                popup_d299f6cf38e0b591afc048b15394fb98.setContent(html_ba7d374857750d4224e2b6eaab069e0f);
+            
+        
+
+        circle_0548e896d9d13d167f952ff66753f1c4.bindPopup(popup_d299f6cf38e0b591afc048b15394fb98)
+        ;
+
+        
+    
+    
+            var circle_marker_1f79d31bc5e1ea416762583126345479 = L.circleMarker(
+                [-17.02, -70.99],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_da6909aed4eadb8623ae48b62a7dfe1f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7fbf4ca3804e1b086feaa6e6b10523f4 = $(`<div id="html_7fbf4ca3804e1b086feaa6e6b10523f4" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Moquegua Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.70 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.0200<br>                         Lon: -70.9900                                                                       </div>                 </div>             </div>`)[0];
+                popup_da6909aed4eadb8623ae48b62a7dfe1f.setContent(html_7fbf4ca3804e1b086feaa6e6b10523f4);
+            
+        
+
+        circle_marker_1f79d31bc5e1ea416762583126345479.bindPopup(popup_da6909aed4eadb8623ae48b62a7dfe1f)
+        ;
+
+        
+    
+    
+            var circle_24bb275060f5f1e8c15c16e7514149cd = L.circle(
+                [-17.02, -70.99],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_06cd20c35e2ce54f202c7eb44f01c92e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_671d87cbc06de2c7b7bef88aa690fdf6 = $(`<div id="html_671d87cbc06de2c7b7bef88aa690fdf6" style="width: 100.0%; height: 100.0%;">Área de análisis - Moquegua Solar 2</div>`)[0];
+                popup_06cd20c35e2ce54f202c7eb44f01c92e.setContent(html_671d87cbc06de2c7b7bef88aa690fdf6);
+            
+        
+
+        circle_24bb275060f5f1e8c15c16e7514149cd.bindPopup(popup_06cd20c35e2ce54f202c7eb44f01c92e)
+        ;
+
+        
+    
+    
+            var circle_marker_6e10b0e2b0990e43b4e72dffb943ce91 = L.circleMarker(
+                [-17.65, -71.3333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d5981b0c95f3442a072f95e5821b33cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cf58eb606af95cc3b2afd0363ba98f56 = $(`<div id="html_cf58eb606af95cc3b2afd0363ba98f56" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ilo Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.40 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.6500<br>                         Lon: -71.3333                                                                       </div>                 </div>             </div>`)[0];
+                popup_d5981b0c95f3442a072f95e5821b33cf.setContent(html_cf58eb606af95cc3b2afd0363ba98f56);
+            
+        
+
+        circle_marker_6e10b0e2b0990e43b4e72dffb943ce91.bindPopup(popup_d5981b0c95f3442a072f95e5821b33cf)
+        ;
+
+        
+    
+    
+            var circle_3cfe5efef2bdf11f61934eb1b099a49c = L.circle(
+                [-17.65, -71.3333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_66fcce135407352a5ac45bcf59aa9af3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21468a4facb4030f6637f78464e58660 = $(`<div id="html_21468a4facb4030f6637f78464e58660" style="width: 100.0%; height: 100.0%;">Área de análisis - Ilo Solar</div>`)[0];
+                popup_66fcce135407352a5ac45bcf59aa9af3.setContent(html_21468a4facb4030f6637f78464e58660);
+            
+        
+
+        circle_3cfe5efef2bdf11f61934eb1b099a49c.bindPopup(popup_66fcce135407352a5ac45bcf59aa9af3)
+        ;
+
+        
+    
+    
+            var circle_marker_c7bfb4fe9a50f609500110c7e4346860 = L.circleMarker(
+                [-17.0833, -70.8333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_34fb5f962e671d70e058c0d8f5981d96 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_15cdf1c5b7804d2749f11759dc4669e3 = $(`<div id="html_15cdf1c5b7804d2749f11759dc4669e3" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Torata Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.60 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.0833<br>                         Lon: -70.8333                                                                       </div>                 </div>             </div>`)[0];
+                popup_34fb5f962e671d70e058c0d8f5981d96.setContent(html_15cdf1c5b7804d2749f11759dc4669e3);
+            
+        
+
+        circle_marker_c7bfb4fe9a50f609500110c7e4346860.bindPopup(popup_34fb5f962e671d70e058c0d8f5981d96)
+        ;
+
+        
+    
+    
+            var circle_dc08748adcdb90523f20a3217262acad = L.circle(
+                [-17.0833, -70.8333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_993124fd5b8eb1c20a62fe3560288329 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e2b44378c7b185a8179e1a13edcab9e = $(`<div id="html_9e2b44378c7b185a8179e1a13edcab9e" style="width: 100.0%; height: 100.0%;">Área de análisis - Torata Solar</div>`)[0];
+                popup_993124fd5b8eb1c20a62fe3560288329.setContent(html_9e2b44378c7b185a8179e1a13edcab9e);
+            
+        
+
+        circle_dc08748adcdb90523f20a3217262acad.bindPopup(popup_993124fd5b8eb1c20a62fe3560288329)
+        ;
+
+        
+    
+    
+            var circle_marker_ff19bec544fd267c7f74e4272b14d7be = L.circleMarker(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_77abe534005ad02ffdcdbcca5699d68c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab4187bd0f448c414b478e53f345bfb9 = $(`<div id="html_ab4187bd0f448c414b478e53f345bfb9" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Tacna Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.60 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -18.0167<br>                         Lon: -70.2500                                                                       </div>                 </div>             </div>`)[0];
+                popup_77abe534005ad02ffdcdbcca5699d68c.setContent(html_ab4187bd0f448c414b478e53f345bfb9);
+            
+        
+
+        circle_marker_ff19bec544fd267c7f74e4272b14d7be.bindPopup(popup_77abe534005ad02ffdcdbcca5699d68c)
+        ;
+
+        
+    
+    
+            var circle_321fe09ce323a7d6a872f027242473cf = L.circle(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_1ddaddbdc2247edcb5418b0c080221ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bfeaf9302337b1c00da5e3bfff8c89f9 = $(`<div id="html_bfeaf9302337b1c00da5e3bfff8c89f9" style="width: 100.0%; height: 100.0%;">Área de análisis - Tacna Solar 1</div>`)[0];
+                popup_1ddaddbdc2247edcb5418b0c080221ba.setContent(html_bfeaf9302337b1c00da5e3bfff8c89f9);
+            
+        
+
+        circle_321fe09ce323a7d6a872f027242473cf.bindPopup(popup_1ddaddbdc2247edcb5418b0c080221ba)
+        ;
+
+        
+    
+    
+            var circle_marker_d3889fd5d03a170c16f28c831ebdeb29 = L.circleMarker(
+                [-18.03, -70.26],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_1d6b55c8ae504665508fff82ca40b087 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0dd0d2ad5e94aef8173e2917df5cab99 = $(`<div id="html_0dd0d2ad5e94aef8173e2917df5cab99" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Tacna Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.50 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -18.0300<br>                         Lon: -70.2600                                                                       </div>                 </div>             </div>`)[0];
+                popup_1d6b55c8ae504665508fff82ca40b087.setContent(html_0dd0d2ad5e94aef8173e2917df5cab99);
+            
+        
+
+        circle_marker_d3889fd5d03a170c16f28c831ebdeb29.bindPopup(popup_1d6b55c8ae504665508fff82ca40b087)
+        ;
+
+        
+    
+    
+            var circle_b4dba55c77d6edbff56de0c2d92ae6e6 = L.circle(
+                [-18.03, -70.26],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_6f391157fd82de0811cde24b5c9f6086 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d10f54a3007a8b4663f7ca141b63b16 = $(`<div id="html_1d10f54a3007a8b4663f7ca141b63b16" style="width: 100.0%; height: 100.0%;">Área de análisis - Tacna Solar 2</div>`)[0];
+                popup_6f391157fd82de0811cde24b5c9f6086.setContent(html_1d10f54a3007a8b4663f7ca141b63b16);
+            
+        
+
+        circle_b4dba55c77d6edbff56de0c2d92ae6e6.bindPopup(popup_6f391157fd82de0811cde24b5c9f6086)
+        ;
+
+        
+    
+    
+            var circle_marker_1636fd288d3f46ac49e04c70e8aed9f9 = L.circleMarker(
+                [-17.6167, -70.75],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_3bbaf3cb8eaab24ede3bbf33fd77aa97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2708ba076d347a562e5d79b3f1a11308 = $(`<div id="html_2708ba076d347a562e5d79b3f1a11308" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Locumba Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.40 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.6167<br>                         Lon: -70.7500                                                                       </div>                 </div>             </div>`)[0];
+                popup_3bbaf3cb8eaab24ede3bbf33fd77aa97.setContent(html_2708ba076d347a562e5d79b3f1a11308);
+            
+        
+
+        circle_marker_1636fd288d3f46ac49e04c70e8aed9f9.bindPopup(popup_3bbaf3cb8eaab24ede3bbf33fd77aa97)
+        ;
+
+        
+    
+    
+            var circle_33b89f1b953dcfc63933f2ca15035fd5 = L.circle(
+                [-17.6167, -70.75],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_db09b79e7cd005b397e45e9567c1cfd1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af8afce9eab658b59033f115ea9331cc = $(`<div id="html_af8afce9eab658b59033f115ea9331cc" style="width: 100.0%; height: 100.0%;">Área de análisis - Locumba Solar</div>`)[0];
+                popup_db09b79e7cd005b397e45e9567c1cfd1.setContent(html_af8afce9eab658b59033f115ea9331cc);
+            
+        
+
+        circle_33b89f1b953dcfc63933f2ca15035fd5.bindPopup(popup_db09b79e7cd005b397e45e9567c1cfd1)
+        ;
+
+        
+    
+    
+            var circle_marker_5e7766c4f513d77e566245409e8a0825 = L.circleMarker(
+                [-17.8667, -70.5833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_a4c663d8a99606799a2fa29b9214b21b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_88c16bf4091ab60a2097b0796e061a9e = $(`<div id="html_88c16bf4091ab60a2097b0796e061a9e" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Sama Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.50 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -17.8667<br>                         Lon: -70.5833                                                                       </div>                 </div>             </div>`)[0];
+                popup_a4c663d8a99606799a2fa29b9214b21b.setContent(html_88c16bf4091ab60a2097b0796e061a9e);
+            
+        
+
+        circle_marker_5e7766c4f513d77e566245409e8a0825.bindPopup(popup_a4c663d8a99606799a2fa29b9214b21b)
+        ;
+
+        
+    
+    
+            var circle_c9d08851481510c659a526fdb9cb037d = L.circle(
+                [-17.8667, -70.5833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_74b2c1e1992d380bad3722f305d9bb06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f77201e352e19a10f7c6766f365807a6 = $(`<div id="html_f77201e352e19a10f7c6766f365807a6" style="width: 100.0%; height: 100.0%;">Área de análisis - Sama Solar</div>`)[0];
+                popup_74b2c1e1992d380bad3722f305d9bb06.setContent(html_f77201e352e19a10f7c6766f365807a6);
+            
+        
+
+        circle_c9d08851481510c659a526fdb9cb037d.bindPopup(popup_74b2c1e1992d380bad3722f305d9bb06)
+        ;
+
+        
+    
+    
+            var circle_marker_109e17357618cdbd2c3086d9c7a8d7a6 = L.circleMarker(
+                [-15.8333, -70.0167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_df6e6af55f9115eb32753aded5ffdf9d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6985a030860c10e44d165d4350f63b9e = $(`<div id="html_6985a030860c10e44d165d4350f63b9e" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Puno Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.20 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.8333<br>                         Lon: -70.0167                                                                       </div>                 </div>             </div>`)[0];
+                popup_df6e6af55f9115eb32753aded5ffdf9d.setContent(html_6985a030860c10e44d165d4350f63b9e);
+            
+        
+
+        circle_marker_109e17357618cdbd2c3086d9c7a8d7a6.bindPopup(popup_df6e6af55f9115eb32753aded5ffdf9d)
+        ;
+
+        
+    
+    
+            var circle_036a81cdd045fd1bd2b3021a2e2b6044 = L.circle(
+                [-15.8333, -70.0167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_6660cea5946228a3efaf0582736856fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1b8deab03a69b2e810df8293bc02613 = $(`<div id="html_b1b8deab03a69b2e810df8293bc02613" style="width: 100.0%; height: 100.0%;">Área de análisis - Puno Solar</div>`)[0];
+                popup_6660cea5946228a3efaf0582736856fa.setContent(html_b1b8deab03a69b2e810df8293bc02613);
+            
+        
+
+        circle_036a81cdd045fd1bd2b3021a2e2b6044.bindPopup(popup_6660cea5946228a3efaf0582736856fa)
+        ;
+
+        
+    
+    
+            var circle_marker_cd5df53c60eb3ac5d86eecd1478ce23e = L.circleMarker(
+                [-15.5, -70.1333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_59a75464596db4e0e6434f84069cd0ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5212ecaa1fef2580fce84cea5045ef7 = $(`<div id="html_b5212ecaa1fef2580fce84cea5045ef7" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Juliaca Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.10 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.5000<br>                         Lon: -70.1333                                                                       </div>                 </div>             </div>`)[0];
+                popup_59a75464596db4e0e6434f84069cd0ef.setContent(html_b5212ecaa1fef2580fce84cea5045ef7);
+            
+        
+
+        circle_marker_cd5df53c60eb3ac5d86eecd1478ce23e.bindPopup(popup_59a75464596db4e0e6434f84069cd0ef)
+        ;
+
+        
+    
+    
+            var circle_350c0ba4b9b0d2bce9f665525acb32ef = L.circle(
+                [-15.5, -70.1333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d9c9b7496ca658259428a90a1061220f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce0ca342cb7d050cc655c812583b6d2b = $(`<div id="html_ce0ca342cb7d050cc655c812583b6d2b" style="width: 100.0%; height: 100.0%;">Área de análisis - Juliaca Solar</div>`)[0];
+                popup_d9c9b7496ca658259428a90a1061220f.setContent(html_ce0ca342cb7d050cc655c812583b6d2b);
+            
+        
+
+        circle_350c0ba4b9b0d2bce9f665525acb32ef.bindPopup(popup_d9c9b7496ca658259428a90a1061220f)
+        ;
+
+        
+    
+    
+            var circle_marker_e9ff53598ae00db8e2dd274d54b66992 = L.circleMarker(
+                [-14.9167, -70.1917],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_742701450e9c5ad6b6729294ded1253a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dadf469f93c2b2eef7393b589680d8bd = $(`<div id="html_dadf469f93c2b2eef7393b589680d8bd" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Azángaro Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.9167<br>                         Lon: -70.1917                                                                       </div>                 </div>             </div>`)[0];
+                popup_742701450e9c5ad6b6729294ded1253a.setContent(html_dadf469f93c2b2eef7393b589680d8bd);
+            
+        
+
+        circle_marker_e9ff53598ae00db8e2dd274d54b66992.bindPopup(popup_742701450e9c5ad6b6729294ded1253a)
+        ;
+
+        
+    
+    
+            var circle_b54778960a6ead236a36156c3121feb6 = L.circle(
+                [-14.9167, -70.1917],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_5b4e80403dbf0c8b8019c6f71671ca86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f67731cb7ace69e40d022558718824ca = $(`<div id="html_f67731cb7ace69e40d022558718824ca" style="width: 100.0%; height: 100.0%;">Área de análisis - Azángaro Solar</div>`)[0];
+                popup_5b4e80403dbf0c8b8019c6f71671ca86.setContent(html_f67731cb7ace69e40d022558718824ca);
+            
+        
+
+        circle_b54778960a6ead236a36156c3121feb6.bindPopup(popup_5b4e80403dbf0c8b8019c6f71671ca86)
+        ;
+
+        
+    
+    
+            var circle_marker_32e81e8d7c15a459bd55a551c4894535 = L.circleMarker(
+                [-14.8833, -70.5833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_e59e76909e517e442e5257c9751184ab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1c3bd46ca9d526818826aaa2ed906c16 = $(`<div id="html_1c3bd46ca9d526818826aaa2ed906c16" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ayaviri Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.10 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.8833<br>                         Lon: -70.5833                                                                       </div>                 </div>             </div>`)[0];
+                popup_e59e76909e517e442e5257c9751184ab.setContent(html_1c3bd46ca9d526818826aaa2ed906c16);
+            
+        
+
+        circle_marker_32e81e8d7c15a459bd55a551c4894535.bindPopup(popup_e59e76909e517e442e5257c9751184ab)
+        ;
+
+        
+    
+    
+            var circle_281f22a9c4199d2f575ad740d16f5094 = L.circle(
+                [-14.8833, -70.5833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d5cf7fd3865e1a45d9a60b75aa9d81c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2ea5bf5bc5c3c36c296d9c9b94271f57 = $(`<div id="html_2ea5bf5bc5c3c36c296d9c9b94271f57" style="width: 100.0%; height: 100.0%;">Área de análisis - Ayaviri Solar</div>`)[0];
+                popup_d5cf7fd3865e1a45d9a60b75aa9d81c4.setContent(html_2ea5bf5bc5c3c36c296d9c9b94271f57);
+            
+        
+
+        circle_281f22a9c4199d2f575ad740d16f5094.bindPopup(popup_d5cf7fd3865e1a45d9a60b75aa9d81c4)
+        ;
+
+        
+    
+    
+            var circle_marker_fe2172bbabaa9f1a86a7cc92db96c589 = L.circleMarker(
+                [-15.3667, -70.3667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_bdee555b67876e4f7852990f6af0a7cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a6a5ccdc80f72f64d3b02a2127fff7db = $(`<div id="html_a6a5ccdc80f72f64d3b02a2127fff7db" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Lampa Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -15.3667<br>                         Lon: -70.3667                                                                       </div>                 </div>             </div>`)[0];
+                popup_bdee555b67876e4f7852990f6af0a7cd.setContent(html_a6a5ccdc80f72f64d3b02a2127fff7db);
+            
+        
+
+        circle_marker_fe2172bbabaa9f1a86a7cc92db96c589.bindPopup(popup_bdee555b67876e4f7852990f6af0a7cd)
+        ;
+
+        
+    
+    
+            var circle_87e79fa46e52374cef6ba130fa24277c = L.circle(
+                [-15.3667, -70.3667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_54461010a9feb4a4eb3e0a4142845c74 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e553f5a610cd8c16d9918fc38a20998a = $(`<div id="html_e553f5a610cd8c16d9918fc38a20998a" style="width: 100.0%; height: 100.0%;">Área de análisis - Lampa Solar</div>`)[0];
+                popup_54461010a9feb4a4eb3e0a4142845c74.setContent(html_e553f5a610cd8c16d9918fc38a20998a);
+            
+        
+
+        circle_87e79fa46e52374cef6ba130fa24277c.bindPopup(popup_54461010a9feb4a4eb3e0a4142845c74)
+        ;
+
+        
+    
+    
+            var circle_marker_d2a6cbbc964aae21f5d92383c5b94e48 = L.circleMarker(
+                [-13.5333, -71.9333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_7832ecb95c6722d20c9bf58fe817c34f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d28393aeaa0d1dea3371639faced340 = $(`<div id="html_7d28393aeaa0d1dea3371639faced340" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Cusco Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.5333<br>                         Lon: -71.9333                                                                       </div>                 </div>             </div>`)[0];
+                popup_7832ecb95c6722d20c9bf58fe817c34f.setContent(html_7d28393aeaa0d1dea3371639faced340);
+            
+        
+
+        circle_marker_d2a6cbbc964aae21f5d92383c5b94e48.bindPopup(popup_7832ecb95c6722d20c9bf58fe817c34f)
+        ;
+
+        
+    
+    
+            var circle_dfd4325caa4a66ec3768798c05c7828c = L.circle(
+                [-13.5333, -71.9333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_9df9d4e9323ee2b8ff9deb4220e87e7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a1a3ddb5e04fed3cfd7132515b4cec3d = $(`<div id="html_a1a3ddb5e04fed3cfd7132515b4cec3d" style="width: 100.0%; height: 100.0%;">Área de análisis - Cusco Solar 1</div>`)[0];
+                popup_9df9d4e9323ee2b8ff9deb4220e87e7e.setContent(html_a1a3ddb5e04fed3cfd7132515b4cec3d);
+            
+        
+
+        circle_dfd4325caa4a66ec3768798c05c7828c.bindPopup(popup_9df9d4e9323ee2b8ff9deb4220e87e7e)
+        ;
+
+        
+    
+    
+            var circle_marker_55ec45675cc7864f4a2ed23d59b598d7 = L.circleMarker(
+                [-13.55, -71.95],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_ee1898671b0c594c959bafbd967872ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_746180a863cf83c6ac224a44c310f61a = $(`<div id="html_746180a863cf83c6ac224a44c310f61a" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Cusco Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.5500<br>                         Lon: -71.9500                                                                       </div>                 </div>             </div>`)[0];
+                popup_ee1898671b0c594c959bafbd967872ff.setContent(html_746180a863cf83c6ac224a44c310f61a);
+            
+        
+
+        circle_marker_55ec45675cc7864f4a2ed23d59b598d7.bindPopup(popup_ee1898671b0c594c959bafbd967872ff)
+        ;
+
+        
+    
+    
+            var circle_92d807112cb94748f8bfdf10796607f8 = L.circle(
+                [-13.55, -71.95],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_c1e4e1286d3d7b12f44c766524b8b7ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_345f3d8f41f671bc19af9a8189e551ac = $(`<div id="html_345f3d8f41f671bc19af9a8189e551ac" style="width: 100.0%; height: 100.0%;">Área de análisis - Cusco Solar 2</div>`)[0];
+                popup_c1e4e1286d3d7b12f44c766524b8b7ce.setContent(html_345f3d8f41f671bc19af9a8189e551ac);
+            
+        
+
+        circle_92d807112cb94748f8bfdf10796607f8.bindPopup(popup_c1e4e1286d3d7b12f44c766524b8b7ce)
+        ;
+
+        
+    
+    
+            var circle_marker_513fc1bf3e46025f59b499d2ed0abb6e = L.circleMarker(
+                [-14.9167, -71.3],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_cdf629b22c6dbe46adb05b9a52e6818a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a05d796053578f684bc92e06e4b2c31 = $(`<div id="html_4a05d796053578f684bc92e06e4b2c31" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Espinar Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.9167<br>                         Lon: -71.3000                                                                       </div>                 </div>             </div>`)[0];
+                popup_cdf629b22c6dbe46adb05b9a52e6818a.setContent(html_4a05d796053578f684bc92e06e4b2c31);
+            
+        
+
+        circle_marker_513fc1bf3e46025f59b499d2ed0abb6e.bindPopup(popup_cdf629b22c6dbe46adb05b9a52e6818a)
+        ;
+
+        
+    
+    
+            var circle_44a97d83751556c620fbd4204f3b96b5 = L.circle(
+                [-14.9167, -71.3],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_861039b14b9ca1eb78e9223ea9c0f9df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee55d3736c144337806e1ed1babefcbe = $(`<div id="html_ee55d3736c144337806e1ed1babefcbe" style="width: 100.0%; height: 100.0%;">Área de análisis - Espinar Solar</div>`)[0];
+                popup_861039b14b9ca1eb78e9223ea9c0f9df.setContent(html_ee55d3736c144337806e1ed1babefcbe);
+            
+        
+
+        circle_44a97d83751556c620fbd4204f3b96b5.bindPopup(popup_861039b14b9ca1eb78e9223ea9c0f9df)
+        ;
+
+        
+    
+    
+            var circle_marker_a15a1ab752027860d6923feca4b77701 = L.circleMarker(
+                [-14.2667, -71.2333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_926b8cb101e832c256801a342c744ea5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ff88ea717d1ce657eccbc900bb0f894 = $(`<div id="html_9ff88ea717d1ce657eccbc900bb0f894" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Sicuani Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.10 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.2667<br>                         Lon: -71.2333                                                                       </div>                 </div>             </div>`)[0];
+                popup_926b8cb101e832c256801a342c744ea5.setContent(html_9ff88ea717d1ce657eccbc900bb0f894);
+            
+        
+
+        circle_marker_a15a1ab752027860d6923feca4b77701.bindPopup(popup_926b8cb101e832c256801a342c744ea5)
+        ;
+
+        
+    
+    
+            var circle_0567108e48615a9beff41d777e5721cc = L.circle(
+                [-14.2667, -71.2333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_0bed52532675cc2c7e85d86751860a08 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a6da3b27ebcc601a165f324f9258afb = $(`<div id="html_2a6da3b27ebcc601a165f324f9258afb" style="width: 100.0%; height: 100.0%;">Área de análisis - Sicuani Solar</div>`)[0];
+                popup_0bed52532675cc2c7e85d86751860a08.setContent(html_2a6da3b27ebcc601a165f324f9258afb);
+            
+        
+
+        circle_0567108e48615a9beff41d777e5721cc.bindPopup(popup_0bed52532675cc2c7e85d86751860a08)
+        ;
+
+        
+    
+    
+            var circle_marker_f2fc7059c72b1aa0782170381dfc5fab = L.circleMarker(
+                [-13.3, -72.1167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_65fdeeb98dcba7a48bb18a0bd13a1114 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0b7df867d81b158c895e2188cb19c58d = $(`<div id="html_0b7df867d81b158c895e2188cb19c58d" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Urubamba Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.3000<br>                         Lon: -72.1167                                                                       </div>                 </div>             </div>`)[0];
+                popup_65fdeeb98dcba7a48bb18a0bd13a1114.setContent(html_0b7df867d81b158c895e2188cb19c58d);
+            
+        
+
+        circle_marker_f2fc7059c72b1aa0782170381dfc5fab.bindPopup(popup_65fdeeb98dcba7a48bb18a0bd13a1114)
+        ;
+
+        
+    
+    
+            var circle_9db30b1c7a46cd06c2f9d60040aacc1a = L.circle(
+                [-13.3, -72.1167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_06b7b76e6d85010ead9bbfdac3a86b25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b79b6439df251d647303e4c04902804 = $(`<div id="html_1b79b6439df251d647303e4c04902804" style="width: 100.0%; height: 100.0%;">Área de análisis - Urubamba Solar</div>`)[0];
+                popup_06b7b76e6d85010ead9bbfdac3a86b25.setContent(html_1b79b6439df251d647303e4c04902804);
+            
+        
+
+        circle_9db30b1c7a46cd06c2f9d60040aacc1a.bindPopup(popup_06b7b76e6d85010ead9bbfdac3a86b25)
+        ;
+
+        
+    
+    
+            var circle_marker_c7c6a448704bcbfb696f5f2aa03b72e4 = L.circleMarker(
+                [-13.6333, -72.8833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d6059f0d22dd24fe7d9db5524bd5cd6c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_abdb0b6ed800cee4b122d3af3df5bca5 = $(`<div id="html_abdb0b6ed800cee4b122d3af3df5bca5" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Abancay Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.6333<br>                         Lon: -72.8833                                                                       </div>                 </div>             </div>`)[0];
+                popup_d6059f0d22dd24fe7d9db5524bd5cd6c.setContent(html_abdb0b6ed800cee4b122d3af3df5bca5);
+            
+        
+
+        circle_marker_c7c6a448704bcbfb696f5f2aa03b72e4.bindPopup(popup_d6059f0d22dd24fe7d9db5524bd5cd6c)
+        ;
+
+        
+    
+    
+            var circle_f77ca9c1358a8bfbf601e4f34b280fd8 = L.circle(
+                [-13.6333, -72.8833],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_8f927940d4aac316a5834084a9fe3cb9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4de5c3eb2cc9667e44957e5030b324ec = $(`<div id="html_4de5c3eb2cc9667e44957e5030b324ec" style="width: 100.0%; height: 100.0%;">Área de análisis - Abancay Solar</div>`)[0];
+                popup_8f927940d4aac316a5834084a9fe3cb9.setContent(html_4de5c3eb2cc9667e44957e5030b324ec);
+            
+        
+
+        circle_f77ca9c1358a8bfbf601e4f34b280fd8.bindPopup(popup_8f927940d4aac316a5834084a9fe3cb9)
+        ;
+
+        
+    
+    
+            var circle_marker_63a16ecdc77d1860d6a8d82740bd2551 = L.circleMarker(
+                [-13.6567, -73.3867],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_5ef9bf71f817bd3a905fb052b2ca4ded = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d94bf018015c55711c9da4740b50d036 = $(`<div id="html_d94bf018015c55711c9da4740b50d036" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Andahuaylas Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.6567<br>                         Lon: -73.3867                                                                       </div>                 </div>             </div>`)[0];
+                popup_5ef9bf71f817bd3a905fb052b2ca4ded.setContent(html_d94bf018015c55711c9da4740b50d036);
+            
+        
+
+        circle_marker_63a16ecdc77d1860d6a8d82740bd2551.bindPopup(popup_5ef9bf71f817bd3a905fb052b2ca4ded)
+        ;
+
+        
+    
+    
+            var circle_4b41f8bd6c6de4aa3f6e4d3096b9cf7c = L.circle(
+                [-13.6567, -73.3867],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_46900ce04ac3ba31141a8099235f0249 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_966bb88ac21d7d70d0da06db60c159af = $(`<div id="html_966bb88ac21d7d70d0da06db60c159af" style="width: 100.0%; height: 100.0%;">Área de análisis - Andahuaylas Solar</div>`)[0];
+                popup_46900ce04ac3ba31141a8099235f0249.setContent(html_966bb88ac21d7d70d0da06db60c159af);
+            
+        
+
+        circle_4b41f8bd6c6de4aa3f6e4d3096b9cf7c.bindPopup(popup_46900ce04ac3ba31141a8099235f0249)
+        ;
+
+        
+    
+    
+            var circle_marker_2eb702192c70aaf1a9d7225efe418996 = L.circleMarker(
+                [-14.2933, -73.2433],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_b9b92b3d4679ee2dedef910ab14e8c9d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb0ef92b0c61f0d6d9958a100cce3435 = $(`<div id="html_cb0ef92b0c61f0d6d9958a100cce3435" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Chalhuanca Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -14.2933<br>                         Lon: -73.2433                                                                       </div>                 </div>             </div>`)[0];
+                popup_b9b92b3d4679ee2dedef910ab14e8c9d.setContent(html_cb0ef92b0c61f0d6d9958a100cce3435);
+            
+        
+
+        circle_marker_2eb702192c70aaf1a9d7225efe418996.bindPopup(popup_b9b92b3d4679ee2dedef910ab14e8c9d)
+        ;
+
+        
+    
+    
+            var circle_88d4a7436e5f01248c2a7f8582610eb4 = L.circle(
+                [-14.2933, -73.2433],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_a10d17f9067b5558bd466f32726cce83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d17e0b59d317eb3578368bfdc010594 = $(`<div id="html_5d17e0b59d317eb3578368bfdc010594" style="width: 100.0%; height: 100.0%;">Área de análisis - Chalhuanca Solar</div>`)[0];
+                popup_a10d17f9067b5558bd466f32726cce83.setContent(html_5d17e0b59d317eb3578368bfdc010594);
+            
+        
+
+        circle_88d4a7436e5f01248c2a7f8582610eb4.bindPopup(popup_a10d17f9067b5558bd466f32726cce83)
+        ;
+
+        
+    
+    
+            var circle_marker_3c601f90b3c2c06896d3b406cbeb9db6 = L.circleMarker(
+                [-13.9333, -72.1667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_0f1f637baf2b9c4e0d66bae9e8c91e52 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc902769fc3a5da0830a326eb4f258fb = $(`<div id="html_bc902769fc3a5da0830a326eb4f258fb" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Tambobamba Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.9333<br>                         Lon: -72.1667                                                                       </div>                 </div>             </div>`)[0];
+                popup_0f1f637baf2b9c4e0d66bae9e8c91e52.setContent(html_bc902769fc3a5da0830a326eb4f258fb);
+            
+        
+
+        circle_marker_3c601f90b3c2c06896d3b406cbeb9db6.bindPopup(popup_0f1f637baf2b9c4e0d66bae9e8c91e52)
+        ;
+
+        
+    
+    
+            var circle_d6fe0438611d923e7c756cfcacd03236 = L.circle(
+                [-13.9333, -72.1667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_d3a1c8fa1973d35fd0e0171fc0b40fbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43cb3a4a97375728cd50d3bfe7ae6124 = $(`<div id="html_43cb3a4a97375728cd50d3bfe7ae6124" style="width: 100.0%; height: 100.0%;">Área de análisis - Tambobamba Solar</div>`)[0];
+                popup_d3a1c8fa1973d35fd0e0171fc0b40fbd.setContent(html_43cb3a4a97375728cd50d3bfe7ae6124);
+            
+        
+
+        circle_d6fe0438611d923e7c756cfcacd03236.bindPopup(popup_d3a1c8fa1973d35fd0e0171fc0b40fbd)
+        ;
+
+        
+    
+    
+            var circle_marker_8cddc4f5abdca6a88301795745293621 = L.circleMarker(
+                [-13.1608, -74.2236],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_e823692ec2b0aa9bca0105773063ba40 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_33f5a14a9ed3f4e66a4cefcadc310329 = $(`<div id="html_33f5a14a9ed3f4e66a4cefcadc310329" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ayacucho Solar 1</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.1608<br>                         Lon: -74.2236                                                                       </div>                 </div>             </div>`)[0];
+                popup_e823692ec2b0aa9bca0105773063ba40.setContent(html_33f5a14a9ed3f4e66a4cefcadc310329);
+            
+        
+
+        circle_marker_8cddc4f5abdca6a88301795745293621.bindPopup(popup_e823692ec2b0aa9bca0105773063ba40)
+        ;
+
+        
+    
+    
+            var circle_5ccbb8d322ba8161105f09195ed9b4a2 = L.circle(
+                [-13.1608, -74.2236],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_476b5a7d0ece0870024405518e4b4a00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ee4f10c509435ce01edf101282a75ec = $(`<div id="html_0ee4f10c509435ce01edf101282a75ec" style="width: 100.0%; height: 100.0%;">Área de análisis - Ayacucho Solar 1</div>`)[0];
+                popup_476b5a7d0ece0870024405518e4b4a00.setContent(html_0ee4f10c509435ce01edf101282a75ec);
+            
+        
+
+        circle_5ccbb8d322ba8161105f09195ed9b4a2.bindPopup(popup_476b5a7d0ece0870024405518e4b4a00)
+        ;
+
+        
+    
+    
+            var circle_marker_32f33b3555aa86c86bf0c4f9150b9240 = L.circleMarker(
+                [-13.17, -74.23],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_027fa6405b3273426004e416e66dd750 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f07d6fab82c19749b99a64bce3d53bfd = $(`<div id="html_f07d6fab82c19749b99a64bce3d53bfd" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Ayacucho Solar 2</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.1700<br>                         Lon: -74.2300                                                                       </div>                 </div>             </div>`)[0];
+                popup_027fa6405b3273426004e416e66dd750.setContent(html_f07d6fab82c19749b99a64bce3d53bfd);
+            
+        
+
+        circle_marker_32f33b3555aa86c86bf0c4f9150b9240.bindPopup(popup_027fa6405b3273426004e416e66dd750)
+        ;
+
+        
+    
+    
+            var circle_315100d516ea4ea131f7bf0d41dc6175 = L.circle(
+                [-13.17, -74.23],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_1608d48972535c225f1c7e9a3605f038 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5f24ed18d9447f6cca44457c21c52d20 = $(`<div id="html_5f24ed18d9447f6cca44457c21c52d20" style="width: 100.0%; height: 100.0%;">Área de análisis - Ayacucho Solar 2</div>`)[0];
+                popup_1608d48972535c225f1c7e9a3605f038.setContent(html_5f24ed18d9447f6cca44457c21c52d20);
+            
+        
+
+        circle_315100d516ea4ea131f7bf0d41dc6175.bindPopup(popup_1608d48972535c225f1c7e9a3605f038)
+        ;
+
+        
+    
+    
+            var circle_marker_fa51d7796e5c8273fffd59c5cb2df80d = L.circleMarker(
+                [-12.9333, -74.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_25cdf8afe9490b8d7fb3d1004e68de5d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d624fdf8809e1f421861c86766eaa0f6 = $(`<div id="html_d624fdf8809e1f421861c86766eaa0f6" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Huanta Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.9333<br>                         Lon: -74.2500                                                                       </div>                 </div>             </div>`)[0];
+                popup_25cdf8afe9490b8d7fb3d1004e68de5d.setContent(html_d624fdf8809e1f421861c86766eaa0f6);
+            
+        
+
+        circle_marker_fa51d7796e5c8273fffd59c5cb2df80d.bindPopup(popup_25cdf8afe9490b8d7fb3d1004e68de5d)
+        ;
+
+        
+    
+    
+            var circle_2b5de1580d64598bcabe131c3942dba8 = L.circle(
+                [-12.9333, -74.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_8f3c2bb4a8b9cdde8dc6f47828359c5f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa3d54c20a9d3964cd879ab99ec3af70 = $(`<div id="html_fa3d54c20a9d3964cd879ab99ec3af70" style="width: 100.0%; height: 100.0%;">Área de análisis - Huanta Solar</div>`)[0];
+                popup_8f3c2bb4a8b9cdde8dc6f47828359c5f.setContent(html_fa3d54c20a9d3964cd879ab99ec3af70);
+            
+        
+
+        circle_2b5de1580d64598bcabe131c3942dba8.bindPopup(popup_8f3c2bb4a8b9cdde8dc6f47828359c5f)
+        ;
+
+        
+    
+    
+            var circle_marker_199be525600789c3da980deb4665aff3 = L.circleMarker(
+                [-13.6333, -74.1333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_8ad5db95cc97be4b8e128bcf328c6d4b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aebbea83be1a16703fd4da394332c8b4 = $(`<div id="html_aebbea83be1a16703fd4da394332c8b4" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Cangallo Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 6.00 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -13.6333<br>                         Lon: -74.1333                                                                       </div>                 </div>             </div>`)[0];
+                popup_8ad5db95cc97be4b8e128bcf328c6d4b.setContent(html_aebbea83be1a16703fd4da394332c8b4);
+            
+        
+
+        circle_marker_199be525600789c3da980deb4665aff3.bindPopup(popup_8ad5db95cc97be4b8e128bcf328c6d4b)
+        ;
+
+        
+    
+    
+            var circle_531e2fe234843ca70d03097dd223c09d = L.circle(
+                [-13.6333, -74.1333],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_9f8dce9cef1eb9426f2b7cd105080a57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d0f3d49f8588ee5bc067a64f4518da2 = $(`<div id="html_8d0f3d49f8588ee5bc067a64f4518da2" style="width: 100.0%; height: 100.0%;">Área de análisis - Cangallo Solar</div>`)[0];
+                popup_9f8dce9cef1eb9426f2b7cd105080a57.setContent(html_8d0f3d49f8588ee5bc067a64f4518da2);
+            
+        
+
+        circle_531e2fe234843ca70d03097dd223c09d.bindPopup(popup_9f8dce9cef1eb9426f2b7cd105080a57)
+        ;
+
+        
+    
+    
+            var circle_marker_4b4b0d5c68d8b16d5ae6e6484f165540 = L.circleMarker(
+                [-12.7867, -74.9733],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_ae13aa276187f301c98c0ed47065b2c1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_730ab4a68f38c938241b882f981ea5a9 = $(`<div id="html_730ab4a68f38c938241b882f981ea5a9" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Huancavelica Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.7867<br>                         Lon: -74.9733                                                                       </div>                 </div>             </div>`)[0];
+                popup_ae13aa276187f301c98c0ed47065b2c1.setContent(html_730ab4a68f38c938241b882f981ea5a9);
+            
+        
+
+        circle_marker_4b4b0d5c68d8b16d5ae6e6484f165540.bindPopup(popup_ae13aa276187f301c98c0ed47065b2c1)
+        ;
+
+        
+    
+    
+            var circle_ebe86d88ed1fcb9b7e097dd95c1f317d = L.circle(
+                [-12.7867, -74.9733],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_89e04220077c40775d667647764779e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16bfb3672a7c3fb099a52a6c560cdbe7 = $(`<div id="html_16bfb3672a7c3fb099a52a6c560cdbe7" style="width: 100.0%; height: 100.0%;">Área de análisis - Huancavelica Solar</div>`)[0];
+                popup_89e04220077c40775d667647764779e0.setContent(html_16bfb3672a7c3fb099a52a6c560cdbe7);
+            
+        
+
+        circle_ebe86d88ed1fcb9b7e097dd95c1f317d.bindPopup(popup_89e04220077c40775d667647764779e0)
+        ;
+
+        
+    
+    
+            var circle_marker_fc8d87ca7a07946c7b887a669b04f0ad = L.circleMarker(
+                [-12.3933, -74.8667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_aa6a6ce5c34913a115fb1f34c6c4441c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_43f05ec038249a4110b042b43c314ea7 = $(`<div id="html_43f05ec038249a4110b042b43c314ea7" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Pampas Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.90 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.3933<br>                         Lon: -74.8667                                                                       </div>                 </div>             </div>`)[0];
+                popup_aa6a6ce5c34913a115fb1f34c6c4441c.setContent(html_43f05ec038249a4110b042b43c314ea7);
+            
+        
+
+        circle_marker_fc8d87ca7a07946c7b887a669b04f0ad.bindPopup(popup_aa6a6ce5c34913a115fb1f34c6c4441c)
+        ;
+
+        
+    
+    
+            var circle_07ed8ab1cb749ec305d7a9145f7eb4f2 = L.circle(
+                [-12.3933, -74.8667],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_a41771a793a665515e1c55edbdf17b68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ae6ab478db19f6c15e1bfadd59a9094 = $(`<div id="html_7ae6ab478db19f6c15e1bfadd59a9094" style="width: 100.0%; height: 100.0%;">Área de análisis - Pampas Solar</div>`)[0];
+                popup_a41771a793a665515e1c55edbdf17b68.setContent(html_7ae6ab478db19f6c15e1bfadd59a9094);
+            
+        
+
+        circle_07ed8ab1cb749ec305d7a9145f7eb4f2.bindPopup(popup_a41771a793a665515e1c55edbdf17b68)
+        ;
+
+        
+    
+    
+            var circle_marker_2883ca06cf241818a98510bd74667d59 = L.circleMarker(
+                [-12.9833, -74.7167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_203097c3ca6aa5d44da93605e89f18ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8930beb625a47eb9862baa2c6d8ee58e = $(`<div id="html_8930beb625a47eb9862baa2c6d8ee58e" style="width: 100.0%; height: 100.0%;">                 <div class="popup-container">                     <h4 class="popup-title solar-title">Lircay Solar</h4>                     <div class="popup-content">                         <span class="popup-label">Radiación Solar:</span> 5.80 kWh/m²/día<br>                         <span class="popup-label">Coordenadas:</span><br>                         Lat: -12.9833<br>                         Lon: -74.7167                                                                       </div>                 </div>             </div>`)[0];
+                popup_203097c3ca6aa5d44da93605e89f18ff.setContent(html_8930beb625a47eb9862baa2c6d8ee58e);
+            
+        
+
+        circle_marker_2883ca06cf241818a98510bd74667d59.bindPopup(popup_203097c3ca6aa5d44da93605e89f18ff)
+        ;
+
+        
+    
+    
+            var circle_e395099162d308d78a90d4bad8bde020 = L.circle(
+                [-12.9833, -74.7167],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_79f1e98892058eb11f3bdf8cf3779615);
+        
+    
+        var popup_1f692e47836cd3c472514338ee403a45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7d34f6a8811c7117c5e2387f0f36d955 = $(`<div id="html_7d34f6a8811c7117c5e2387f0f36d955" style="width: 100.0%; height: 100.0%;">Área de análisis - Lircay Solar</div>`)[0];
+                popup_1f692e47836cd3c472514338ee403a45.setContent(html_7d34f6a8811c7117c5e2387f0f36d955);
+            
+        
+
+        circle_e395099162d308d78a90d4bad8bde020.bindPopup(popup_1f692e47836cd3c472514338ee403a45)
+        ;
+
+        
+    
+    
+            var tile_layer_80d77ba424ae9fd2bc03cd100fb70215 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var feature_group_bbfca96facfbf212c7e6a850b8ba2149 = L.featureGroup(
+                {}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+        
+    
+            var heat_map_7196028a28dcd143eb948d5867a46535 = L.heatLayer(
+                [[-12.2686, -76.8936, 5.8], [-12.5167, -76.7333, 6.1], [-12.8, -76.5, 6.0], [-14.0678, -75.7286, 6.3], [-14.1, -75.7, 6.2], [-14.8333, -74.9333, 6.4], [-15.3667, -75.0833, 6.5], [-13.8333, -76.25, 6.2], [-13.7167, -76.2, 6.1], [-16.4352, -71.8757, 6.7], [-16.35, -72.15, 6.6], [-16.4, -71.5, 6.5], [-16.42, -71.52, 6.4], [-16.6167, -72.7167, 6.3], [-17.0333, -72.0167, 6.5], [-17.0011, -70.9814, 6.8], [-17.02, -70.99, 6.7], [-17.65, -71.3333, 6.4], [-17.0833, -70.8333, 6.6], [-18.0167, -70.25, 6.6], [-18.03, -70.26, 6.5], [-17.6167, -70.75, 6.4], [-17.8667, -70.5833, 6.5], [-15.8333, -70.0167, 6.2], [-15.5, -70.1333, 6.1], [-14.9167, -70.1917, 6.0], [-14.8833, -70.5833, 6.1], [-15.3667, -70.3667, 6.0], [-13.5333, -71.9333, 5.9], [-13.55, -71.95, 5.8], [-14.9167, -71.3, 6.0], [-14.2667, -71.2333, 6.1], [-13.3, -72.1167, 5.9], [-13.6333, -72.8833, 5.8], [-13.6567, -73.3867, 5.9], [-14.2933, -73.2433, 6.0], [-13.9333, -72.1667, 5.9], [-13.1608, -74.2236, 5.9], [-13.17, -74.23, 5.8], [-12.9333, -74.25, 5.9], [-13.6333, -74.1333, 6.0], [-12.7867, -74.9733, 5.8], [-12.3933, -74.8667, 5.9], [-12.9833, -74.7167, 5.8]],
+                {"blur": 15, "gradient": {"0.4": "blue", "0.6": "lime", "0.8": "yellow", "1.0": "red"}, "maxZoom": 18, "minOpacity": 0.4, "radius": 25}
+            ).addTo(feature_group_bbfca96facfbf212c7e6a850b8ba2149);
+        
+    
+            var layer_control_b896c29bd5a8fe9f7e4c4b1d5045b3da = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_40c6f15f41c67124134c4d45da391581,
+                    "Satelital" : tile_layer_80d77ba424ae9fd2bc03cd100fb70215,
+                },
+                overlays :  {
+                    "SET 500 kV" : feature_group_0a38ab6a743d7f265efa5d9b48bad251,
+                    "SET 220 kV" : feature_group_9d0e3960015de40a6ca0f983faf07a53,
+                    "SET 138 kV" : feature_group_023cdb0edf254ad158e3098c93e3aef1,
+                    "\u00c1reas de Cobertura" : feature_group_fe18f742c47dde1ce766c48a16c8d204,
+                    "Sitios Solares" : feature_group_79f1e98892058eb11f3bdf8cf3779615,
+                    "Radiaci\u00f3n Solar" : feature_group_bbfca96facfbf212c7e6a850b8ba2149,
+                },
+            };
+            L.control.layers(
+                layer_control_b896c29bd5a8fe9f7e4c4b1d5045b3da.base_layers,
+                layer_control_b896c29bd5a8fe9f7e4c4b1d5045b3da.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_7c49a1eea8174c223fd681676d67ad64);
+            tile_layer_80d77ba424ae9fd2bc03cd100fb70215.remove();
+        
+</script>
+</html>

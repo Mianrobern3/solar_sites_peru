@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f45507563aba3d638d2a89f2e30c202b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
+</head>
+<body>
+    
+    
+        <div style="position: fixed; bottom: 50px; left: 50px; z-index: 1000; background-color: white;
+                    padding: 10px; border: 2px solid grey; border-radius: 5px;">
+            <h4>Leyenda - Subestaciones</h4>
+            <p><span style='color: red'>■</span> 500 kV</p>
+            <p><span style='color: blue'>■</span> 220 kV</p>
+            <p><span style='color: green'>■</span> 138 kV</p>
+        </div>
+        
+    
+            <div class="folium-map" id="map_f45507563aba3d638d2a89f2e30c202b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f45507563aba3d638d2a89f2e30c202b = L.map(
+                "map_f45507563aba3d638d2a89f2e30c202b",
+                {
+                    center: [-14.5, -72.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cbfb34074c9fb8957732cac747a5bc37 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_cbfb34074c9fb8957732cac747a5bc37.addTo(map_f45507563aba3d638d2a89f2e30c202b);
+        
+    
+            var feature_group_052ad89d72abd8ad336649c78d0c2dee = L.featureGroup(
+                {}
+            );
+        
+    
+            var regular_polygon_marker_f5260b41c8966d4809c22f2d303d0481 = new L.RegularPolygonMarker(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052ad89d72abd8ad336649c78d0c2dee);
+        
+    
+        var popup_5e65705c914d5114f1e35a0d241d125b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51f7281f5ff4aa4746cf8669c10f13a1 = $(`<div id="html_51f7281f5ff4aa4746cf8669c10f13a1" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Chilca</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -12.5167<br>                     Lon: -76.7333                 </div>             </div>`)[0];
+                popup_5e65705c914d5114f1e35a0d241d125b.setContent(html_51f7281f5ff4aa4746cf8669c10f13a1);
+            
+        
+
+        regular_polygon_marker_f5260b41c8966d4809c22f2d303d0481.bindPopup(popup_5e65705c914d5114f1e35a0d241d125b)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_49bfa045a34601765ca78af8c49f8799 = new L.RegularPolygonMarker(
+                [-15.3611, -75.0986],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052ad89d72abd8ad336649c78d0c2dee);
+        
+    
+        var popup_9a541307e00e8b2765d3696af789809b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef0fe27c075f09ea047eb14e887119dc = $(`<div id="html_ef0fe27c075f09ea047eb14e887119dc" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Marcona</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Ica<br>                     <b>Ubicación:</b><br>                     Lat: -15.3611<br>                     Lon: -75.0986                 </div>             </div>`)[0];
+                popup_9a541307e00e8b2765d3696af789809b.setContent(html_ef0fe27c075f09ea047eb14e887119dc);
+            
+        
+
+        regular_polygon_marker_49bfa045a34601765ca78af8c49f8799.bindPopup(popup_9a541307e00e8b2765d3696af789809b)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_7b00af6873edce57dc91695eb8fbfe29 = new L.RegularPolygonMarker(
+                [-17.1167, -71.8167],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_052ad89d72abd8ad336649c78d0c2dee);
+        
+    
+        var popup_0b0824676ecd5572594a5a4bb91d4585 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8bd29bbb527dc2863c59a376eb2a6188 = $(`<div id="html_8bd29bbb527dc2863c59a376eb2a6188" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Montalvo</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Ubicación:</b><br>                     Lat: -17.1167<br>                     Lon: -71.8167                 </div>             </div>`)[0];
+                popup_0b0824676ecd5572594a5a4bb91d4585.setContent(html_8bd29bbb527dc2863c59a376eb2a6188);
+            
+        
+
+        regular_polygon_marker_7b00af6873edce57dc91695eb8fbfe29.bindPopup(popup_0b0824676ecd5572594a5a4bb91d4585)
+        ;
+
+        
+    
+    
+            feature_group_052ad89d72abd8ad336649c78d0c2dee.addTo(map_f45507563aba3d638d2a89f2e30c202b);
+        
+    
+            var feature_group_fbefdb4782275a69a50b8b6175a8f7b6 = L.featureGroup(
+                {}
+            );
+        
+    
+            var regular_polygon_marker_c6f4f16907d8acc0d8070f33c51c6ef7 = new L.RegularPolygonMarker(
+                [-10.6667, -77.8333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_8a6b0b90039e6e41e7de0785a7980abf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_84dbfcb9ffa909eab0bb868aa3353ad3 = $(`<div id="html_84dbfcb9ffa909eab0bb868aa3353ad3" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Paramonga</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -10.6667<br>                     Lon: -77.8333                 </div>             </div>`)[0];
+                popup_8a6b0b90039e6e41e7de0785a7980abf.setContent(html_84dbfcb9ffa909eab0bb868aa3353ad3);
+            
+        
+
+        regular_polygon_marker_c6f4f16907d8acc0d8070f33c51c6ef7.bindPopup(popup_8a6b0b90039e6e41e7de0785a7980abf)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_ea07e2b8a5f1c774aa1be703d91494dd = new L.RegularPolygonMarker(
+                [-11.1167, -77.6167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_d31951af11f6b58e5c2bc5f438b7c8be = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42b71354ca4b24de443e9fc567254007 = $(`<div id="html_42b71354ca4b24de443e9fc567254007" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Huacho</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -11.1167<br>                     Lon: -77.6167                 </div>             </div>`)[0];
+                popup_d31951af11f6b58e5c2bc5f438b7c8be.setContent(html_42b71354ca4b24de443e9fc567254007);
+            
+        
+
+        regular_polygon_marker_ea07e2b8a5f1c774aa1be703d91494dd.bindPopup(popup_d31951af11f6b58e5c2bc5f438b7c8be)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_1f2dc3511401644172453507523a5500 = new L.RegularPolygonMarker(
+                [-11.95, -77.1167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_3f84a7128ac75fb68931faef5c7fe502 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98e5042bb78c158dbfca2870f822356e = $(`<div id="html_98e5042bb78c158dbfca2870f822356e" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Zapallal</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -11.9500<br>                     Lon: -77.1167                 </div>             </div>`)[0];
+                popup_3f84a7128ac75fb68931faef5c7fe502.setContent(html_98e5042bb78c158dbfca2870f822356e);
+            
+        
+
+        regular_polygon_marker_1f2dc3511401644172453507523a5500.bindPopup(popup_3f84a7128ac75fb68931faef5c7fe502)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_e46b4a1df123a3c8b082e73083f200a3 = new L.RegularPolygonMarker(
+                [-12.15, -76.9833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_51752a5aa021517d3e47ccc7a281c841 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f94781f24e3052387453994df1192149 = $(`<div id="html_f94781f24e3052387453994df1192149" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE San Juan</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -12.1500<br>                     Lon: -76.9833                 </div>             </div>`)[0];
+                popup_51752a5aa021517d3e47ccc7a281c841.setContent(html_f94781f24e3052387453994df1192149);
+            
+        
+
+        regular_polygon_marker_e46b4a1df123a3c8b082e73083f200a3.bindPopup(popup_51752a5aa021517d3e47ccc7a281c841)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_35af4ef934c5137dcec99590284ead88 = new L.RegularPolygonMarker(
+                [-13.7167, -76.2167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_c450412db2cc59e790593fe233085e1e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_21df95e72284a4a8a702f15166ede679 = $(`<div id="html_21df95e72284a4a8a702f15166ede679" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Independencia</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Ica<br>                     <b>Ubicación:</b><br>                     Lat: -13.7167<br>                     Lon: -76.2167                 </div>             </div>`)[0];
+                popup_c450412db2cc59e790593fe233085e1e.setContent(html_21df95e72284a4a8a702f15166ede679);
+            
+        
+
+        regular_polygon_marker_35af4ef934c5137dcec99590284ead88.bindPopup(popup_c450412db2cc59e790593fe233085e1e)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_af4a919e619cdda2daa3004f4b5003c1 = new L.RegularPolygonMarker(
+                [-14.8333, -74.95],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_806fcd42c561e71e30e614ad3524bbc8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8d701b4c438049e6a44149bd902ce81 = $(`<div id="html_b8d701b4c438049e6a44149bd902ce81" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Poroma</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Ica<br>                     <b>Ubicación:</b><br>                     Lat: -14.8333<br>                     Lon: -74.9500                 </div>             </div>`)[0];
+                popup_806fcd42c561e71e30e614ad3524bbc8.setContent(html_b8d701b4c438049e6a44149bd902ce81);
+            
+        
+
+        regular_polygon_marker_af4a919e619cdda2daa3004f4b5003c1.bindPopup(popup_806fcd42c561e71e30e614ad3524bbc8)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_0189fd1686add31f47c5d5dd7eaf787d = new L.RegularPolygonMarker(
+                [-16.4333, -73.1167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_f74d730bf67dd9308baccb92935c3e91 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_caa2f5a767777a8a58b3783c259bf7f5 = $(`<div id="html_caa2f5a767777a8a58b3783c259bf7f5" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Ocoña</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Ubicación:</b><br>                     Lat: -16.4333<br>                     Lon: -73.1167                 </div>             </div>`)[0];
+                popup_f74d730bf67dd9308baccb92935c3e91.setContent(html_caa2f5a767777a8a58b3783c259bf7f5);
+            
+        
+
+        regular_polygon_marker_0189fd1686add31f47c5d5dd7eaf787d.bindPopup(popup_f74d730bf67dd9308baccb92935c3e91)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_07ff4174b200eff1fe08734a27ee34b1 = new L.RegularPolygonMarker(
+                [-16.45, -71.5333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_fbefdb4782275a69a50b8b6175a8f7b6);
+        
+    
+        var popup_5bd38902070a8142cfbb0607dee88403 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3f51642620c7fbc3a0a290fb62b17ed = $(`<div id="html_f3f51642620c7fbc3a0a290fb62b17ed" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Socabaya</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Ubicación:</b><br>                     Lat: -16.4500<br>                     Lon: -71.5333                 </div>             </div>`)[0];
+                popup_5bd38902070a8142cfbb0607dee88403.setContent(html_f3f51642620c7fbc3a0a290fb62b17ed);
+            
+        
+
+        regular_polygon_marker_07ff4174b200eff1fe08734a27ee34b1.bindPopup(popup_5bd38902070a8142cfbb0607dee88403)
+        ;
+
+        
+    
+    
+            feature_group_fbefdb4782275a69a50b8b6175a8f7b6.addTo(map_f45507563aba3d638d2a89f2e30c202b);
+        
+    
+            var feature_group_4a784d80a04137b9afac860e97fe43e8 = L.featureGroup(
+                {}
+            );
+        
+    
+            var regular_polygon_marker_4584197300370e0beb36d4bb29ed259e = new L.RegularPolygonMarker(
+                [-8.1, -79.0167],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_9800e525cab75d971c6f8b8965ed98b4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c8b26c8d54bf8f217d47d1b73aedfe8d = $(`<div id="html_c8b26c8d54bf8f217d47d1b73aedfe8d" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Trujillo Norte</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> La Libertad<br>                     <b>Ubicación:</b><br>                     Lat: -8.1000<br>                     Lon: -79.0167                 </div>             </div>`)[0];
+                popup_9800e525cab75d971c6f8b8965ed98b4.setContent(html_c8b26c8d54bf8f217d47d1b73aedfe8d);
+            
+        
+
+        regular_polygon_marker_4584197300370e0beb36d4bb29ed259e.bindPopup(popup_9800e525cab75d971c6f8b8965ed98b4)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_430f420bcc23b6e2b746038401d1e252 = new L.RegularPolygonMarker(
+                [-9.0833, -78.5833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_bca8ae799186c8c2526f4053122cbcd7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6900ac6ffd536e9fdad8d57a1cdaf505 = $(`<div id="html_6900ac6ffd536e9fdad8d57a1cdaf505" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Chimbote 1</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Ancash<br>                     <b>Ubicación:</b><br>                     Lat: -9.0833<br>                     Lon: -78.5833                 </div>             </div>`)[0];
+                popup_bca8ae799186c8c2526f4053122cbcd7.setContent(html_6900ac6ffd536e9fdad8d57a1cdaf505);
+            
+        
+
+        regular_polygon_marker_430f420bcc23b6e2b746038401d1e252.bindPopup(popup_bca8ae799186c8c2526f4053122cbcd7)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_1b39f78c1255b1e591ff7245716fe852 = new L.RegularPolygonMarker(
+                [-10.0833, -78.15],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_9761a0e7ab0c80dbac7de312b346bd17 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4e8d3f9051059f147cf89f7907187608 = $(`<div id="html_4e8d3f9051059f147cf89f7907187608" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Huarmey</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Ancash<br>                     <b>Ubicación:</b><br>                     Lat: -10.0833<br>                     Lon: -78.1500                 </div>             </div>`)[0];
+                popup_9761a0e7ab0c80dbac7de312b346bd17.setContent(html_4e8d3f9051059f147cf89f7907187608);
+            
+        
+
+        regular_polygon_marker_1b39f78c1255b1e591ff7245716fe852.bindPopup(popup_9761a0e7ab0c80dbac7de312b346bd17)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_c8f4059971ba9326d4ff9a1473c1a48d = new L.RegularPolygonMarker(
+                [-12.05, -77.1333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_8d06a2f836b5af3f0469da59b1896316 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0e83949d273e9d8daf3069cd4ea7f1fa = $(`<div id="html_0e83949d273e9d8daf3069cd4ea7f1fa" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Callao</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -12.0500<br>                     Lon: -77.1333                 </div>             </div>`)[0];
+                popup_8d06a2f836b5af3f0469da59b1896316.setContent(html_0e83949d273e9d8daf3069cd4ea7f1fa);
+            
+        
+
+        regular_polygon_marker_c8f4059971ba9326d4ff9a1473c1a48d.bindPopup(popup_8d06a2f836b5af3f0469da59b1896316)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_a93bf91b04cf074d42e3d1d179367b7e = new L.RegularPolygonMarker(
+                [-12.0333, -76.9667],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_95f8aba491fdf73f42308a2d3f350c23 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a842df586b9dd4d8537803cdd81a36e = $(`<div id="html_4a842df586b9dd4d8537803cdd81a36e" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Santa Rosa</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Lima<br>                     <b>Ubicación:</b><br>                     Lat: -12.0333<br>                     Lon: -76.9667                 </div>             </div>`)[0];
+                popup_95f8aba491fdf73f42308a2d3f350c23.setContent(html_4a842df586b9dd4d8537803cdd81a36e);
+            
+        
+
+        regular_polygon_marker_a93bf91b04cf074d42e3d1d179367b7e.bindPopup(popup_95f8aba491fdf73f42308a2d3f350c23)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_538ee7005d974cd6d2616d42c873842d = new L.RegularPolygonMarker(
+                [-14.0667, -75.7333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_e8b55ef31481ed8d24136c2fee61ec00 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dc88760e6ff19d57b39bfdae39ab0555 = $(`<div id="html_dc88760e6ff19d57b39bfdae39ab0555" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Ica</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Ica<br>                     <b>Ubicación:</b><br>                     Lat: -14.0667<br>                     Lon: -75.7333                 </div>             </div>`)[0];
+                popup_e8b55ef31481ed8d24136c2fee61ec00.setContent(html_dc88760e6ff19d57b39bfdae39ab0555);
+            
+        
+
+        regular_polygon_marker_538ee7005d974cd6d2616d42c873842d.bindPopup(popup_e8b55ef31481ed8d24136c2fee61ec00)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_d63a4371cd229e647468599fd0a9c8ec = new L.RegularPolygonMarker(
+                [-17.0333, -72.0167],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "numberOfSides": 4, "opacity": 1.0, "radius": 8, "rotation": 0, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4a784d80a04137b9afac860e97fe43e8);
+        
+    
+        var popup_da7248d710735d757ba7e13363e41112 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ed5b30bc02a72d4db2fe094e01a6be6 = $(`<div id="html_9ed5b30bc02a72d4db2fe094e01a6be6" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 200px;">                     <h4>SE SE Mollendo</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Ubicación:</b><br>                     Lat: -17.0333<br>                     Lon: -72.0167                 </div>             </div>`)[0];
+                popup_da7248d710735d757ba7e13363e41112.setContent(html_9ed5b30bc02a72d4db2fe094e01a6be6);
+            
+        
+
+        regular_polygon_marker_d63a4371cd229e647468599fd0a9c8ec.bindPopup(popup_da7248d710735d757ba7e13363e41112)
+        ;
+
+        
+    
+    
+            feature_group_4a784d80a04137b9afac860e97fe43e8.addTo(map_f45507563aba3d638d2a89f2e30c202b);
+        
+</script>
+</html>

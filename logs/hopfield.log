@@ -1,0 +1,194 @@
+2024-11-20 23:20:13,605 - hopfield - INFO - Red inicializada con 16 nodos
+2024-11-20 23:20:13,605 - hopfield - INFO - Iniciando optimización...
+2024-11-20 23:20:13,606 - hopfield - INFO - Convergencia alcanzada en iteración 1
+2024-11-21 11:38:58,735 - hopfield - INFO - Red inicializada con 16 nodos
+2024-11-21 11:38:58,735 - hopfield - INFO - Iniciando optimización...
+2024-11-21 11:38:58,736 - hopfield - INFO - Convergencia alcanzada en iteración 1
+2024-11-21 12:34:57,833 - hopfield - INFO - Iniciando optimización de sitios...
+2024-11-21 12:34:57,877 - hopfield - INFO - Iteración 0: Energía = 775.88, Sitios seleccionados = 5
+2024-11-21 12:34:57,886 - hopfield - INFO - Iteración 100: Energía = 156.03, Sitios seleccionados = 1
+2024-11-21 12:34:57,894 - hopfield - INFO - Iteración 200: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,902 - hopfield - INFO - Iteración 300: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,910 - hopfield - INFO - Iteración 400: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,919 - hopfield - INFO - Iteración 500: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,928 - hopfield - INFO - Iteración 600: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,937 - hopfield - INFO - Iteración 700: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,946 - hopfield - INFO - Iteración 800: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:34:57,954 - hopfield - INFO - Iteración 900: Energía = 0.00, Sitios seleccionados = 0
+2024-11-21 12:38:39,925 - hopfield - INFO - Iniciando optimización de sitios...
+2024-11-21 12:38:39,969 - hopfield - INFO - Iteración 0: Energía = -62128.16, Sitios seleccionados = 4
+2024-11-21 12:38:39,984 - hopfield - INFO - Iteración 100: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,004 - hopfield - INFO - Iteración 200: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,023 - hopfield - INFO - Iteración 300: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,041 - hopfield - INFO - Iteración 400: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,060 - hopfield - INFO - Iteración 500: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,078 - hopfield - INFO - Iteración 600: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,097 - hopfield - INFO - Iteración 700: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,115 - hopfield - INFO - Iteración 800: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 12:38:40,134 - hopfield - INFO - Iteración 900: Energía = -407757.87, Sitios seleccionados = 28
+2024-11-21 13:50:20,795 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 13:54:54,916 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 13:54:54,920 - hopfield - INFO - Iteración 0: 4 sitios seleccionados, Energía: 597.9769
+2024-11-21 13:54:54,928 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.1618
+2024-11-21 13:54:54,932 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.1618
+2024-11-21 13:54:54,937 - hopfield - INFO - Iteración 300: 0 sitios seleccionados, Energía: 0.0000
+2024-11-21 13:54:54,943 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:54:54,947 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:54:54,952 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:54:54,956 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:54:54,964 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:54:54,971 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 13:57:54,319 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 13:57:54,324 - hopfield - INFO - Iteración 0: 3 sitios seleccionados, Energía: 298.2505
+2024-11-21 13:57:54,330 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,335 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,340 - hopfield - INFO - Iteración 300: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,344 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,349 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,354 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,358 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,363 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 13:57:54,368 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.3782
+2024-11-21 14:07:26,520 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 14:07:26,524 - hopfield - INFO - Iteración 0: 2 sitios seleccionados, Energía: 99.3396
+2024-11-21 14:07:26,528 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,533 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,537 - hopfield - INFO - Iteración 300: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,541 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,546 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,553 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,561 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,569 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:07:26,578 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.4070
+2024-11-21 14:10:41,659 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 14:10:41,663 - hopfield - INFO - Iteración 0: 3 sitios seleccionados, Energía: 298.7332
+2024-11-21 14:10:41,668 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,672 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,676 - hopfield - INFO - Iteración 300: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,681 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,685 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,689 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,694 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,698 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:10:41,703 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.6223
+2024-11-21 14:13:17,487 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 14:13:17,491 - hopfield - INFO - Iteración 0: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,496 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,501 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,506 - hopfield - INFO - Iteración 300: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,510 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,515 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,520 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,525 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,530 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:13:17,535 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.9090
+2024-11-21 14:15:47,167 - hopfield - INFO - Iniciando optimización con red de Hopfield...
+2024-11-21 14:15:47,173 - hopfield - INFO - Iteración 0: 5 sitios seleccionados, Energía: 998.0761
+2024-11-21 14:15:47,180 - hopfield - INFO - Iteración 100: 1 sitios seleccionados, Energía: -0.1618
+2024-11-21 14:15:47,185 - hopfield - INFO - Iteración 200: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,190 - hopfield - INFO - Iteración 300: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,196 - hopfield - INFO - Iteración 400: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,200 - hopfield - INFO - Iteración 500: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,206 - hopfield - INFO - Iteración 600: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,211 - hopfield - INFO - Iteración 700: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,216 - hopfield - INFO - Iteración 800: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:15:47,220 - hopfield - INFO - Iteración 900: 1 sitios seleccionados, Energía: -0.3828
+2024-11-21 14:36:02,653 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 14:36:02,653 - hopfield - INFO - Iteración 0: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,657 - hopfield - INFO - Iteración 100: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,660 - hopfield - INFO - Iteración 200: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,662 - hopfield - INFO - Iteración 300: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,665 - hopfield - INFO - Iteración 400: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,668 - hopfield - INFO - Iteración 500: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,671 - hopfield - INFO - Iteración 600: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,674 - hopfield - INFO - Iteración 700: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,677 - hopfield - INFO - Iteración 800: Energía = -0.7000, Sitios = 1
+2024-11-21 14:36:02,680 - hopfield - INFO - Iteración 900: Energía = -0.7000, Sitios = 1
+2024-11-21 14:37:32,680 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 14:37:32,681 - hopfield - INFO - Iteración 0: Energía = 99.1000, Sitios = 2
+2024-11-21 14:37:32,684 - hopfield - INFO - Iteración 100: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,687 - hopfield - INFO - Iteración 200: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,689 - hopfield - INFO - Iteración 300: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,692 - hopfield - INFO - Iteración 400: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,695 - hopfield - INFO - Iteración 500: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,698 - hopfield - INFO - Iteración 600: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,700 - hopfield - INFO - Iteración 700: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,703 - hopfield - INFO - Iteración 800: Energía = -0.8000, Sitios = 1
+2024-11-21 14:37:32,706 - hopfield - INFO - Iteración 900: Energía = -0.8000, Sitios = 1
+2024-11-21 16:36:00,840 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:36:00,841 - hopfield - INFO - Iteración 0: Energía = 298.7000, Sitios = 3
+2024-11-21 16:36:00,844 - hopfield - INFO - Iteración 100: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,847 - hopfield - INFO - Iteración 200: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,850 - hopfield - INFO - Iteración 300: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,852 - hopfield - INFO - Iteración 400: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,855 - hopfield - INFO - Iteración 500: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,858 - hopfield - INFO - Iteración 600: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,861 - hopfield - INFO - Iteración 700: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,863 - hopfield - INFO - Iteración 800: Energía = -0.5000, Sitios = 1
+2024-11-21 16:36:00,866 - hopfield - INFO - Iteración 900: Energía = -0.5000, Sitios = 1
+2024-11-21 16:38:43,799 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:38:43,800 - hopfield - INFO - Iteración 0: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,803 - hopfield - INFO - Iteración 100: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,805 - hopfield - INFO - Iteración 200: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,808 - hopfield - INFO - Iteración 300: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,810 - hopfield - INFO - Iteración 400: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,813 - hopfield - INFO - Iteración 500: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,816 - hopfield - INFO - Iteración 600: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,818 - hopfield - INFO - Iteración 700: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,821 - hopfield - INFO - Iteración 800: Energía = -0.9000, Sitios = 1
+2024-11-21 16:38:43,823 - hopfield - INFO - Iteración 900: Energía = -0.9000, Sitios = 1
+2024-11-21 16:42:48,153 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:42:48,153 - hopfield - INFO - Iteración 0: Energía = 0.0000, Sitios = 0
+2024-11-21 16:42:48,156 - hopfield - INFO - Iteración 100: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,159 - hopfield - INFO - Iteración 200: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,163 - hopfield - INFO - Iteración 300: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,166 - hopfield - INFO - Iteración 400: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,169 - hopfield - INFO - Iteración 500: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,172 - hopfield - INFO - Iteración 600: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,174 - hopfield - INFO - Iteración 700: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,178 - hopfield - INFO - Iteración 800: Energía = -0.4000, Sitios = 1
+2024-11-21 16:42:48,182 - hopfield - INFO - Iteración 900: Energía = -0.4000, Sitios = 1
+2024-11-21 16:45:21,437 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:45:21,437 - hopfield - INFO - Iteración 0: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,440 - hopfield - INFO - Iteración 100: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,443 - hopfield - INFO - Iteración 200: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,447 - hopfield - INFO - Iteración 300: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,450 - hopfield - INFO - Iteración 400: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,452 - hopfield - INFO - Iteración 500: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,455 - hopfield - INFO - Iteración 600: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,458 - hopfield - INFO - Iteración 700: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,462 - hopfield - INFO - Iteración 800: Energía = -0.9000, Sitios = 1
+2024-11-21 16:45:21,465 - hopfield - INFO - Iteración 900: Energía = -0.9000, Sitios = 1
+2024-11-21 16:47:29,461 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:47:29,461 - hopfield - INFO - Iteración 0: Energía = -0.5000, Sitios = 1
+2024-11-21 16:47:29,464 - hopfield - INFO - Iteración 100: Energía = -0.5000, Sitios = 1
+2024-11-21 16:47:29,467 - hopfield - INFO - Iteración 200: Energía = -0.5000, Sitios = 1
+2024-11-21 16:47:29,469 - hopfield - INFO - Iteración 300: Energía = -0.5000, Sitios = 1
+2024-11-21 16:47:29,472 - hopfield - INFO - Iteración 400: Energía = -0.5000, Sitios = 1
+2024-11-21 16:47:29,475 - hopfield - INFO - Iteración 500: Energía = -0.8000, Sitios = 1
+2024-11-21 16:47:29,478 - hopfield - INFO - Iteración 600: Energía = -0.8000, Sitios = 1
+2024-11-21 16:47:29,480 - hopfield - INFO - Iteración 700: Energía = -0.8000, Sitios = 1
+2024-11-21 16:47:29,483 - hopfield - INFO - Iteración 800: Energía = -0.8000, Sitios = 1
+2024-11-21 16:47:29,486 - hopfield - INFO - Iteración 900: Energía = -0.8000, Sitios = 1
+2024-11-21 16:49:32,447 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:49:32,448 - hopfield - INFO - Iteración 0: Energía = 297.7000, Sitios = 3
+2024-11-21 16:49:32,451 - hopfield - INFO - Iteración 100: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,454 - hopfield - INFO - Iteración 200: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,457 - hopfield - INFO - Iteración 300: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,459 - hopfield - INFO - Iteración 400: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,462 - hopfield - INFO - Iteración 500: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,465 - hopfield - INFO - Iteración 600: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,467 - hopfield - INFO - Iteración 700: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,470 - hopfield - INFO - Iteración 800: Energía = -1.0000, Sitios = 1
+2024-11-21 16:49:32,473 - hopfield - INFO - Iteración 900: Energía = -1.0000, Sitios = 1
+2024-11-21 16:52:17,563 - hopfield - INFO - Red Hopfield inicializada: 11 sitios, distancia mín: 50.0km
+2024-11-21 16:52:17,563 - hopfield - INFO - Iteración 0: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,566 - hopfield - INFO - Iteración 100: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,570 - hopfield - INFO - Iteración 200: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,572 - hopfield - INFO - Iteración 300: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,575 - hopfield - INFO - Iteración 400: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,578 - hopfield - INFO - Iteración 500: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,581 - hopfield - INFO - Iteración 600: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,583 - hopfield - INFO - Iteración 700: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,586 - hopfield - INFO - Iteración 800: Energía = -0.7000, Sitios = 1
+2024-11-21 16:52:17,589 - hopfield - INFO - Iteración 900: Energía = -0.7000, Sitios = 1

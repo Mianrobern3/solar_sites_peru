@@ -1,0 +1,2550 @@
+2024-11-20 23:19:36,148 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-20 23:20:13,631 - main - INFO - 
+Resultados finales:
+2024-11-20 23:20:13,631 - main - INFO - Total de sitios analizados: 16
+2024-11-20 23:20:13,631 - main - INFO - Sitios seleccionados: 4
+2024-11-20 23:20:13,631 - main - INFO - Energía final del sistema: -4.0000
+2024-11-20 23:20:13,631 - main - INFO - 
+Detalles de sitios seleccionados:
+2024-11-20 23:20:13,631 - main - INFO - Sitio 2:
+2024-11-20 23:20:13,631 - main - INFO -   Ubicación: (-12.0000, -76.0000)
+2024-11-20 23:20:13,631 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-20 23:20:13,632 - main - INFO - Sitio 3:
+2024-11-20 23:20:13,632 - main - INFO -   Ubicación: (-12.0000, -75.5000)
+2024-11-20 23:20:13,632 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-20 23:20:13,632 - main - INFO - Sitio 6:
+2024-11-20 23:20:13,632 - main - INFO -   Ubicación: (-11.5000, -76.0000)
+2024-11-20 23:20:13,632 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-20 23:20:13,632 - main - INFO - Sitio 7:
+2024-11-20 23:20:13,632 - main - INFO -   Ubicación: (-11.5000, -75.5000)
+2024-11-20 23:20:13,633 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-21 11:38:13,208 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 11:38:58,765 - main - INFO - 
+Resultados finales:
+2024-11-21 11:38:58,765 - main - INFO - Total de sitios analizados: 16
+2024-11-21 11:38:58,765 - main - INFO - Sitios seleccionados: 4
+2024-11-21 11:38:58,765 - main - INFO - Energía final del sistema: -4.0000
+2024-11-21 11:38:58,765 - main - INFO - 
+Detalles de sitios seleccionados:
+2024-11-21 11:38:58,766 - main - INFO - Sitio 2:
+2024-11-21 11:38:58,766 - main - INFO -   Ubicación: (-12.0000, -76.0000)
+2024-11-21 11:38:58,766 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-21 11:38:58,766 - main - INFO - Sitio 3:
+2024-11-21 11:38:58,766 - main - INFO -   Ubicación: (-12.0000, -75.5000)
+2024-11-21 11:38:58,766 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-21 11:38:58,766 - main - INFO - Sitio 6:
+2024-11-21 11:38:58,766 - main - INFO -   Ubicación: (-11.5000, -76.0000)
+2024-11-21 11:38:58,767 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-21 11:38:58,767 - main - INFO - Sitio 7:
+2024-11-21 11:38:58,767 - main - INFO -   Ubicación: (-11.5000, -75.5000)
+2024-11-21 11:38:58,767 - main - INFO -   GHI: 191.11 kWh/m²/día
+2024-11-21 11:38:58,767 - main - INFO - Creando visualización...
+2024-11-21 11:38:58,791 - main - INFO - 
+Puedes ver el mapa en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 11:42:24,383 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 11:43:28,528 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 11:44:12,041 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 11:48:00,887 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 11:48:00,889 - main - ERROR - No se pudieron obtener datos solares
+2024-11-21 11:53:43,617 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 12:11:37,104 - main - ERROR - No se pudieron obtener datos solares
+2024-11-21 12:13:38,993 - main - INFO - Iniciando análisis de sitios solares en Perú
+2024-11-21 12:14:34,998 - main - INFO - 
+Proceso interrumpido por el usuario
+2024-11-21 12:14:36,913 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:14:36,913 - main - INFO - Modo: Prueba con puntos específicos
+2024-11-21 12:14:45,091 - main - INFO - 
+Resultados obtenidos:
+2024-11-21 12:14:45,091 - main - INFO - Total de sitios válidos: 2
+2024-11-21 12:14:45,092 - main - INFO - 
+Sitio 1:
+2024-11-21 12:14:45,092 - main - INFO -   Ubicación: (-12.0464, -77.0428)
+2024-11-21 12:14:45,092 - main - INFO -   GHI: -156.05 kWh/m²/día
+2024-11-21 12:14:45,092 - main - INFO - 
+Sitio 2:
+2024-11-21 12:14:45,092 - main - INFO -   Ubicación: (-16.4000, -71.5350)
+2024-11-21 12:14:45,092 - main - INFO -   GHI: -154.30 kWh/m²/día
+2024-11-21 12:15:56,274 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:15:56,275 - main - INFO - Modo: Prueba con puntos específicos
+2024-11-21 12:16:03,841 - main - INFO - 
+Resultados obtenidos:
+2024-11-21 12:16:03,841 - main - INFO - Total de sitios válidos: 2
+2024-11-21 12:16:03,842 - main - INFO - 
+Sitio 1:
+2024-11-21 12:16:03,842 - main - INFO -   Ubicación: (-12.0464, -77.0428)
+2024-11-21 12:16:03,842 - main - INFO -   GHI: -156.05 kWh/m²/día
+2024-11-21 12:16:03,842 - main - INFO - 
+Sitio 2:
+2024-11-21 12:16:03,842 - main - INFO -   Ubicación: (-16.4000, -71.5350)
+2024-11-21 12:16:03,843 - main - INFO -   GHI: -154.30 kWh/m²/día
+2024-11-21 12:18:28,513 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:18:36,522 - main - INFO - Datos guardados en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites.geojson
+2024-11-21 12:18:36,533 - main - INFO - 
+Estadísticas:
+2024-11-21 12:18:36,533 - main - INFO - Total de sitios: 2
+2024-11-21 12:18:36,533 - main - INFO - GHI promedio: -155.17 kWh/m²/día
+2024-11-21 12:18:36,533 - main - INFO - GHI máximo: -154.30 kWh/m²/día
+2024-11-21 12:18:36,533 - main - INFO - GHI mínimo: -156.05 kWh/m²/día
+2024-11-21 12:25:32,053 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:25:40,368 - main - INFO - Datos guardados en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites.geojson
+2024-11-21 12:25:40,385 - main - INFO - 
+Estadísticas:
+2024-11-21 12:25:40,385 - main - INFO - Total de sitios: 2
+2024-11-21 12:25:40,385 - main - INFO - GHI promedio: -155.17 kWh/m²/día
+2024-11-21 12:25:40,385 - main - INFO - GHI máximo: -154.30 kWh/m²/día
+2024-11-21 12:25:40,385 - main - INFO - GHI mínimo: -156.05 kWh/m²/día
+2024-11-21 12:28:59,855 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:30:14,327 - main - INFO - Datos guardados en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites.geojson
+2024-11-21 12:30:14,386 - main - INFO - 
+Estadísticas:
+2024-11-21 12:30:14,386 - main - INFO - Total de sitios: 28
+2024-11-21 12:30:14,386 - main - INFO - GHI promedio: -155.63 kWh/m²/día
+2024-11-21 12:30:14,386 - main - INFO - GHI máximo: -154.30 kWh/m²/día
+2024-11-21 12:30:14,386 - main - INFO - GHI mínimo: -157.11 kWh/m²/día
+2024-11-21 12:33:44,227 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:34:57,989 - main - INFO - Datos guardados en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites.geojson
+2024-11-21 12:34:58,035 - main - INFO - 
+Estadísticas:
+2024-11-21 12:34:58,035 - main - INFO - Total de sitios: 28
+2024-11-21 12:34:58,036 - main - INFO - GHI promedio: -155.63 kWh/m²/día
+2024-11-21 12:34:58,036 - main - INFO - GHI máximo: -154.30 kWh/m²/día
+2024-11-21 12:34:58,036 - main - INFO - GHI mínimo: -157.11 kWh/m²/día
+2024-11-21 12:37:25,283 - main - INFO - === Iniciando análisis de sitios solares en Perú ===
+2024-11-21 12:38:40,184 - main - INFO - Datos guardados en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites.geojson
+2024-11-21 12:38:40,230 - main - INFO - 
+Estadísticas:
+2024-11-21 12:38:40,231 - main - INFO - Total de sitios: 28
+2024-11-21 12:38:40,231 - main - INFO - GHI promedio: -155.63 kWh/m²/día
+2024-11-21 12:38:40,231 - main - INFO - GHI máximo: -154.30 kWh/m²/día
+2024-11-21 12:38:40,231 - main - INFO - GHI mínimo: -157.11 kWh/m²/día
+2024-11-21 12:44:37,303 - main - INFO - 
+Subestaciones por nivel de tensión:
+2024-11-21 12:44:37,303 - main - INFO - 
+500 kV (3 subestaciones):
+2024-11-21 12:44:37,303 - main - INFO -   - SE Chilca (Lima)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Marcona (Ica)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Montalvo (Arequipa)
+2024-11-21 12:44:37,303 - main - INFO - 
+220 kV (8 subestaciones):
+2024-11-21 12:44:37,303 - main - INFO -   - SE Paramonga (Lima)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Huacho (Lima)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Zapallal (Lima)
+2024-11-21 12:44:37,303 - main - INFO -   - SE San Juan (Lima)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Independencia (Ica)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Poroma (Ica)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Ocoña (Arequipa)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Socabaya (Arequipa)
+2024-11-21 12:44:37,303 - main - INFO - 
+138 kV (7 subestaciones):
+2024-11-21 12:44:37,303 - main - INFO -   - SE Trujillo Norte (La Libertad)
+2024-11-21 12:44:37,303 - main - INFO -   - SE Chimbote 1 (Ancash)
+2024-11-21 12:44:37,304 - main - INFO -   - SE Huarmey (Ancash)
+2024-11-21 12:44:37,304 - main - INFO -   - SE Callao (Lima)
+2024-11-21 12:44:37,304 - main - INFO -   - SE Santa Rosa (Lima)
+2024-11-21 12:44:37,304 - main - INFO -   - SE Ica (Ica)
+2024-11-21 12:44:37,304 - main - INFO -   - SE Mollendo (Arequipa)
+2024-11-21 12:48:37,256 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 12:48:37,256 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 12:48:37,256 - main - INFO - Total de Subestaciones: 18
+2024-11-21 12:48:37,256 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 12:48:37,256 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 12:48:37,256 - main - INFO -   220 kV: 8 subestaciones
+2024-11-21 12:48:37,257 - main - INFO -   138 kV: 7 subestaciones
+2024-11-21 12:48:37,257 - main - INFO - 
+Distribución por Región:
+2024-11-21 12:48:37,257 - main - INFO -   Arequipa: 4 subestaciones
+2024-11-21 12:48:37,257 - main - INFO -   Ancash: 2 subestaciones
+2024-11-21 12:48:37,257 - main - INFO -   Lima: 7 subestaciones
+2024-11-21 12:48:37,257 - main - INFO -   Ica: 4 subestaciones
+2024-11-21 12:48:37,257 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 12:48:37,257 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 12:48:37,266 - main - ERROR - Error durante la ejecución: module 'folium.plugins' has no attribute 'Scale'
+2024-11-21 12:49:13,418 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 12:49:13,418 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 12:49:13,418 - main - INFO - Total de Subestaciones: 18
+2024-11-21 12:49:13,418 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 12:49:13,419 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   220 kV: 8 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   138 kV: 7 subestaciones
+2024-11-21 12:49:13,419 - main - INFO - 
+Distribución por Región:
+2024-11-21 12:49:13,419 - main - INFO -   Lima: 7 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   Arequipa: 4 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   Ica: 4 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   Ancash: 2 subestaciones
+2024-11-21 12:49:13,419 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 12:49:13,419 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 12:49:13,429 - main - ERROR - Error durante la ejecución: module 'folium.plugins' has no attribute 'Scale'
+2024-11-21 12:52:46,419 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 12:52:46,419 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 12:52:46,419 - main - INFO - Total de Subestaciones: 18
+2024-11-21 12:52:46,419 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 12:52:46,419 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   220 kV: 8 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   138 kV: 7 subestaciones
+2024-11-21 12:52:46,420 - main - INFO - 
+Distribución por Región:
+2024-11-21 12:52:46,420 - main - INFO -   Lima: 7 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   Arequipa: 4 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   Ica: 4 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 12:52:46,420 - main - INFO -   Ancash: 2 subestaciones
+2024-11-21 12:52:46,420 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 12:52:46,429 - main - ERROR - Error durante la ejecución: module 'folium' has no attribute 'Scale'
+2024-11-21 12:54:02,866 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 12:54:02,866 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 12:54:02,866 - main - INFO - Total de Subestaciones: 18
+2024-11-21 12:54:02,867 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 12:54:02,867 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 12:54:02,867 - main - INFO -   220 kV: 8 subestaciones
+2024-11-21 12:54:02,867 - main - INFO -   138 kV: 7 subestaciones
+2024-11-21 12:54:02,867 - main - INFO - 
+Distribución por Región:
+2024-11-21 12:54:02,867 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 12:54:02,867 - main - INFO -   Ancash: 2 subestaciones
+2024-11-21 12:54:02,867 - main - INFO -   Lima: 7 subestaciones
+2024-11-21 12:54:02,867 - main - INFO -   Arequipa: 4 subestaciones
+2024-11-21 12:54:02,868 - main - INFO -   Ica: 4 subestaciones
+2024-11-21 12:54:02,868 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 12:54:02,907 - main - INFO - Mapa guardado en: data/processed/subestaciones_peru.html
+2024-11-21 12:54:02,907 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 12:54:02,907 - main - INFO - Abra el archivo 'data/processed/subestaciones_peru.html' en su navegador
+2024-11-21 13:18:52,313 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:18:52,313 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:18:52,314 - main - INFO - Total de Subestaciones: 18
+2024-11-21 13:18:52,314 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:18:52,314 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   220 kV: 8 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   138 kV: 7 subestaciones
+2024-11-21 13:18:52,314 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:18:52,314 - main - INFO -   Ancash: 2 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   Lima: 7 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   Arequipa: 4 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   Ica: 4 subestaciones
+2024-11-21 13:18:52,314 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 13:18:52,314 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:18:52,903 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:18:52,903 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:18:52,903 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:29:57,434 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:30:00,214 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:30:00,214 - main - INFO - Total de Subestaciones: 0
+2024-11-21 13:30:00,214 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:30:00,214 - main - INFO -   500 kV: 0 subestaciones
+2024-11-21 13:30:00,214 - main - INFO -   220 kV: 0 subestaciones
+2024-11-21 13:30:00,215 - main - INFO -   138 kV: 0 subestaciones
+2024-11-21 13:30:00,215 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:30:00,215 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:30:00,735 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:30:00,735 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:30:00,735 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:30:36,763 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:30:39,538 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:30:39,538 - main - INFO - Total de Subestaciones: 0
+2024-11-21 13:30:39,538 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:30:39,538 - main - INFO -   500 kV: 0 subestaciones
+2024-11-21 13:30:39,538 - main - INFO -   220 kV: 0 subestaciones
+2024-11-21 13:30:39,538 - main - INFO -   138 kV: 0 subestaciones
+2024-11-21 13:30:39,538 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:30:39,538 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:30:40,060 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:30:40,060 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:30:40,060 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:31:55,227 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:31:57,667 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:31:57,668 - main - INFO - Total de Subestaciones: 14
+2024-11-21 13:31:57,668 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:31:57,668 - main - INFO -   500 kV: 3 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   220 kV: 6 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   138 kV: 5 subestaciones
+2024-11-21 13:31:57,668 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:31:57,668 - main - INFO -   Ica: 3 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   Ancash: 1 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   La Libertad: 1 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   Arequipa: 3 subestaciones
+2024-11-21 13:31:57,668 - main - INFO -   Lima: 6 subestaciones
+2024-11-21 13:31:57,668 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:31:58,210 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:31:58,210 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:31:58,211 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:38:10,024 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:38:10,025 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:38:10,025 - main - INFO - Total de Subestaciones: 49
+2024-11-21 13:38:10,025 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:38:10,025 - main - INFO -   500 kV: 5 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   220 kV: 21 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   138 kV: 23 subestaciones
+2024-11-21 13:38:10,025 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:38:10,025 - main - INFO -   Lima: 10 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Arequipa: 12 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Moquegua: 6 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Tacna: 6 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Apurimac: 2 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:38:10,025 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:38:10,026 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:38:10,682 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:38:10,683 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:38:10,683 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:40:49,224 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:40:49,225 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:40:49,225 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:40:49,225 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:40:49,226 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:40:49,226 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:40:49,226 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:40:49,226 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:40:49,227 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:40:49,228 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:40:50,190 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:40:50,190 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:40:50,190 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:42:50,626 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:42:50,626 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:42:50,626 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:42:50,626 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:42:50,627 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:42:50,627 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:42:50,627 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:42:50,627 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:42:50,627 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:42:51,320 - main - INFO - Mapa guardado y abierto en: data/processed/sistema_electrico_peru.html
+2024-11-21 13:42:51,320 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:42:51,320 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 13:45:24,669 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:45:24,670 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:45:24,670 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:45:24,670 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:45:24,670 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:45:24,671 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:45:24,671 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:45:24,671 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:45:24,672 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:45:24,673 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:45:24,673 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:45:24,673 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:45:24,673 - main - ERROR - Error durante la ejecución: name 'SolarSiteAnalyzer' is not defined
+2024-11-21 13:49:06,491 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:49:06,492 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:49:06,492 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:49:06,492 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:49:06,492 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:49:06,492 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:49:06,492 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:49:06,492 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:49:06,493 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:49:06,493 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:50:20,803 - main - ERROR - Error durante la ejecución: name 'group_500kv' is not defined
+2024-11-21 13:53:39,676 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:53:39,677 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:53:39,677 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:53:39,677 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:53:39,677 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:53:39,677 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:53:39,677 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:53:39,677 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:53:39,678 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:53:39,679 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:53:39,679 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:54:54,997 - main - ERROR - Error durante la ejecución: name 'create_header' is not defined
+2024-11-21 13:56:40,649 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 13:56:40,650 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 13:56:40,650 - main - INFO - Total de Subestaciones: 168
+2024-11-21 13:56:40,650 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 13:56:40,650 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 13:56:40,651 - main - INFO - 
+Distribución por Región:
+2024-11-21 13:56:40,651 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 13:56:40,651 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 13:56:40,652 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 13:56:40,652 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 13:57:54,629 - main - INFO - Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 13:57:54,629 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 13:57:54,629 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 14:06:09,702 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 14:06:09,703 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 14:06:09,703 - main - INFO - Total de Subestaciones: 168
+2024-11-21 14:06:09,703 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 14:06:09,703 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 14:06:09,703 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 14:06:09,704 - main - INFO - 
+Distribución por Región:
+2024-11-21 14:06:09,704 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 14:06:09,704 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 14:06:09,704 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 14:07:26,905 - main - INFO - Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 14:07:26,905 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 14:07:26,905 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 14:09:24,549 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 14:09:24,550 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 14:09:24,550 - main - INFO - Total de Subestaciones: 168
+2024-11-21 14:09:24,550 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 14:09:24,550 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 14:09:24,550 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 14:09:24,551 - main - INFO - 
+Distribución por Región:
+2024-11-21 14:09:24,551 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 14:09:24,551 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 14:09:24,552 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 14:09:24,552 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 14:10:42,024 - main - INFO - Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 14:10:42,024 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 14:10:42,024 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 14:12:02,782 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 14:12:02,783 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 14:12:02,783 - main - INFO - Total de Subestaciones: 168
+2024-11-21 14:12:02,783 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 14:12:02,783 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 14:12:02,783 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 14:12:02,783 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 14:12:02,784 - main - INFO - 
+Distribución por Región:
+2024-11-21 14:12:02,784 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 14:12:02,784 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 14:12:02,784 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 14:13:17,542 - main - ERROR - Error durante la ejecución: name 'group_solar' is not defined
+2024-11-21 14:14:28,931 - main - INFO - === Sistema de Análisis de Subestaciones Eléctricas ===
+2024-11-21 14:14:28,932 - main - INFO - 
+Estadísticas de la Red:
+2024-11-21 14:14:28,932 - main - INFO - Total de Subestaciones: 168
+2024-11-21 14:14:28,932 - main - INFO - 
+Distribución por Voltaje:
+2024-11-21 14:14:28,932 - main - INFO -   500 kV: 14 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   220 kV: 79 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   138 kV: 75 subestaciones
+2024-11-21 14:14:28,933 - main - INFO - 
+Distribución por Región:
+2024-11-21 14:14:28,933 - main - INFO -   Moquegua: 7 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Tacna: 7 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Huancavelica: 6 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Ancash: 10 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Junin: 12 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Ica: 12 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Madre de Dios: 3 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Piura: 10 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Pasco: 4 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Lima: 23 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Apurimac: 7 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Cajamarca: 7 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Ayacucho: 1 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   La Libertad: 6 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Cusco: 9 subestaciones
+2024-11-21 14:14:28,933 - main - INFO -   Lambayeque: 6 subestaciones
+2024-11-21 14:14:28,934 - main - INFO -   Amazonas: 2 subestaciones
+2024-11-21 14:14:28,934 - main - INFO -   Puno: 12 subestaciones
+2024-11-21 14:14:28,934 - main - INFO -   Tumbes: 4 subestaciones
+2024-11-21 14:14:28,934 - main - INFO -   Huanuco: 3 subestaciones
+2024-11-21 14:14:28,934 - main - INFO -   Arequipa: 17 subestaciones
+2024-11-21 14:14:28,934 - main - INFO - 
+Creando mapa interactivo...
+2024-11-21 14:15:47,511 - main - INFO - Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 14:15:47,512 - main - INFO - 
+Análisis completado exitosamente.
+2024-11-21 14:15:47,512 - main - INFO - Abra el archivo 'data/processed/sistema_electrico_peru.html' en su navegador
+2024-11-21 14:20:50,348 - main - ERROR - Error durante la ejecución: 'MapCreator' object has no attribute '_create_substation_marker'
+2024-11-21 14:29:55,017 - main - ERROR - Error durante la creación del mapa: 'SolarSiteAnalyzer' object has no attribute 'optimize_site_selection'
+2024-11-21 14:29:55,017 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:30:14,309 - main - ERROR - Error durante la creación del mapa: 'SolarSiteAnalyzer' object has no attribute 'optimize_site_selection'
+2024-11-21 14:30:14,310 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:30:24,788 - main - ERROR - Error durante la creación del mapa: 'SolarSiteAnalyzer' object has no attribute 'optimize_site_selection'
+2024-11-21 14:30:24,788 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:30:44,732 - main - ERROR - Error durante la creación del mapa: 'SolarSiteAnalyzer' object has no attribute 'optimize_site_selection'
+2024-11-21 14:30:44,732 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:33:15,529 - main - ERROR - Error durante la creación del mapa: SolarSite.__init__() missing 1 required positional argument: 'radiation'
+2024-11-21 14:33:15,529 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:34:33,592 - main - ERROR - Error durante la creación del mapa: 'SolarSiteAnalyzer' object has no attribute 'optimize_site_selection'
+2024-11-21 14:34:33,592 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:36:02,683 - main - ERROR - Error durante la creación del mapa: 'MapCreator' object has no attribute 'add_solar_site'
+2024-11-21 14:36:02,683 - main - ERROR - No se pudo crear el mapa de análisis
+2024-11-21 14:37:32,745 - main - INFO - Análisis completado. Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 16:36:00,906 - main - INFO - Análisis completado. Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 16:38:43,870 - main - INFO - Análisis completado. Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 16:42:48,145 - main - INFO - Agregando 21 subestaciones al mapa...
+2024-11-21 16:42:48,238 - main - INFO - Análisis completado. Mapa guardado en: data/processed/solar_sites_peru.html
+2024-11-21 16:45:21,425 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:45:21,425 - main - INFO - Inicializando analizadores...
+2024-11-21 16:45:21,426 - main - INFO - Creando mapa base...
+2024-11-21 16:45:21,431 - main - INFO - Agregando subestaciones al mapa...
+2024-11-21 16:45:21,436 - main - INFO - Se agregaron 21 subestaciones al mapa
+2024-11-21 16:45:21,437 - main - INFO - Analizando sitios solares...
+2024-11-21 16:45:21,468 - main - INFO - Agregando 1 sitios solares al mapa...
+2024-11-21 16:45:21,468 - main - INFO - Guardando mapa en data/processed/solar_sites_map_20241121_164521.html...
+2024-11-21 16:45:21,523 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map_20241121_164521.html
+2024-11-21 16:45:21,523 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 16:45:21,523 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 16:45:21,523 - main - INFO - 
+Lima:
+2024-11-21 16:45:21,523 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:45:21,523 - main - INFO - 
+Ica:
+2024-11-21 16:45:21,523 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:45:21,523 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:45:21,523 - main - INFO - 
+Arequipa:
+2024-11-21 16:45:21,523 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   Total: 4 subestaciones
+2024-11-21 16:45:21,524 - main - INFO - 
+Moquegua:
+2024-11-21 16:45:21,524 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:45:21,524 - main - INFO - 
+Tacna:
+2024-11-21 16:45:21,524 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:45:21,524 - main - INFO - 
+Cusco:
+2024-11-21 16:45:21,524 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:45:21,524 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:45:21,525 - main - INFO - 
+Puno:
+2024-11-21 16:45:21,525 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:45:21,525 - main - INFO - 
+Apurímac:
+2024-11-21 16:45:21,525 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:45:21,525 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:45:21,525 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 16:45:21,525 - main - INFO - Finalizando programa
+2024-11-21 16:47:29,447 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:47:29,447 - main - INFO - Inicializando analizadores...
+2024-11-21 16:47:29,448 - main - INFO - Creando mapa base...
+2024-11-21 16:47:29,454 - main - INFO - Agregando subestaciones al mapa...
+2024-11-21 16:47:29,461 - main - INFO - Se agregaron 21 subestaciones al mapa
+2024-11-21 16:47:29,461 - main - INFO - Analizando sitios solares...
+2024-11-21 16:47:29,489 - main - INFO - Agregando 1 sitios solares al mapa...
+2024-11-21 16:47:29,490 - main - INFO - Guardando mapa en data/processed/solar_sites_map_20241121_164729.html...
+2024-11-21 16:47:29,541 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map_20241121_164729.html
+2024-11-21 16:47:29,541 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 16:47:29,541 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 16:47:29,541 - main - INFO - 
+Lima:
+2024-11-21 16:47:29,541 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:47:29,541 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:47:29,541 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:47:29,541 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:47:29,541 - main - INFO - 
+Ica:
+2024-11-21 16:47:29,541 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:47:29,541 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:47:29,541 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Arequipa:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 4 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Moquegua:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Tacna:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Cusco:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Puno:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:47:29,542 - main - INFO - 
+Apurímac:
+2024-11-21 16:47:29,542 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:47:29,542 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:47:29,543 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:47:29,543 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 16:47:29,543 - main - INFO - Finalizando programa
+2024-11-21 16:49:32,429 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:49:32,429 - main - INFO - Inicializando analizadores...
+2024-11-21 16:49:32,430 - main - INFO - Creando mapa base...
+2024-11-21 16:49:32,437 - main - INFO - Agregando subestaciones al mapa...
+2024-11-21 16:49:32,438 - main - INFO - Agregada subestación: Chilca 1
+2024-11-21 16:49:32,439 - main - INFO - Agregada subestación: Chilca REP
+2024-11-21 16:49:32,439 - main - INFO - Agregada subestación: Independencia
+2024-11-21 16:49:32,439 - main - INFO - Agregada subestación: Marcona
+2024-11-21 16:49:32,440 - main - INFO - Agregada subestación: Montalvo
+2024-11-21 16:49:32,441 - main - INFO - Agregada subestación: Socabaya
+2024-11-21 16:49:32,441 - main - INFO - Agregada subestación: Cerro Verde 1
+2024-11-21 16:49:32,442 - main - INFO - Agregada subestación: Cerro Verde 2
+2024-11-21 16:49:32,442 - main - INFO - Agregada subestación: Moquegua
+2024-11-21 16:49:32,443 - main - INFO - Agregada subestación: Ilo 1
+2024-11-21 16:49:32,443 - main - INFO - Agregada subestación: Ilo 2
+2024-11-21 16:49:32,444 - main - INFO - Agregada subestación: Los Héroes
+2024-11-21 16:49:32,444 - main - INFO - Agregada subestación: Tacna
+2024-11-21 16:49:32,445 - main - INFO - Agregada subestación: Quencoro
+2024-11-21 16:49:32,445 - main - INFO - Agregada subestación: Tintaya
+2024-11-21 16:49:32,445 - main - INFO - Agregada subestación: Onocora
+2024-11-21 16:49:32,446 - main - INFO - Agregada subestación: Puno
+2024-11-21 16:49:32,446 - main - INFO - Agregada subestación: Juliaca
+2024-11-21 16:49:32,446 - main - INFO - Agregada subestación: Azángaro
+2024-11-21 16:49:32,447 - main - INFO - Agregada subestación: Abancay Nueva
+2024-11-21 16:49:32,447 - main - INFO - Agregada subestación: Cotaruse
+2024-11-21 16:49:32,447 - main - INFO - Analizando sitios solares...
+2024-11-21 16:49:32,475 - main - INFO - Agregando 1 sitios solares al mapa...
+2024-11-21 16:49:32,476 - main - INFO - Guardando mapa en data/processed/solar_sites_map_20241121_164932.html...
+2024-11-21 16:49:32,518 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map_20241121_164932.html
+2024-11-21 16:49:32,519 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 16:49:32,519 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 16:49:32,519 - main - INFO - 
+Lima:
+2024-11-21 16:49:32,519 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:49:32,519 - main - INFO - 
+Ica:
+2024-11-21 16:49:32,519 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:49:32,519 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:49:32,519 - main - INFO - 
+Arequipa:
+2024-11-21 16:49:32,520 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   Total: 4 subestaciones
+2024-11-21 16:49:32,520 - main - INFO - 
+Moquegua:
+2024-11-21 16:49:32,520 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:49:32,520 - main - INFO - 
+Tacna:
+2024-11-21 16:49:32,520 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:49:32,520 - main - INFO - 
+Cusco:
+2024-11-21 16:49:32,520 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:49:32,520 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:49:32,521 - main - INFO - 
+Puno:
+2024-11-21 16:49:32,521 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:49:32,521 - main - INFO - 
+Apurímac:
+2024-11-21 16:49:32,521 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:49:32,521 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:49:32,521 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 16:49:32,521 - main - INFO - Finalizando programa
+2024-11-21 16:52:17,545 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:52:17,548 - main - INFO - Se obtuvieron 21 subestaciones
+2024-11-21 16:52:17,554 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 16:52:17,554 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 16:52:17,555 - main - INFO - Agregando subestación: Independencia
+2024-11-21 16:52:17,555 - main - INFO - Agregando subestación: Marcona
+2024-11-21 16:52:17,555 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 16:52:17,556 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 16:52:17,557 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 16:52:17,557 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 16:52:17,557 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 16:52:17,558 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 16:52:17,558 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 16:52:17,559 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 16:52:17,559 - main - INFO - Agregando subestación: Tacna
+2024-11-21 16:52:17,560 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 16:52:17,560 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 16:52:17,560 - main - INFO - Agregando subestación: Onocora
+2024-11-21 16:52:17,561 - main - INFO - Agregando subestación: Puno
+2024-11-21 16:52:17,561 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 16:52:17,562 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 16:52:17,562 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 16:52:17,562 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 16:52:17,635 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 16:52:17,635 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 16:52:17,635 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 16:52:17,635 - main - INFO - 
+Lima:
+2024-11-21 16:52:17,635 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:52:17,635 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:52:17,635 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:52:17,635 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:52:17,635 - main - INFO - 
+Ica:
+2024-11-21 16:52:17,635 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:52:17,636 - main - INFO - 
+Arequipa:
+2024-11-21 16:52:17,636 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   Total: 4 subestaciones
+2024-11-21 16:52:17,636 - main - INFO - 
+Moquegua:
+2024-11-21 16:52:17,636 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:52:17,636 - main - INFO - 
+Tacna:
+2024-11-21 16:52:17,636 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:52:17,636 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:52:17,636 - main - INFO - 
+Cusco:
+2024-11-21 16:52:17,637 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:52:17,637 - main - INFO - 
+Puno:
+2024-11-21 16:52:17,637 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:52:17,637 - main - INFO - 
+Apurímac:
+2024-11-21 16:52:17,637 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:52:17,637 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:52:17,637 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 16:52:17,637 - main - INFO - Finalizando programa
+2024-11-21 16:57:07,255 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:57:07,257 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 16:57:07,262 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 16:57:07,263 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 16:57:07,263 - main - INFO - Agregando subestación: Independencia
+2024-11-21 16:57:07,264 - main - INFO - Agregando subestación: Marcona
+2024-11-21 16:57:07,264 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 16:57:07,264 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 16:57:07,265 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 16:57:07,265 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 16:57:07,265 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 16:57:07,266 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 16:57:07,266 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 16:57:07,266 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 16:57:07,267 - main - INFO - Agregando subestación: Tacna
+2024-11-21 16:57:07,267 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 16:57:07,267 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 16:57:07,267 - main - INFO - Agregando subestación: Onocora
+2024-11-21 16:57:07,268 - main - INFO - Agregando subestación: Puno
+2024-11-21 16:57:07,268 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 16:57:07,268 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 16:57:07,268 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 16:57:07,269 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 16:57:07,269 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 16:57:07,270 - main - ERROR - Error en create_analysis_map: 'MapCreator' object has no attribute 'solar_sites'
+2024-11-21 16:57:07,270 - main - ERROR - No se pudo generar el mapa de análisis
+2024-11-21 16:57:07,270 - main - INFO - Finalizando programa
+2024-11-21 16:57:11,032 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:57:11,034 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 16:57:11,040 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 16:57:11,040 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 16:57:11,041 - main - INFO - Agregando subestación: Independencia
+2024-11-21 16:57:11,041 - main - INFO - Agregando subestación: Marcona
+2024-11-21 16:57:11,042 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 16:57:11,042 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 16:57:11,042 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 16:57:11,042 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 16:57:11,043 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 16:57:11,043 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 16:57:11,043 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 16:57:11,044 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 16:57:11,044 - main - INFO - Agregando subestación: Tacna
+2024-11-21 16:57:11,044 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 16:57:11,044 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 16:57:11,045 - main - INFO - Agregando subestación: Onocora
+2024-11-21 16:57:11,045 - main - INFO - Agregando subestación: Puno
+2024-11-21 16:57:11,045 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 16:57:11,046 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 16:57:11,046 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 16:57:11,046 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 16:57:11,046 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 16:57:11,047 - main - ERROR - Error en create_analysis_map: 'MapCreator' object has no attribute 'solar_sites'
+2024-11-21 16:57:11,047 - main - ERROR - No se pudo generar el mapa de análisis
+2024-11-21 16:57:11,047 - main - INFO - Finalizando programa
+2024-11-21 16:59:09,467 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 16:59:09,469 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 16:59:09,474 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 16:59:09,475 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 16:59:09,475 - main - INFO - Agregando subestación: Independencia
+2024-11-21 16:59:09,476 - main - INFO - Agregando subestación: Marcona
+2024-11-21 16:59:09,476 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 16:59:09,476 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 16:59:09,477 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 16:59:09,477 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 16:59:09,478 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 16:59:09,478 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 16:59:09,478 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 16:59:09,479 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 16:59:09,479 - main - INFO - Agregando subestación: Tacna
+2024-11-21 16:59:09,479 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 16:59:09,480 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 16:59:09,480 - main - INFO - Agregando subestación: Onocora
+2024-11-21 16:59:09,480 - main - INFO - Agregando subestación: Puno
+2024-11-21 16:59:09,481 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 16:59:09,481 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 16:59:09,481 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 16:59:09,482 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 16:59:09,482 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 16:59:09,615 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 16:59:09,615 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 16:59:09,615 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 16:59:09,615 - main - INFO - 
+Lima:
+2024-11-21 16:59:09,615 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:59:09,615 - main - INFO - 
+Ica:
+2024-11-21 16:59:09,615 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:59:09,615 - main - INFO - 
+Arequipa:
+2024-11-21 16:59:09,615 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:59:09,615 - main - INFO -   Total: 4 subestaciones
+2024-11-21 16:59:09,615 - main - INFO - 
+Moquegua:
+2024-11-21 16:59:09,615 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:59:09,616 - main - INFO - 
+Tacna:
+2024-11-21 16:59:09,616 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:59:09,616 - main - INFO - 
+Cusco:
+2024-11-21 16:59:09,616 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:59:09,616 - main - INFO - 
+Puno:
+2024-11-21 16:59:09,616 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   Total: 3 subestaciones
+2024-11-21 16:59:09,616 - main - INFO - 
+Apurímac:
+2024-11-21 16:59:09,616 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 16:59:09,616 - main - INFO -   Total: 2 subestaciones
+2024-11-21 16:59:09,616 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 16:59:09,616 - main - INFO - Finalizando programa
+2024-11-21 17:05:50,080 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:05:50,082 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 17:05:50,087 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 17:05:50,087 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 17:05:50,088 - main - INFO - Agregando subestación: Independencia
+2024-11-21 17:05:50,088 - main - INFO - Agregando subestación: Marcona
+2024-11-21 17:05:50,089 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 17:05:50,089 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 17:05:50,090 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 17:05:50,090 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 17:05:50,090 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 17:05:50,091 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 17:05:50,091 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 17:05:50,091 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 17:05:50,091 - main - INFO - Agregando subestación: Tacna
+2024-11-21 17:05:50,092 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 17:05:50,092 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 17:05:50,093 - main - INFO - Agregando subestación: Onocora
+2024-11-21 17:05:50,093 - main - INFO - Agregando subestación: Puno
+2024-11-21 17:05:50,094 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 17:05:50,094 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 17:05:50,095 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 17:05:50,095 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 17:05:50,096 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 17:05:50,235 - main - ERROR - Error en create_analysis_map: 'Figure' object has no attribute 'scripts'
+2024-11-21 17:05:50,236 - main - ERROR - No se pudo generar el mapa de análisis
+2024-11-21 17:05:50,236 - main - INFO - Finalizando programa
+2024-11-21 17:10:07,370 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:10:07,372 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 17:10:07,375 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 17:10:07,376 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 17:10:07,376 - main - INFO - Agregando subestación: Independencia
+2024-11-21 17:10:07,377 - main - INFO - Agregando subestación: Marcona
+2024-11-21 17:10:07,378 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 17:10:07,378 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 17:10:07,379 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 17:10:07,379 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 17:10:07,380 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 17:10:07,380 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 17:10:07,381 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 17:10:07,381 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 17:10:07,382 - main - INFO - Agregando subestación: Tacna
+2024-11-21 17:10:07,382 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 17:10:07,383 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 17:10:07,383 - main - INFO - Agregando subestación: Onocora
+2024-11-21 17:10:07,383 - main - INFO - Agregando subestación: Puno
+2024-11-21 17:10:07,384 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 17:10:07,384 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 17:10:07,385 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 17:10:07,385 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 17:10:07,386 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 17:10:07,520 - main - ERROR - Error en create_analysis_map: 'Figure' object has no attribute 'scripts'
+2024-11-21 17:10:07,520 - main - ERROR - No se pudo generar el mapa de análisis
+2024-11-21 17:10:07,520 - main - INFO - Finalizando programa
+2024-11-21 17:12:27,722 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:12:27,724 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 17:12:27,726 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 17:12:27,727 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 17:12:27,727 - main - INFO - Agregando subestación: Independencia
+2024-11-21 17:12:27,728 - main - INFO - Agregando subestación: Marcona
+2024-11-21 17:12:27,728 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 17:12:27,729 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 17:12:27,729 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 17:12:27,729 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 17:12:27,730 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 17:12:27,730 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 17:12:27,730 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 17:12:27,731 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 17:12:27,731 - main - INFO - Agregando subestación: Tacna
+2024-11-21 17:12:27,731 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 17:12:27,732 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 17:12:27,732 - main - INFO - Agregando subestación: Onocora
+2024-11-21 17:12:27,733 - main - INFO - Agregando subestación: Puno
+2024-11-21 17:12:27,733 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 17:12:27,733 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 17:12:27,734 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 17:12:27,734 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 17:12:27,734 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 17:12:27,749 - main - ERROR - Error en create_analysis_map: 'Element' object has no attribute '_repr_html_'
+2024-11-21 17:12:27,749 - main - ERROR - No se pudo generar el mapa de análisis
+2024-11-21 17:12:27,749 - main - INFO - Finalizando programa
+2024-11-21 17:13:19,775 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:13:19,777 - main - INFO - Se obtuvieron 22 subestaciones
+2024-11-21 17:13:19,780 - main - INFO - Agregando subestación: Chilca 1
+2024-11-21 17:13:19,780 - main - INFO - Agregando subestación: Chilca REP
+2024-11-21 17:13:19,781 - main - INFO - Agregando subestación: Independencia
+2024-11-21 17:13:19,781 - main - INFO - Agregando subestación: Marcona
+2024-11-21 17:13:19,783 - main - INFO - Agregando subestación: Montalvo
+2024-11-21 17:13:19,783 - main - INFO - Agregando subestación: Socabaya
+2024-11-21 17:13:19,784 - main - INFO - Agregando subestación: Cerro Verde 1
+2024-11-21 17:13:19,784 - main - INFO - Agregando subestación: Cerro Verde 2
+2024-11-21 17:13:19,785 - main - INFO - Agregando subestación: Moquegua
+2024-11-21 17:13:19,785 - main - INFO - Agregando subestación: Ilo 1
+2024-11-21 17:13:19,786 - main - INFO - Agregando subestación: Ilo 2
+2024-11-21 17:13:19,786 - main - INFO - Agregando subestación: Los Héroes
+2024-11-21 17:13:19,787 - main - INFO - Agregando subestación: Tacna
+2024-11-21 17:13:19,788 - main - INFO - Agregando subestación: Quencoro
+2024-11-21 17:13:19,788 - main - INFO - Agregando subestación: Tintaya
+2024-11-21 17:13:19,788 - main - INFO - Agregando subestación: Onocora
+2024-11-21 17:13:19,789 - main - INFO - Agregando subestación: Puno
+2024-11-21 17:13:19,789 - main - INFO - Agregando subestación: Juliaca
+2024-11-21 17:13:19,790 - main - INFO - Agregando subestación: Azángaro
+2024-11-21 17:13:19,790 - main - INFO - Agregando subestación: Abancay Nueva
+2024-11-21 17:13:19,791 - main - INFO - Agregando subestación: Cotaruse
+2024-11-21 17:13:19,791 - main - INFO - Agregando subestación: Paramonga Nueva
+2024-11-21 17:13:19,807 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:13:19,807 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:13:19,807 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:13:19,807 - main - INFO - 
+Lima:
+2024-11-21 17:13:19,807 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:13:19,807 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:13:19,808 - main - INFO - 
+Ica:
+2024-11-21 17:13:19,808 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO - 
+Arequipa:
+2024-11-21 17:13:19,808 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:13:19,808 - main - INFO - 
+Moquegua:
+2024-11-21 17:13:19,808 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:13:19,808 - main - INFO - 
+Tacna:
+2024-11-21 17:13:19,808 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO - 
+Cusco:
+2024-11-21 17:13:19,808 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:13:19,808 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:13:19,809 - main - INFO - 
+Puno:
+2024-11-21 17:13:19,809 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:13:19,809 - main - INFO - 
+Apurímac:
+2024-11-21 17:13:19,809 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:13:19,809 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:13:19,809 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:13:19,809 - main - INFO - Finalizando programa
+2024-11-21 17:15:31,660 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:15:31,662 - main - INFO - Loaded 22 substations
+2024-11-21 17:15:31,662 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:15:31,665 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:15:31,666 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:15:31,667 - main - INFO - Adding substation: Independencia
+2024-11-21 17:15:31,668 - main - INFO - Adding substation: Marcona
+2024-11-21 17:15:31,668 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:15:31,669 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:15:31,669 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:15:31,670 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:15:31,671 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:15:31,671 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:15:31,672 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:15:31,672 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:15:31,673 - main - INFO - Adding substation: Tacna
+2024-11-21 17:15:31,673 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:15:31,674 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:15:31,674 - main - INFO - Adding substation: Onocora
+2024-11-21 17:15:31,674 - main - INFO - Adding substation: Puno
+2024-11-21 17:15:31,675 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:15:31,675 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:15:31,676 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:15:31,676 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:15:31,676 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:15:31,677 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:15:31,677 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:15:31,678 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:15:31,678 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:15:31,679 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:15:31,679 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:15:31,680 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:15:31,680 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:15:31,681 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:15:31,681 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:15:31,681 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:15:31,682 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:15:31,682 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:15:31,683 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:15:31,683 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:15:31,684 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:15:31,684 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:15:31,685 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:15:31,685 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:15:31,685 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:15:31,686 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:15:31,686 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:15:31,687 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:15:31,687 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:15:31,688 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:15:31,688 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:15:31,688 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:15:31,689 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:15:31,689 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:15:31,690 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:15:31,690 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:15:31,690 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:15:31,691 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:15:31,691 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:15:31,692 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:15:31,692 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:15:31,692 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:15:31,693 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:15:31,693 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:15:31,694 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:15:31,694 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:15:31,694 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:15:31,695 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:15:31,695 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:15:31,700 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:15:31,700 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:15:31,700 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:15:31,701 - main - INFO - 
+Lima:
+2024-11-21 17:15:31,701 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:15:31,701 - main - INFO - 
+Ica:
+2024-11-21 17:15:31,701 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:15:31,701 - main - INFO - 
+Arequipa:
+2024-11-21 17:15:31,701 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:15:31,701 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:15:31,702 - main - INFO - 
+Moquegua:
+2024-11-21 17:15:31,702 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:15:31,702 - main - INFO - 
+Tacna:
+2024-11-21 17:15:31,702 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:15:31,702 - main - INFO - 
+Cusco:
+2024-11-21 17:15:31,702 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:15:31,702 - main - INFO - 
+Puno:
+2024-11-21 17:15:31,702 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:15:31,702 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:15:31,703 - main - INFO - 
+Apurímac:
+2024-11-21 17:15:31,703 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:15:31,703 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:15:31,703 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:15:31,703 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:15:31,703 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:15:31,703 - main - INFO - Finalizando programa
+2024-11-21 17:19:18,499 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:19:18,501 - main - INFO - Loaded 22 substations
+2024-11-21 17:19:18,501 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:19:18,503 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:19:18,504 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:19:18,505 - main - INFO - Adding substation: Independencia
+2024-11-21 17:19:18,505 - main - INFO - Adding substation: Marcona
+2024-11-21 17:19:18,506 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:19:18,506 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:19:18,507 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:19:18,507 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:19:18,508 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:19:18,508 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:19:18,509 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:19:18,509 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:19:18,510 - main - INFO - Adding substation: Tacna
+2024-11-21 17:19:18,510 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:19:18,511 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:19:18,511 - main - INFO - Adding substation: Onocora
+2024-11-21 17:19:18,512 - main - INFO - Adding substation: Puno
+2024-11-21 17:19:18,512 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:19:18,513 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:19:18,513 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:19:18,514 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:19:18,514 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:19:18,514 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:19:18,515 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:19:18,516 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:19:18,516 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:19:18,517 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:19:18,517 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:19:18,518 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:19:18,518 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:19:18,518 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:19:18,519 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:19:18,519 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:19:18,519 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:19:18,520 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:19:18,520 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:19:18,520 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:19:18,520 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:19:18,521 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:19:18,521 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:19:18,521 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:19:18,521 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:19:18,522 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:19:18,522 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:19:18,523 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:19:18,523 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:19:18,523 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:19:18,524 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:19:18,524 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:19:18,524 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:19:18,525 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:19:18,525 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:19:18,525 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:19:18,526 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:19:18,526 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:19:18,526 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:19:18,527 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:19:18,527 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:19:18,528 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:19:18,528 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:19:18,528 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:19:18,529 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:19:18,529 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:19:18,529 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:19:18,530 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:19:18,530 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:19:18,534 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:19:18,534 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:19:18,534 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:19:18,534 - main - INFO - 
+Lima:
+2024-11-21 17:19:18,534 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:18,534 - main - INFO - 
+Ica:
+2024-11-21 17:19:18,534 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:18,534 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Arequipa:
+2024-11-21 17:19:18,535 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Moquegua:
+2024-11-21 17:19:18,535 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Tacna:
+2024-11-21 17:19:18,535 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Cusco:
+2024-11-21 17:19:18,535 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Puno:
+2024-11-21 17:19:18,535 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:18,535 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:18,535 - main - INFO - 
+Apurímac:
+2024-11-21 17:19:18,536 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:18,536 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:18,536 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:18,536 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:18,536 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:19:18,536 - main - INFO - Finalizando programa
+2024-11-21 17:19:53,431 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:19:53,433 - main - INFO - Loaded 22 substations
+2024-11-21 17:19:53,433 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:19:53,435 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:19:53,436 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:19:53,437 - main - INFO - Adding substation: Independencia
+2024-11-21 17:19:53,437 - main - INFO - Adding substation: Marcona
+2024-11-21 17:19:53,438 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:19:53,438 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:19:53,438 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:19:53,439 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:19:53,439 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:19:53,439 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:19:53,440 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:19:53,440 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:19:53,440 - main - INFO - Adding substation: Tacna
+2024-11-21 17:19:53,441 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:19:53,441 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:19:53,442 - main - INFO - Adding substation: Onocora
+2024-11-21 17:19:53,442 - main - INFO - Adding substation: Puno
+2024-11-21 17:19:53,442 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:19:53,443 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:19:53,443 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:19:53,443 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:19:53,443 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:19:53,444 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:19:53,444 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:19:53,445 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:19:53,445 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:19:53,445 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:19:53,446 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:19:53,446 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:19:53,447 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:19:53,447 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:19:53,447 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:19:53,448 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:19:53,448 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:19:53,448 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:19:53,449 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:19:53,449 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:19:53,450 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:19:53,450 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:19:53,450 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:19:53,451 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:19:53,451 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:19:53,451 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:19:53,452 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:19:53,452 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:19:53,453 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:19:53,453 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:19:53,453 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:19:53,454 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:19:53,454 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:19:53,455 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:19:53,455 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:19:53,455 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:19:53,456 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:19:53,456 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:19:53,457 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:19:53,457 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:19:53,457 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:19:53,458 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:19:53,458 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:19:53,458 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:19:53,459 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:19:53,459 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:19:53,460 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:19:53,460 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:19:53,460 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:19:53,463 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:19:53,463 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:19:53,463 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:19:53,463 - main - INFO - 
+Lima:
+2024-11-21 17:19:53,463 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:53,463 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,463 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:53,463 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:53,463 - main - INFO - 
+Ica:
+2024-11-21 17:19:53,463 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:53,464 - main - INFO - 
+Arequipa:
+2024-11-21 17:19:53,464 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:19:53,464 - main - INFO - 
+Moquegua:
+2024-11-21 17:19:53,464 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:53,464 - main - INFO - 
+Tacna:
+2024-11-21 17:19:53,464 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:53,464 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:53,464 - main - INFO - 
+Cusco:
+2024-11-21 17:19:53,465 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:53,465 - main - INFO - 
+Puno:
+2024-11-21 17:19:53,465 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:19:53,465 - main - INFO - 
+Apurímac:
+2024-11-21 17:19:53,465 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:19:53,465 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:19:53,466 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:19:53,466 - main - INFO - Finalizando programa
+2024-11-21 17:20:51,590 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:20:51,592 - main - INFO - Loaded 22 substations
+2024-11-21 17:20:51,592 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:20:51,595 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:20:51,596 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:20:51,597 - main - INFO - Adding substation: Independencia
+2024-11-21 17:20:51,598 - main - INFO - Adding substation: Marcona
+2024-11-21 17:20:51,598 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:20:51,599 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:20:51,599 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:20:51,600 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:20:51,600 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:20:51,601 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:20:51,601 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:20:51,602 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:20:51,602 - main - INFO - Adding substation: Tacna
+2024-11-21 17:20:51,603 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:20:51,603 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:20:51,603 - main - INFO - Adding substation: Onocora
+2024-11-21 17:20:51,604 - main - INFO - Adding substation: Puno
+2024-11-21 17:20:51,604 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:20:51,604 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:20:51,605 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:20:51,605 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:20:51,605 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:20:51,606 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:20:51,606 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:20:51,607 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:20:51,607 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:20:51,607 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:20:51,608 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:20:51,608 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:20:51,609 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:20:51,609 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:20:51,609 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:20:51,610 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:20:51,610 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:20:51,610 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:20:51,610 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:20:51,611 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:20:51,611 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:20:51,611 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:20:51,612 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:20:51,612 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:20:51,612 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:20:51,613 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:20:51,613 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:20:51,613 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:20:51,614 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:20:51,614 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:20:51,614 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:20:51,615 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:20:51,615 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:20:51,615 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:20:51,616 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:20:51,616 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:20:51,616 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:20:51,616 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:20:51,617 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:20:51,617 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:20:51,617 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:20:51,618 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:20:51,618 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:20:51,618 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:20:51,619 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:20:51,619 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:20:51,619 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:20:51,619 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:20:51,620 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:20:51,769 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:20:51,769 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:20:51,769 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:20:51,769 - main - INFO - 
+Lima:
+2024-11-21 17:20:51,769 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:20:51,769 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,769 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:20:51,769 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:20:51,769 - main - INFO - 
+Ica:
+2024-11-21 17:20:51,769 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:20:51,769 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,769 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:20:51,770 - main - INFO - 
+Arequipa:
+2024-11-21 17:20:51,770 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:20:51,770 - main - INFO - 
+Moquegua:
+2024-11-21 17:20:51,770 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:20:51,770 - main - INFO - 
+Tacna:
+2024-11-21 17:20:51,770 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:20:51,770 - main - INFO - 
+Cusco:
+2024-11-21 17:20:51,770 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,770 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:20:51,771 - main - INFO - 
+Puno:
+2024-11-21 17:20:51,771 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:20:51,771 - main - INFO - 
+Apurímac:
+2024-11-21 17:20:51,771 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:20:51,771 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:20:51,771 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:20:51,771 - main - INFO - Finalizando programa
+2024-11-21 17:22:09,250 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:22:09,252 - main - INFO - Loaded 22 substations
+2024-11-21 17:22:09,252 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:22:09,255 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:22:09,256 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:22:09,257 - main - INFO - Adding substation: Independencia
+2024-11-21 17:22:09,257 - main - INFO - Adding substation: Marcona
+2024-11-21 17:22:09,258 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:22:09,258 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:22:09,259 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:22:09,259 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:22:09,260 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:22:09,260 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:22:09,261 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:22:09,261 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:22:09,261 - main - INFO - Adding substation: Tacna
+2024-11-21 17:22:09,262 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:22:09,262 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:22:09,262 - main - INFO - Adding substation: Onocora
+2024-11-21 17:22:09,263 - main - INFO - Adding substation: Puno
+2024-11-21 17:22:09,263 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:22:09,263 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:22:09,263 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:22:09,264 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:22:09,264 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:22:09,264 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:22:09,265 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:22:09,265 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:22:09,266 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:22:09,266 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:22:09,266 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:22:09,267 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:22:09,267 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:22:09,268 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:22:09,268 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:22:09,268 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:22:09,269 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:22:09,269 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:22:09,269 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:22:09,270 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:22:09,270 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:22:09,271 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:22:09,271 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:22:09,272 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:22:09,272 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:22:09,272 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:22:09,273 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:22:09,273 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:22:09,273 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:22:09,274 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:22:09,274 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:22:09,274 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:22:09,275 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:22:09,275 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:22:09,276 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:22:09,276 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:22:09,277 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:22:09,277 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:22:09,277 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:22:09,278 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:22:09,278 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:22:09,278 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:22:09,279 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:22:09,279 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:22:09,279 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:22:09,280 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:22:09,280 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:22:09,280 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:22:09,281 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:22:09,402 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:22:09,402 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:22:09,402 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:22:09,402 - main - INFO - 
+Lima:
+2024-11-21 17:22:09,402 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:22:09,402 - main - INFO - 
+Ica:
+2024-11-21 17:22:09,402 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:22:09,402 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:22:09,402 - main - INFO - 
+Arequipa:
+2024-11-21 17:22:09,402 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:22:09,403 - main - INFO - 
+Moquegua:
+2024-11-21 17:22:09,403 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:22:09,403 - main - INFO - 
+Tacna:
+2024-11-21 17:22:09,403 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:22:09,403 - main - INFO - 
+Cusco:
+2024-11-21 17:22:09,403 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:22:09,403 - main - INFO - 
+Puno:
+2024-11-21 17:22:09,403 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:22:09,403 - main - INFO - 
+Apurímac:
+2024-11-21 17:22:09,403 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:22:09,403 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:22:09,404 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:22:09,404 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:22:09,404 - main - INFO - Finalizando programa
+2024-11-21 17:23:42,061 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:23:42,063 - main - INFO - Loaded 22 substations
+2024-11-21 17:23:42,063 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:23:42,065 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:23:42,066 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:23:42,067 - main - INFO - Adding substation: Independencia
+2024-11-21 17:23:42,067 - main - INFO - Adding substation: Marcona
+2024-11-21 17:23:42,068 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:23:42,068 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:23:42,068 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:23:42,069 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:23:42,069 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:23:42,070 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:23:42,070 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:23:42,071 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:23:42,071 - main - INFO - Adding substation: Tacna
+2024-11-21 17:23:42,071 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:23:42,072 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:23:42,072 - main - INFO - Adding substation: Onocora
+2024-11-21 17:23:42,073 - main - INFO - Adding substation: Puno
+2024-11-21 17:23:42,073 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:23:42,074 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:23:42,074 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:23:42,074 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:23:42,075 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:23:42,075 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:23:42,076 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:23:42,076 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:23:42,076 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:23:42,077 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:23:42,077 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:23:42,077 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:23:42,078 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:23:42,078 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:23:42,079 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:23:42,079 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:23:42,079 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:23:42,080 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:23:42,080 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:23:42,080 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:23:42,081 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:23:42,081 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:23:42,082 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:23:42,082 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:23:42,083 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:23:42,083 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:23:42,084 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:23:42,084 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:23:42,084 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:23:42,085 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:23:42,085 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:23:42,085 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:23:42,086 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:23:42,086 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:23:42,086 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:23:42,087 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:23:42,087 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:23:42,087 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:23:42,088 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:23:42,088 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:23:42,088 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:23:42,088 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:23:42,089 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:23:42,089 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:23:42,089 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:23:42,090 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:23:42,090 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:23:42,090 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:23:42,091 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:23:42,213 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:23:42,214 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:23:42,214 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:23:42,214 - main - INFO - 
+Lima:
+2024-11-21 17:23:42,214 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:23:42,214 - main - INFO - 
+Ica:
+2024-11-21 17:23:42,214 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:23:42,214 - main - INFO - 
+Arequipa:
+2024-11-21 17:23:42,214 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:23:42,214 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:23:42,214 - main - INFO - 
+Moquegua:
+2024-11-21 17:23:42,214 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:23:42,215 - main - INFO - 
+Tacna:
+2024-11-21 17:23:42,215 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:23:42,215 - main - INFO - 
+Cusco:
+2024-11-21 17:23:42,215 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:23:42,215 - main - INFO - 
+Puno:
+2024-11-21 17:23:42,215 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:23:42,215 - main - INFO - 
+Apurímac:
+2024-11-21 17:23:42,215 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:23:42,215 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:23:42,215 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:23:42,215 - main - INFO - Finalizando programa
+2024-11-21 17:26:31,651 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:26:31,654 - main - INFO - Loaded 22 substations
+2024-11-21 17:26:31,654 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:26:31,656 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:26:31,656 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:26:31,657 - main - INFO - Adding substation: Independencia
+2024-11-21 17:26:31,657 - main - INFO - Adding substation: Marcona
+2024-11-21 17:26:31,658 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:26:31,658 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:26:31,658 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:26:31,659 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:26:31,659 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:26:31,659 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:26:31,660 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:26:31,660 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:26:31,660 - main - INFO - Adding substation: Tacna
+2024-11-21 17:26:31,660 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:26:31,661 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:26:31,661 - main - INFO - Adding substation: Onocora
+2024-11-21 17:26:31,661 - main - INFO - Adding substation: Puno
+2024-11-21 17:26:31,661 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:26:31,662 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:26:31,662 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:26:31,662 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:26:31,663 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:26:31,663 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:26:31,663 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:26:31,664 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:26:31,664 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:26:31,664 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:26:31,664 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:26:31,665 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:26:31,665 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:26:31,665 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:26:31,666 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:26:31,667 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:26:31,667 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:26:31,667 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:26:31,668 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:26:31,668 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:26:31,668 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:26:31,668 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:26:31,669 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:26:31,669 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:26:31,670 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:26:31,670 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:26:31,670 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:26:31,671 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:26:31,671 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:26:31,672 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:26:31,672 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:26:31,672 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:26:31,673 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:26:31,673 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:26:31,673 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:26:31,674 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:26:31,674 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:26:31,674 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:26:31,675 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:26:31,675 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:26:31,675 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:26:31,676 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:26:31,676 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:26:31,676 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:26:31,677 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:26:31,677 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:26:31,677 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:26:31,678 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:26:31,678 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:26:31,805 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:26:31,805 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:26:31,805 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:26:31,805 - main - INFO - 
+Lima:
+2024-11-21 17:26:31,805 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:26:31,805 - main - INFO - 
+Ica:
+2024-11-21 17:26:31,805 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:26:31,805 - main - INFO - 
+Arequipa:
+2024-11-21 17:26:31,805 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:26:31,805 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:26:31,806 - main - INFO - 
+Moquegua:
+2024-11-21 17:26:31,806 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:26:31,806 - main - INFO - 
+Tacna:
+2024-11-21 17:26:31,806 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:26:31,806 - main - INFO - 
+Cusco:
+2024-11-21 17:26:31,806 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:26:31,806 - main - INFO - 
+Puno:
+2024-11-21 17:26:31,806 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:26:31,806 - main - INFO - 
+Apurímac:
+2024-11-21 17:26:31,806 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:26:31,806 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:26:31,807 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:26:31,807 - main - INFO - Finalizando programa
+2024-11-21 17:28:22,458 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:28:22,459 - main - INFO - Loaded 22 substations
+2024-11-21 17:28:22,459 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:28:22,462 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:28:22,462 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:28:22,463 - main - INFO - Adding substation: Independencia
+2024-11-21 17:28:22,463 - main - INFO - Adding substation: Marcona
+2024-11-21 17:28:22,464 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:28:22,464 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:28:22,465 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:28:22,465 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:28:22,465 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:28:22,466 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:28:22,466 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:28:22,467 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:28:22,467 - main - INFO - Adding substation: Tacna
+2024-11-21 17:28:22,467 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:28:22,468 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:28:22,469 - main - INFO - Adding substation: Onocora
+2024-11-21 17:28:22,469 - main - INFO - Adding substation: Puno
+2024-11-21 17:28:22,469 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:28:22,470 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:28:22,470 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:28:22,471 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:28:22,471 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:28:22,472 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:28:22,472 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:28:22,473 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:28:22,473 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:28:22,473 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:28:22,474 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:28:22,474 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:28:22,474 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:28:22,475 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:28:22,475 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:28:22,476 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:28:22,476 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:28:22,476 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:28:22,477 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:28:22,477 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:28:22,477 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:28:22,477 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:28:22,478 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:28:22,478 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:28:22,478 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:28:22,479 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:28:22,479 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:28:22,479 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:28:22,480 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:28:22,480 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:28:22,480 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:28:22,480 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:28:22,481 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:28:22,481 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:28:22,481 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:28:22,482 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:28:22,482 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:28:22,482 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:28:22,482 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:28:22,483 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:28:22,483 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:28:22,483 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:28:22,483 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:28:22,484 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:28:22,484 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:28:22,484 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:28:22,484 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:28:22,485 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:28:22,485 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:28:22,608 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:28:22,608 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:28:22,608 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:28:22,608 - main - INFO - 
+Lima:
+2024-11-21 17:28:22,608 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:28:22,608 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,608 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:28:22,608 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:28:22,608 - main - INFO - 
+Ica:
+2024-11-21 17:28:22,608 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:28:22,608 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Arequipa:
+2024-11-21 17:28:22,609 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Moquegua:
+2024-11-21 17:28:22,609 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Tacna:
+2024-11-21 17:28:22,609 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Cusco:
+2024-11-21 17:28:22,609 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Puno:
+2024-11-21 17:28:22,609 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:28:22,609 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:28:22,609 - main - INFO - 
+Apurímac:
+2024-11-21 17:28:22,610 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:28:22,610 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:28:22,610 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:28:22,610 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:28:22,610 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:28:22,610 - main - INFO - Finalizando programa
+2024-11-21 17:30:27,821 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:30:27,822 - main - INFO - Loaded 22 substations
+2024-11-21 17:30:27,822 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:30:27,825 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:30:27,826 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:30:27,826 - main - INFO - Adding substation: Independencia
+2024-11-21 17:30:27,826 - main - INFO - Adding substation: Marcona
+2024-11-21 17:30:27,827 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:30:27,827 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:30:27,828 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:30:27,828 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:30:27,828 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:30:27,829 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:30:27,829 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:30:27,830 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:30:27,830 - main - INFO - Adding substation: Tacna
+2024-11-21 17:30:27,831 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:30:27,831 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:30:27,832 - main - INFO - Adding substation: Onocora
+2024-11-21 17:30:27,832 - main - INFO - Adding substation: Puno
+2024-11-21 17:30:27,833 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:30:27,833 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:30:27,834 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:30:27,834 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:30:27,835 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:30:27,835 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:30:27,836 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:30:27,837 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:30:27,837 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:30:27,838 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:30:27,838 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:30:27,839 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:30:27,839 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:30:27,840 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:30:27,840 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:30:27,841 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:30:27,841 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:30:27,842 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:30:27,842 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:30:27,843 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:30:27,843 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:30:27,844 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:30:27,844 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:30:27,844 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:30:27,845 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:30:27,845 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:30:27,846 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:30:27,846 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:30:27,847 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:30:27,847 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:30:27,848 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:30:27,848 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:30:27,849 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:30:27,849 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:30:27,850 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:30:27,850 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:30:27,850 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:30:27,851 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:30:27,851 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:30:27,851 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:30:27,852 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:30:27,852 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:30:27,853 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:30:27,853 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:30:27,853 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:30:27,854 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:30:27,854 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:30:27,855 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:30:27,855 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:30:27,977 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:30:27,977 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:30:27,978 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:30:27,978 - main - INFO - 
+Lima:
+2024-11-21 17:30:27,978 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:30:27,978 - main - INFO - 
+Ica:
+2024-11-21 17:30:27,978 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:30:27,978 - main - INFO - 
+Arequipa:
+2024-11-21 17:30:27,978 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:30:27,978 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:30:27,979 - main - INFO - 
+Moquegua:
+2024-11-21 17:30:27,979 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:30:27,979 - main - INFO - 
+Tacna:
+2024-11-21 17:30:27,979 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:30:27,979 - main - INFO - 
+Cusco:
+2024-11-21 17:30:27,979 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:30:27,979 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:30:27,979 - main - INFO - 
+Puno:
+2024-11-21 17:30:27,979 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:30:27,980 - main - INFO - 
+Apurímac:
+2024-11-21 17:30:27,980 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:30:27,980 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:30:27,980 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:30:27,980 - main - INFO - Finalizando programa
+2024-11-21 17:32:40,018 - main - INFO - Iniciando análisis del sector eléctrico peruano...
+2024-11-21 17:32:40,020 - main - INFO - Loaded 22 substations
+2024-11-21 17:32:40,020 - main - INFO - Loaded 44 solar sites
+2024-11-21 17:32:40,023 - main - INFO - Adding substation: Chilca 1
+2024-11-21 17:32:40,024 - main - INFO - Adding substation: Chilca REP
+2024-11-21 17:32:40,025 - main - INFO - Adding substation: Independencia
+2024-11-21 17:32:40,025 - main - INFO - Adding substation: Marcona
+2024-11-21 17:32:40,025 - main - INFO - Adding substation: Montalvo
+2024-11-21 17:32:40,026 - main - INFO - Adding substation: Socabaya
+2024-11-21 17:32:40,026 - main - INFO - Adding substation: Cerro Verde 1
+2024-11-21 17:32:40,027 - main - INFO - Adding substation: Cerro Verde 2
+2024-11-21 17:32:40,027 - main - INFO - Adding substation: Moquegua
+2024-11-21 17:32:40,028 - main - INFO - Adding substation: Ilo 1
+2024-11-21 17:32:40,028 - main - INFO - Adding substation: Ilo 2
+2024-11-21 17:32:40,028 - main - INFO - Adding substation: Los Héroes
+2024-11-21 17:32:40,029 - main - INFO - Adding substation: Tacna
+2024-11-21 17:32:40,029 - main - INFO - Adding substation: Quencoro
+2024-11-21 17:32:40,030 - main - INFO - Adding substation: Tintaya
+2024-11-21 17:32:40,030 - main - INFO - Adding substation: Onocora
+2024-11-21 17:32:40,030 - main - INFO - Adding substation: Puno
+2024-11-21 17:32:40,031 - main - INFO - Adding substation: Juliaca
+2024-11-21 17:32:40,031 - main - INFO - Adding substation: Azángaro
+2024-11-21 17:32:40,032 - main - INFO - Adding substation: Abancay Nueva
+2024-11-21 17:32:40,032 - main - INFO - Adding substation: Cotaruse
+2024-11-21 17:32:40,032 - main - INFO - Adding substation: Paramonga Nueva
+2024-11-21 17:32:40,033 - main - INFO - Adding solar site: Lurín Solar
+2024-11-21 17:32:40,033 - main - INFO - Adding solar site: Chilca Solar
+2024-11-21 17:32:40,033 - main - INFO - Adding solar site: Asia Solar
+2024-11-21 17:32:40,033 - main - INFO - Adding solar site: Ica Solar 1
+2024-11-21 17:32:40,034 - main - INFO - Adding solar site: Ica Solar 2
+2024-11-21 17:32:40,034 - main - INFO - Adding solar site: Nazca Solar
+2024-11-21 17:32:40,034 - main - INFO - Adding solar site: Marcona Solar
+2024-11-21 17:32:40,034 - main - INFO - Adding solar site: Paracas Solar
+2024-11-21 17:32:40,035 - main - INFO - Adding solar site: Pisco Solar
+2024-11-21 17:32:40,035 - main - INFO - Adding solar site: La Joya Solar
+2024-11-21 17:32:40,035 - main - INFO - Adding solar site: Majes Solar
+2024-11-21 17:32:40,036 - main - INFO - Adding solar site: Arequipa Solar 1
+2024-11-21 17:32:40,036 - main - INFO - Adding solar site: Arequipa Solar 2
+2024-11-21 17:32:40,036 - main - INFO - Adding solar site: Camaná Solar
+2024-11-21 17:32:40,037 - main - INFO - Adding solar site: Mollendo Solar
+2024-11-21 17:32:40,037 - main - INFO - Adding solar site: Moquegua Solar 1
+2024-11-21 17:32:40,037 - main - INFO - Adding solar site: Moquegua Solar 2
+2024-11-21 17:32:40,037 - main - INFO - Adding solar site: Ilo Solar
+2024-11-21 17:32:40,038 - main - INFO - Adding solar site: Torata Solar
+2024-11-21 17:32:40,038 - main - INFO - Adding solar site: Tacna Solar 1
+2024-11-21 17:32:40,038 - main - INFO - Adding solar site: Tacna Solar 2
+2024-11-21 17:32:40,039 - main - INFO - Adding solar site: Locumba Solar
+2024-11-21 17:32:40,039 - main - INFO - Adding solar site: Sama Solar
+2024-11-21 17:32:40,039 - main - INFO - Adding solar site: Puno Solar
+2024-11-21 17:32:40,040 - main - INFO - Adding solar site: Juliaca Solar
+2024-11-21 17:32:40,040 - main - INFO - Adding solar site: Azángaro Solar
+2024-11-21 17:32:40,040 - main - INFO - Adding solar site: Ayaviri Solar
+2024-11-21 17:32:40,040 - main - INFO - Adding solar site: Lampa Solar
+2024-11-21 17:32:40,041 - main - INFO - Adding solar site: Cusco Solar 1
+2024-11-21 17:32:40,041 - main - INFO - Adding solar site: Cusco Solar 2
+2024-11-21 17:32:40,041 - main - INFO - Adding solar site: Espinar Solar
+2024-11-21 17:32:40,042 - main - INFO - Adding solar site: Sicuani Solar
+2024-11-21 17:32:40,042 - main - INFO - Adding solar site: Urubamba Solar
+2024-11-21 17:32:40,042 - main - INFO - Adding solar site: Abancay Solar
+2024-11-21 17:32:40,043 - main - INFO - Adding solar site: Andahuaylas Solar
+2024-11-21 17:32:40,043 - main - INFO - Adding solar site: Chalhuanca Solar
+2024-11-21 17:32:40,043 - main - INFO - Adding solar site: Tambobamba Solar
+2024-11-21 17:32:40,043 - main - INFO - Adding solar site: Ayacucho Solar 1
+2024-11-21 17:32:40,044 - main - INFO - Adding solar site: Ayacucho Solar 2
+2024-11-21 17:32:40,044 - main - INFO - Adding solar site: Huanta Solar
+2024-11-21 17:32:40,044 - main - INFO - Adding solar site: Cangallo Solar
+2024-11-21 17:32:40,045 - main - INFO - Adding solar site: Huancavelica Solar
+2024-11-21 17:32:40,045 - main - INFO - Adding solar site: Pampas Solar
+2024-11-21 17:32:40,045 - main - INFO - Adding solar site: Lircay Solar
+2024-11-21 17:32:40,171 - main - INFO - Mapa generado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:32:40,171 - main - INFO - 
+Realizando análisis de cobertura...
+2024-11-21 17:32:40,171 - main - INFO - 
+Análisis de Cobertura por Región:
+2024-11-21 17:32:40,171 - main - INFO - 
+Lima:
+2024-11-21 17:32:40,171 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:32:40,171 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,171 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:32:40,171 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:32:40,172 - main - INFO - 
+Ica:
+2024-11-21 17:32:40,172 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:32:40,172 - main - INFO - 
+Arequipa:
+2024-11-21 17:32:40,172 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   Total: 4 subestaciones
+2024-11-21 17:32:40,172 - main - INFO - 
+Moquegua:
+2024-11-21 17:32:40,172 - main - INFO -   500kV: 1 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:32:40,172 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:32:40,173 - main - INFO - 
+Tacna:
+2024-11-21 17:32:40,173 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   220kV: 1 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:32:40,173 - main - INFO - 
+Cusco:
+2024-11-21 17:32:40,173 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:32:40,173 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:32:40,173 - main - INFO - 
+Puno:
+2024-11-21 17:32:40,173 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   138kV: 1 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   Total: 3 subestaciones
+2024-11-21 17:32:40,174 - main - INFO - 
+Apurímac:
+2024-11-21 17:32:40,174 - main - INFO -   500kV: 0 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   220kV: 2 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   138kV: 0 subestaciones
+2024-11-21 17:32:40,174 - main - INFO -   Total: 2 subestaciones
+2024-11-21 17:32:40,174 - main - INFO - 
+Análisis completado exitosamente
+2024-11-21 17:32:40,174 - main - INFO - Finalizando programa

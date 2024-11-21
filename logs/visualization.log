@@ -1,0 +1,8 @@
+2024-11-21 11:38:58,791 - visualization - INFO - Mapa guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 12:18:36,532 - visualization - ERROR - Error creando el mapa: module 'folium.plugins' has no attribute 'Scale'
+2024-11-21 12:25:40,384 - visualization - INFO - Mapa interactivo guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 12:25:40,384 - visualization - INFO - Número de puntos en el mapa: 2
+2024-11-21 12:30:14,386 - visualization - INFO - Mapa interactivo guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 12:34:58,035 - visualization - INFO - Mapa interactivo guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 12:38:40,230 - visualization - INFO - Mapa interactivo guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/solar_sites_map.html
+2024-11-21 12:44:37,331 - visualization - INFO - Mapa de subestaciones guardado en: /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/data/processed/grid_map.html

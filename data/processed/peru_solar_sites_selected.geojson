@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"name": "peru_solar_sites_selected",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "ghi": 191.11270833333333, "lat": -12.0, "lon": -76.0, "raw_value": 191.11270833333333, "ghi_normalized": 1.0, "selected": 1 }, "geometry": { "type": "Point", "coordinates": [ -76.0, -12.0 ] } },
+{ "type": "Feature", "properties": { "ghi": 191.11270833333333, "lat": -12.0, "lon": -75.5, "raw_value": 191.11270833333333, "ghi_normalized": 1.0, "selected": 1 }, "geometry": { "type": "Point", "coordinates": [ -75.5, -12.0 ] } },
+{ "type": "Feature", "properties": { "ghi": 191.11270833333333, "lat": -11.5, "lon": -76.0, "raw_value": 191.11270833333333, "ghi_normalized": 1.0, "selected": 1 }, "geometry": { "type": "Point", "coordinates": [ -76.0, -11.5 ] } },
+{ "type": "Feature", "properties": { "ghi": 191.11270833333333, "lat": -11.5, "lon": -75.5, "raw_value": 191.11270833333333, "ghi_normalized": 1.0, "selected": 1 }, "geometry": { "type": "Point", "coordinates": [ -75.5, -11.5 ] } }
+]
+}

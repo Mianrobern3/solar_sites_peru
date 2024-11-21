@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8adeb6b4ea094762182bb3908f713eee {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    top: 10px; 
+                    left: 50px; 
+                    z-index: 1000; 
+                    background-color: white; 
+                    padding: 15px; 
+                    border: 2px solid grey; 
+                    border-radius: 5px;
+                    max-width: 300px;">
+            <h2 style="color: #2c3e50; margin-bottom: 10px;">
+                ANÁLISIS DEL SECTOR ELÉCTRICO DE PERÚ
+            </h2>
+            <p style="color: #34495e; margin-bottom: 5px;">
+                <b>DATOS:</b>
+            </p>
+            <ul style="color: #34495e; margin-left: 20px;">
+                <li>Subestaciones Eléctricas</li>
+                <li>Áreas de Cobertura</li>
+                <li>Sitios Solares Potenciales</li>
+            </ul>
+        </div>
+        
+    
+        <div style="position: fixed; 
+                    bottom: 50px; 
+                    left: 50px; 
+                    z-index: 1000; 
+                    background-color: white; 
+                    padding: 10px; 
+                    border: 2px solid grey; 
+                    border-radius: 5px;">
+            <h4 style="margin-bottom: 10px;">Leyenda</h4>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: red;"></i>
+                <span style="margin-left: 5px;">SET 500 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: blue;"></i>
+                <span style="margin-left: 5px;">SET 220 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: green;"></i>
+                <span style="margin-left: 5px;">SET 138 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-circle" style="color: rgba(0,0,0,0.3);"></i>
+                <span style="margin-left: 5px;">Área de Cobertura 10km</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-circle" style="color: #d35400;"></i>
+                <span style="margin-left: 5px;">Sitios Solares</span>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_8adeb6b4ea094762182bb3908f713eee" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8adeb6b4ea094762182bb3908f713eee = L.map(
+                "map_8adeb6b4ea094762182bb3908f713eee",
+                {
+                    center: [-14.0678, -75.7286],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_854cdb34b4112dbd6d8d83791342af27 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_854cdb34b4112dbd6d8d83791342af27.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var feature_group_b2dc756a4358f759f4189a609144333e = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_51782305614903a3d462d3924b7295e3 = L.marker(
+                [-12.5167, -76.7333],
+                {}
+            ).addTo(feature_group_b2dc756a4358f759f4189a609144333e);
+        
+    
+            var icon_cd3b4f345c51559270ce32e91a0b9b4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_51782305614903a3d462d3924b7295e3.setIcon(icon_cd3b4f345c51559270ce32e91a0b9b4b);
+        
+    
+        var popup_32bdef290ae12a815840a64481654950 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00db9d8eafb4f27983b139660dfff5ad = $(`<div id="html_00db9d8eafb4f27983b139660dfff5ad" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Chilca 1</h4>                         <b>Voltaje:</b> 500 kV<br>                         <b>Región:</b> Lima<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_32bdef290ae12a815840a64481654950.setContent(html_00db9d8eafb4f27983b139660dfff5ad);
+            
+        
+
+        marker_51782305614903a3d462d3924b7295e3.bindPopup(popup_32bdef290ae12a815840a64481654950)
+        ;
+
+        
+    
+    
+            var marker_e6d8bd5cbbb678eaaf4c161db99131e9 = L.marker(
+                [-17.1333, -70.8333],
+                {}
+            ).addTo(feature_group_b2dc756a4358f759f4189a609144333e);
+        
+    
+            var icon_8d680953765c13363cbf4c0ccaf970b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e6d8bd5cbbb678eaaf4c161db99131e9.setIcon(icon_8d680953765c13363cbf4c0ccaf970b8);
+        
+    
+        var popup_cc1d22039c8255b521683a560d6db562 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffcd6e56a8efb64a121d0f67167b4f7a = $(`<div id="html_ffcd6e56a8efb64a121d0f67167b4f7a" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Montalvo</h4>                         <b>Voltaje:</b> 500 kV<br>                         <b>Región:</b> Arequipa<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_cc1d22039c8255b521683a560d6db562.setContent(html_ffcd6e56a8efb64a121d0f67167b4f7a);
+            
+        
+
+        marker_e6d8bd5cbbb678eaaf4c161db99131e9.bindPopup(popup_cc1d22039c8255b521683a560d6db562)
+        ;
+
+        
+    
+    
+            var marker_8717046544be989645cae3e683c101af = L.marker(
+                [-17.1917, -70.9306],
+                {}
+            ).addTo(feature_group_b2dc756a4358f759f4189a609144333e);
+        
+    
+            var icon_5e547fdc98f615752beaa5e248f818e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_8717046544be989645cae3e683c101af.setIcon(icon_5e547fdc98f615752beaa5e248f818e5);
+        
+    
+        var popup_eb5621f0b987ce66cad20b16935c6772 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d236a31adbcb638376dfe05165d8bae = $(`<div id="html_1d236a31adbcb638376dfe05165d8bae" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Moquegua</h4>                         <b>Voltaje:</b> 500 kV<br>                         <b>Región:</b> Moquegua<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_eb5621f0b987ce66cad20b16935c6772.setContent(html_1d236a31adbcb638376dfe05165d8bae);
+            
+        
+
+        marker_8717046544be989645cae3e683c101af.bindPopup(popup_eb5621f0b987ce66cad20b16935c6772)
+        ;
+
+        
+    
+    
+            feature_group_b2dc756a4358f759f4189a609144333e.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var feature_group_f254abb7c3c0eca7f30d5a2b36a11aac = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_ad2db34c9d8d5005a1d133af4795e2fe = L.marker(
+                [-12.52, -76.7367],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_7c42637fdc8d5d38263d5de3952b48a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ad2db34c9d8d5005a1d133af4795e2fe.setIcon(icon_7c42637fdc8d5d38263d5de3952b48a5);
+        
+    
+        var popup_0fd8b82f2f2fe4402c8c915804a5669e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_002d1974420f8b0e0b368c8b39faf607 = $(`<div id="html_002d1974420f8b0e0b368c8b39faf607" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Chilca REP</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Lima<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_0fd8b82f2f2fe4402c8c915804a5669e.setContent(html_002d1974420f8b0e0b368c8b39faf607);
+            
+        
+
+        marker_ad2db34c9d8d5005a1d133af4795e2fe.bindPopup(popup_0fd8b82f2f2fe4402c8c915804a5669e)
+        ;
+
+        
+    
+    
+            var marker_753c94a49695e32128faf7c6f4945f89 = L.marker(
+                [-13.7167, -76.0167],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_0d58774b8c1dbec98c11f928084e56a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_753c94a49695e32128faf7c6f4945f89.setIcon(icon_0d58774b8c1dbec98c11f928084e56a2);
+        
+    
+        var popup_999391e929a44b7c1584d72bc45bee3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b85453b5cc76e73424d665f0f585fb98 = $(`<div id="html_b85453b5cc76e73424d665f0f585fb98" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Independencia</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Ica<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_999391e929a44b7c1584d72bc45bee3e.setContent(html_b85453b5cc76e73424d665f0f585fb98);
+            
+        
+
+        marker_753c94a49695e32128faf7c6f4945f89.bindPopup(popup_999391e929a44b7c1584d72bc45bee3e)
+        ;
+
+        
+    
+    
+            var marker_53eec9a448b3c20542fb0a4a3a518a4b = L.marker(
+                [-15.3667, -75.0833],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_2378ceaaafa8bf7a35b091871bf3ceca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_53eec9a448b3c20542fb0a4a3a518a4b.setIcon(icon_2378ceaaafa8bf7a35b091871bf3ceca);
+        
+    
+        var popup_adcfea5a89dce77fba9bee99e78c69a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69c7e7fbe0bb7287dab380d71395ef2e = $(`<div id="html_69c7e7fbe0bb7287dab380d71395ef2e" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Marcona</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Ica<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_adcfea5a89dce77fba9bee99e78c69a8.setContent(html_69c7e7fbe0bb7287dab380d71395ef2e);
+            
+        
+
+        marker_53eec9a448b3c20542fb0a4a3a518a4b.bindPopup(popup_adcfea5a89dce77fba9bee99e78c69a8)
+        ;
+
+        
+    
+    
+            var marker_de4ff8ce55e1b00a15708d278176ff7c = L.marker(
+                [-16.4333, -71.5333],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_fe5e59369bed25c4ebd8be51d834f82b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_de4ff8ce55e1b00a15708d278176ff7c.setIcon(icon_fe5e59369bed25c4ebd8be51d834f82b);
+        
+    
+        var popup_6ffb4056e34ad23b29bd92da10558a13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c3b4d307bd48b0bc7c6eb922399dd12 = $(`<div id="html_4c3b4d307bd48b0bc7c6eb922399dd12" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Socabaya</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Arequipa<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_6ffb4056e34ad23b29bd92da10558a13.setContent(html_4c3b4d307bd48b0bc7c6eb922399dd12);
+            
+        
+
+        marker_de4ff8ce55e1b00a15708d278176ff7c.bindPopup(popup_6ffb4056e34ad23b29bd92da10558a13)
+        ;
+
+        
+    
+    
+            var marker_4ee27c7749127097c94afe41496337af = L.marker(
+                [-16.5167, -71.5833],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_d94f465c2cf2e4db48b2067835396f52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4ee27c7749127097c94afe41496337af.setIcon(icon_d94f465c2cf2e4db48b2067835396f52);
+        
+    
+        var popup_7d4f7ca66d3a9d71e95faf3ccdc92ca4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee599fe8e108d99cb0c1d4a3a23da111 = $(`<div id="html_ee599fe8e108d99cb0c1d4a3a23da111" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Cerro Verde 1</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Arequipa<br>                         <b>Operador:</b> CERRO VERDE<br>                         <b>Tipo:</b> Cliente Libre                     </div>                 </div>`)[0];
+                popup_7d4f7ca66d3a9d71e95faf3ccdc92ca4.setContent(html_ee599fe8e108d99cb0c1d4a3a23da111);
+            
+        
+
+        marker_4ee27c7749127097c94afe41496337af.bindPopup(popup_7d4f7ca66d3a9d71e95faf3ccdc92ca4)
+        ;
+
+        
+    
+    
+            var marker_c81b3f28def39457e561ff3641c9ccb9 = L.marker(
+                [-17.65, -71.3333],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_7e02cf9461d9ed3c67522d27ccdd4a52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c81b3f28def39457e561ff3641c9ccb9.setIcon(icon_7e02cf9461d9ed3c67522d27ccdd4a52);
+        
+    
+        var popup_fd5721b5d13e4025245099838de78918 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9df5f1104f09d0f6a6254658a5dee7a7 = $(`<div id="html_9df5f1104f09d0f6a6254658a5dee7a7" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Ilo 1</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Moquegua<br>                         <b>Operador:</b> ENERSUR<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_fd5721b5d13e4025245099838de78918.setContent(html_9df5f1104f09d0f6a6254658a5dee7a7);
+            
+        
+
+        marker_c81b3f28def39457e561ff3641c9ccb9.bindPopup(popup_fd5721b5d13e4025245099838de78918)
+        ;
+
+        
+    
+    
+            var marker_c894248f0462a39c0c0ba9975e437b14 = L.marker(
+                [-18.0167, -70.25],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_cefb41e1c8e10e120e6df537c33b49f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c894248f0462a39c0c0ba9975e437b14.setIcon(icon_cefb41e1c8e10e120e6df537c33b49f8);
+        
+    
+        var popup_435ddfe53c32995c7008717d04e9dbc6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_629053c4166821a1f1d2e386938c970e = $(`<div id="html_629053c4166821a1f1d2e386938c970e" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Los Héroes</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Tacna<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_435ddfe53c32995c7008717d04e9dbc6.setContent(html_629053c4166821a1f1d2e386938c970e);
+            
+        
+
+        marker_c894248f0462a39c0c0ba9975e437b14.bindPopup(popup_435ddfe53c32995c7008717d04e9dbc6)
+        ;
+
+        
+    
+    
+            var marker_17c3b94092fc6accb80c77e495e5c860 = L.marker(
+                [-13.5333, -71.9333],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_f950b3f0df340c26c4e2efe5e53aee49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_17c3b94092fc6accb80c77e495e5c860.setIcon(icon_f950b3f0df340c26c4e2efe5e53aee49);
+        
+    
+        var popup_88b875da1abddfd80d4837a731ef57f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b435ba4c6fa8cf06db149ae5a5061e46 = $(`<div id="html_b435ba4c6fa8cf06db149ae5a5061e46" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Quencoro</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Cusco<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_88b875da1abddfd80d4837a731ef57f7.setContent(html_b435ba4c6fa8cf06db149ae5a5061e46);
+            
+        
+
+        marker_17c3b94092fc6accb80c77e495e5c860.bindPopup(popup_88b875da1abddfd80d4837a731ef57f7)
+        ;
+
+        
+    
+    
+            var marker_ea9fd21df81d80824fd3abc69e274fb1 = L.marker(
+                [-14.9167, -71.3],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_b715952302589b8d4a853398bff6c675 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ea9fd21df81d80824fd3abc69e274fb1.setIcon(icon_b715952302589b8d4a853398bff6c675);
+        
+    
+        var popup_be82315ca0c42eb88447d2b25f609919 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2265fd9d896b6a294e123a97f620fc32 = $(`<div id="html_2265fd9d896b6a294e123a97f620fc32" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Tintaya</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Cusco<br>                         <b>Operador:</b> ANTAPACCAY<br>                         <b>Tipo:</b> Cliente Libre                     </div>                 </div>`)[0];
+                popup_be82315ca0c42eb88447d2b25f609919.setContent(html_2265fd9d896b6a294e123a97f620fc32);
+            
+        
+
+        marker_ea9fd21df81d80824fd3abc69e274fb1.bindPopup(popup_be82315ca0c42eb88447d2b25f609919)
+        ;
+
+        
+    
+    
+            var marker_54aba5d4d921c403397c78138be655ad = L.marker(
+                [-15.8333, -70.0167],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_36f373572775c96c964e31abf15d0d49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_54aba5d4d921c403397c78138be655ad.setIcon(icon_36f373572775c96c964e31abf15d0d49);
+        
+    
+        var popup_5d4909c7bde62efea7ceccb66f6ca3e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd216a8b919e57061d1fb204d4620f76 = $(`<div id="html_bd216a8b919e57061d1fb204d4620f76" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Puno</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Puno<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_5d4909c7bde62efea7ceccb66f6ca3e3.setContent(html_bd216a8b919e57061d1fb204d4620f76);
+            
+        
+
+        marker_54aba5d4d921c403397c78138be655ad.bindPopup(popup_5d4909c7bde62efea7ceccb66f6ca3e3)
+        ;
+
+        
+    
+    
+            var marker_527dd6c9496232075c0f27fe78a5d2df = L.marker(
+                [-15.5, -70.1333],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_26f3d89a4d023854adf5420c6c5837f7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_527dd6c9496232075c0f27fe78a5d2df.setIcon(icon_26f3d89a4d023854adf5420c6c5837f7);
+        
+    
+        var popup_f8e5c0d5eb55c0f8b96567003d3653b9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f89374f0e868d1552bda4a4ba336cff5 = $(`<div id="html_f89374f0e868d1552bda4a4ba336cff5" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Juliaca</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Puno<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_f8e5c0d5eb55c0f8b96567003d3653b9.setContent(html_f89374f0e868d1552bda4a4ba336cff5);
+            
+        
+
+        marker_527dd6c9496232075c0f27fe78a5d2df.bindPopup(popup_f8e5c0d5eb55c0f8b96567003d3653b9)
+        ;
+
+        
+    
+    
+            var marker_c3a5cb9bc7058f9a9a385143c55cdce9 = L.marker(
+                [-13.6333, -72.8833],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_69cb22cd4b3e70c355090cdd67012805 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c3a5cb9bc7058f9a9a385143c55cdce9.setIcon(icon_69cb22cd4b3e70c355090cdd67012805);
+        
+    
+        var popup_6a121621a9ac320108783582dcfe8da2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5245e3e0ca4c24191c650cf33ba0bc6 = $(`<div id="html_f5245e3e0ca4c24191c650cf33ba0bc6" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Abancay Nueva</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Apurímac<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_6a121621a9ac320108783582dcfe8da2.setContent(html_f5245e3e0ca4c24191c650cf33ba0bc6);
+            
+        
+
+        marker_c3a5cb9bc7058f9a9a385143c55cdce9.bindPopup(popup_6a121621a9ac320108783582dcfe8da2)
+        ;
+
+        
+    
+    
+            var marker_959b890d5707c388f33fd63d9a278828 = L.marker(
+                [-14.3167, -73.2],
+                {}
+            ).addTo(feature_group_f254abb7c3c0eca7f30d5a2b36a11aac);
+        
+    
+            var icon_d05867b1919f47dde5879c51a292210b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_959b890d5707c388f33fd63d9a278828.setIcon(icon_d05867b1919f47dde5879c51a292210b);
+        
+    
+        var popup_27eeda3f4722fb4f682f58b4c7cad7ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c59f75780560db36cb41bd7d33f3a11f = $(`<div id="html_c59f75780560db36cb41bd7d33f3a11f" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Cotaruse</h4>                         <b>Voltaje:</b> 220 kV<br>                         <b>Región:</b> Apurímac<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Compensación                     </div>                 </div>`)[0];
+                popup_27eeda3f4722fb4f682f58b4c7cad7ee.setContent(html_c59f75780560db36cb41bd7d33f3a11f);
+            
+        
+
+        marker_959b890d5707c388f33fd63d9a278828.bindPopup(popup_27eeda3f4722fb4f682f58b4c7cad7ee)
+        ;
+
+        
+    
+    
+            feature_group_f254abb7c3c0eca7f30d5a2b36a11aac.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var feature_group_c7efd6f55d1a7862a2dd83bd5424d621 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_7157f471fc5fc85bd09bb7b336aef252 = L.marker(
+                [-16.52, -71.5867],
+                {}
+            ).addTo(feature_group_c7efd6f55d1a7862a2dd83bd5424d621);
+        
+    
+            var icon_b6e92bf017595061b42fad31c97379b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7157f471fc5fc85bd09bb7b336aef252.setIcon(icon_b6e92bf017595061b42fad31c97379b8);
+        
+    
+        var popup_d3de2496b016c471c4079a6748e98272 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb50b448251099130261a3152b4c19f5 = $(`<div id="html_eb50b448251099130261a3152b4c19f5" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Cerro Verde 2</h4>                         <b>Voltaje:</b> 138 kV<br>                         <b>Región:</b> Arequipa<br>                         <b>Operador:</b> CERRO VERDE<br>                         <b>Tipo:</b> Cliente Libre                     </div>                 </div>`)[0];
+                popup_d3de2496b016c471c4079a6748e98272.setContent(html_eb50b448251099130261a3152b4c19f5);
+            
+        
+
+        marker_7157f471fc5fc85bd09bb7b336aef252.bindPopup(popup_d3de2496b016c471c4079a6748e98272)
+        ;
+
+        
+    
+    
+            var marker_f2e868549219c05badf94c064ea0b7ce = L.marker(
+                [-17.6533, -71.3367],
+                {}
+            ).addTo(feature_group_c7efd6f55d1a7862a2dd83bd5424d621);
+        
+    
+            var icon_5f63bad1b3e66c4d1333ef4ee371ba53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f2e868549219c05badf94c064ea0b7ce.setIcon(icon_5f63bad1b3e66c4d1333ef4ee371ba53);
+        
+    
+        var popup_0fa9e9b16c72b5f1fc47ad8e29b8fe6d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f4760632c58bd28a685a9ecd36da105a = $(`<div id="html_f4760632c58bd28a685a9ecd36da105a" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Ilo 2</h4>                         <b>Voltaje:</b> 138 kV<br>                         <b>Región:</b> Moquegua<br>                         <b>Operador:</b> ENERSUR<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_0fa9e9b16c72b5f1fc47ad8e29b8fe6d.setContent(html_f4760632c58bd28a685a9ecd36da105a);
+            
+        
+
+        marker_f2e868549219c05badf94c064ea0b7ce.bindPopup(popup_0fa9e9b16c72b5f1fc47ad8e29b8fe6d)
+        ;
+
+        
+    
+    
+            var marker_c5fdedb02448dc02aa2345d428d69756 = L.marker(
+                [-18.05, -70.2333],
+                {}
+            ).addTo(feature_group_c7efd6f55d1a7862a2dd83bd5424d621);
+        
+    
+            var icon_392e5c81b7fe16d8d39baca5dca1bb83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c5fdedb02448dc02aa2345d428d69756.setIcon(icon_392e5c81b7fe16d8d39baca5dca1bb83);
+        
+    
+        var popup_f175fe9d66c2841ba9270787aff7dfc4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be1c399af7d21ec29902221965c3c40a = $(`<div id="html_be1c399af7d21ec29902221965c3c40a" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Tacna</h4>                         <b>Voltaje:</b> 138 kV<br>                         <b>Región:</b> Tacna<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_f175fe9d66c2841ba9270787aff7dfc4.setContent(html_be1c399af7d21ec29902221965c3c40a);
+            
+        
+
+        marker_c5fdedb02448dc02aa2345d428d69756.bindPopup(popup_f175fe9d66c2841ba9270787aff7dfc4)
+        ;
+
+        
+    
+    
+            var marker_2b14ce81be537fadcddd7984b923aa95 = L.marker(
+                [-14.25, -71.75],
+                {}
+            ).addTo(feature_group_c7efd6f55d1a7862a2dd83bd5424d621);
+        
+    
+            var icon_7078faa13df1c5e87a28ad1b0b942c2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2b14ce81be537fadcddd7984b923aa95.setIcon(icon_7078faa13df1c5e87a28ad1b0b942c2b);
+        
+    
+        var popup_76ecda8a90fe5ba0cda53dc3a2dc5312 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_649558fe4d3d1424c2f78ed4e422520f = $(`<div id="html_649558fe4d3d1424c2f78ed4e422520f" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Onocora</h4>                         <b>Voltaje:</b> 138 kV<br>                         <b>Región:</b> Cusco<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_76ecda8a90fe5ba0cda53dc3a2dc5312.setContent(html_649558fe4d3d1424c2f78ed4e422520f);
+            
+        
+
+        marker_2b14ce81be537fadcddd7984b923aa95.bindPopup(popup_76ecda8a90fe5ba0cda53dc3a2dc5312)
+        ;
+
+        
+    
+    
+            var marker_267c1068bfeee1f0dcc1b05fe658432a = L.marker(
+                [-14.9167, -70.1917],
+                {}
+            ).addTo(feature_group_c7efd6f55d1a7862a2dd83bd5424d621);
+        
+    
+            var icon_a11a5ba1b2401c7bc5cae66dce8fd75a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_267c1068bfeee1f0dcc1b05fe658432a.setIcon(icon_a11a5ba1b2401c7bc5cae66dce8fd75a);
+        
+    
+        var popup_e5f5d82e989e792fd331aac2526c7b8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b12c4806906fbe02d03d3136210e4ecd = $(`<div id="html_b12c4806906fbe02d03d3136210e4ecd" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: Arial; width: 250px;">                         <h4>SE Azángaro</h4>                         <b>Voltaje:</b> 138 kV<br>                         <b>Región:</b> Puno<br>                         <b>Operador:</b> REP<br>                         <b>Tipo:</b> Transformación                     </div>                 </div>`)[0];
+                popup_e5f5d82e989e792fd331aac2526c7b8e.setContent(html_b12c4806906fbe02d03d3136210e4ecd);
+            
+        
+
+        marker_267c1068bfeee1f0dcc1b05fe658432a.bindPopup(popup_e5f5d82e989e792fd331aac2526c7b8e)
+        ;
+
+        
+    
+    
+            feature_group_c7efd6f55d1a7862a2dd83bd5424d621.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var feature_group_1c51d3dcbd973741018374081d9ef407 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_ea8dc01e942bff23c911c45a345eaab7 = L.circle(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_8c8e7b5df0a9e78a111c5d42bbfcbd9a = L.circle(
+                [-12.52, -76.7367],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_89a488ab653221d354a30979e691185d = L.circle(
+                [-13.7167, -76.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_c20896e4aac6bf83cbeb9368bfefb369 = L.circle(
+                [-15.3667, -75.0833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_9a91360c58d9d4c7e1080742d034cfd6 = L.circle(
+                [-17.1333, -70.8333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_bbad614634124637f4781c91f18d7369 = L.circle(
+                [-16.4333, -71.5333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_dc67a2da380c8141f1eb2daaf9caef34 = L.circle(
+                [-16.5167, -71.5833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_a6e9c484e5befa07512d7e891bb841de = L.circle(
+                [-16.52, -71.5867],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_8d39a5d3eb10fb5a639819dcfca0eb3f = L.circle(
+                [-17.1917, -70.9306],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_7c12b89cc10e90615d4a89895b8eda15 = L.circle(
+                [-17.65, -71.3333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_634b61d445ddbc640d95ae07fc58ffde = L.circle(
+                [-17.6533, -71.3367],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_0db5ae4a3c5cbc4280784db46efc879e = L.circle(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_1237cac6c09b0844f52610c9e55b33f4 = L.circle(
+                [-18.05, -70.2333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_219dbc71c4d48c8ee4a10ceb486325d9 = L.circle(
+                [-13.5333, -71.9333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_ec1ebbc90eb9c6eef8559e963215b73a = L.circle(
+                [-14.9167, -71.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_72b080f73bf65d1296835ae31cd9439f = L.circle(
+                [-14.25, -71.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_9cccf26ea0896a4e77202e755941e4d2 = L.circle(
+                [-15.8333, -70.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_ecc959c904a15340c9b91ccf6ea7fe25 = L.circle(
+                [-15.5, -70.1333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_839cfb35c2a99e8a8e0f67876616c63b = L.circle(
+                [-14.9167, -70.1917],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_f36b166ee94d727251bc32d54ef8883d = L.circle(
+                [-13.6333, -72.8833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            var circle_96fe0ade6373d8f9254c333807b50a11 = L.circle(
+                [-14.3167, -73.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_1c51d3dcbd973741018374081d9ef407);
+        
+    
+            feature_group_1c51d3dcbd973741018374081d9ef407.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var feature_group_4552fa0d7dc0eac1626ab22b63f4ace7 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_6d4ce14b54873c2aa09c952207fa01de = L.circleMarker(
+                [-17.0011, -70.9814],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_4552fa0d7dc0eac1626ab22b63f4ace7);
+        
+    
+        var popup_0e6204b8626b163b54a04f42cd72e307 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a8e97c553e781aa2095b5fe31e4070cd = $(`<div id="html_a8e97c553e781aa2095b5fe31e4070cd" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: #d35400;">Moquegua Solar 1</h4>                     <b>Radiación Solar:</b> 6.80 kWh/m²/día<br>                     <b>Coordenadas:</b><br>                     Lat: -17.0011<br>                     Lon: -70.9814                                                           </div>             </div>`)[0];
+                popup_0e6204b8626b163b54a04f42cd72e307.setContent(html_a8e97c553e781aa2095b5fe31e4070cd);
+            
+        
+
+        circle_marker_6d4ce14b54873c2aa09c952207fa01de.bindPopup(popup_0e6204b8626b163b54a04f42cd72e307)
+        ;
+
+        
+    
+    
+            var circle_a5487b20366ef419c129d9e433b1743a = L.circle(
+                [-17.0011, -70.9814],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_4552fa0d7dc0eac1626ab22b63f4ace7);
+        
+    
+        var popup_12096433df202e76c52a36d0b4ef66bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_79021f7d56ea4a4692a511cbb73aac98 = $(`<div id="html_79021f7d56ea4a4692a511cbb73aac98" style="width: 100.0%; height: 100.0%;">Área de análisis - Moquegua Solar 1</div>`)[0];
+                popup_12096433df202e76c52a36d0b4ef66bc.setContent(html_79021f7d56ea4a4692a511cbb73aac98);
+            
+        
+
+        circle_a5487b20366ef419c129d9e433b1743a.bindPopup(popup_12096433df202e76c52a36d0b4ef66bc)
+        ;
+
+        
+    
+    
+            feature_group_4552fa0d7dc0eac1626ab22b63f4ace7.addTo(map_8adeb6b4ea094762182bb3908f713eee);
+        
+    
+            var layer_control_93b6cad76300c3b6bb061d53c4663128_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_854cdb34b4112dbd6d8d83791342af27,
+                },
+                overlays :  {
+                    "SET 500 kV" : feature_group_b2dc756a4358f759f4189a609144333e,
+                    "SET 220 kV" : feature_group_f254abb7c3c0eca7f30d5a2b36a11aac,
+                    "SET 138 kV" : feature_group_c7efd6f55d1a7862a2dd83bd5424d621,
+                    "\u00c1reas de Cobertura" : feature_group_1c51d3dcbd973741018374081d9ef407,
+                    "Sitios Solares" : feature_group_4552fa0d7dc0eac1626ab22b63f4ace7,
+                },
+            };
+            let layer_control_93b6cad76300c3b6bb061d53c4663128 = L.control.layers(
+                layer_control_93b6cad76300c3b6bb061d53c4663128_layers.base_layers,
+                layer_control_93b6cad76300c3b6bb061d53c4663128_layers.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_8adeb6b4ea094762182bb3908f713eee);
+
+        
+</script>
+</html>

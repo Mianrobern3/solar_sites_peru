@@ -1,0 +1,1227 @@
+2024-11-21 14:37:32,709 - map_utils - INFO - Sitio solar agregado: Tacna Solar
+2024-11-21 14:37:32,745 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_peru.html
+2024-11-21 16:36:00,869 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 16:36:00,906 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_peru.html
+2024-11-21 16:38:43,793 - map_utils - INFO - Subestación agregada: La Planicie (500kV)
+2024-11-21 16:38:43,793 - map_utils - INFO - Subestación agregada: Carapongo (500kV)
+2024-11-21 16:38:43,794 - map_utils - INFO - Subestación agregada: Chilca (500kV)
+2024-11-21 16:38:43,794 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:38:43,794 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:38:43,795 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:38:43,795 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:38:43,795 - map_utils - INFO - Subestación agregada: Cerro Verde (220kV)
+2024-11-21 16:38:43,796 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:38:43,796 - map_utils - INFO - Subestación agregada: Ilo (220kV)
+2024-11-21 16:38:43,797 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:38:43,797 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:38:43,797 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:38:43,798 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:38:43,798 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:38:43,798 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:38:43,799 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:38:43,799 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:38:43,826 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 16:38:43,870 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_peru.html
+2024-11-21 16:42:48,146 - map_utils - INFO - Agregada subestación: Chilca 1 (500kV)
+2024-11-21 16:42:48,147 - map_utils - INFO - Agregada subestación: Chilca REP (220kV)
+2024-11-21 16:42:48,147 - map_utils - INFO - Agregada subestación: Independencia (220kV)
+2024-11-21 16:42:48,147 - map_utils - INFO - Agregada subestación: Marcona (220kV)
+2024-11-21 16:42:48,148 - map_utils - INFO - Agregada subestación: Montalvo (500kV)
+2024-11-21 16:42:48,148 - map_utils - INFO - Agregada subestación: Socabaya (220kV)
+2024-11-21 16:42:48,148 - map_utils - INFO - Agregada subestación: Cerro Verde 1 (220kV)
+2024-11-21 16:42:48,149 - map_utils - INFO - Agregada subestación: Cerro Verde 2 (138kV)
+2024-11-21 16:42:48,149 - map_utils - INFO - Agregada subestación: Moquegua (500kV)
+2024-11-21 16:42:48,150 - map_utils - INFO - Agregada subestación: Ilo 1 (220kV)
+2024-11-21 16:42:48,150 - map_utils - INFO - Agregada subestación: Ilo 2 (138kV)
+2024-11-21 16:42:48,150 - map_utils - INFO - Agregada subestación: Los Héroes (220kV)
+2024-11-21 16:42:48,150 - map_utils - INFO - Agregada subestación: Tacna (138kV)
+2024-11-21 16:42:48,151 - map_utils - INFO - Agregada subestación: Quencoro (220kV)
+2024-11-21 16:42:48,151 - map_utils - INFO - Agregada subestación: Tintaya (220kV)
+2024-11-21 16:42:48,151 - map_utils - INFO - Agregada subestación: Onocora (138kV)
+2024-11-21 16:42:48,151 - map_utils - INFO - Agregada subestación: Puno (220kV)
+2024-11-21 16:42:48,152 - map_utils - INFO - Agregada subestación: Juliaca (220kV)
+2024-11-21 16:42:48,152 - map_utils - INFO - Agregada subestación: Azángaro (138kV)
+2024-11-21 16:42:48,152 - map_utils - INFO - Agregada subestación: Abancay Nueva (220kV)
+2024-11-21 16:42:48,153 - map_utils - INFO - Agregada subestación: Cotaruse (220kV)
+2024-11-21 16:42:48,185 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 16:42:48,238 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_peru.html
+2024-11-21 16:45:21,431 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:45:21,432 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:45:21,432 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:45:21,432 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:45:21,433 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:45:21,433 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:45:21,433 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:45:21,433 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:45:21,434 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:45:21,434 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:45:21,434 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:45:21,434 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:45:21,434 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:45:21,435 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:45:21,435 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:45:21,435 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:45:21,435 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:45:21,436 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:45:21,436 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:45:21,436 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:45:21,436 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:45:21,468 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 16:45:21,522 - map_utils - INFO - Mapa guardado en: data/processed/solar_sites_map_20241121_164521.html
+2024-11-21 16:47:29,454 - map_utils - INFO - Mapa base inicializado correctamente
+2024-11-21 16:47:29,454 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:47:29,455 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:47:29,455 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:47:29,456 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:47:29,456 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:47:29,456 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:47:29,457 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:47:29,457 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:47:29,457 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:47:29,458 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:47:29,458 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:47:29,458 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:47:29,458 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:47:29,459 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:47:29,459 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:47:29,459 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:47:29,459 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:47:29,459 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:47:29,460 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:47:29,460 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:47:29,460 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:47:29,489 - map_utils - INFO - Sitio solar agregado: Tacna Solar
+2024-11-21 16:47:29,541 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map_20241121_164729.html
+2024-11-21 16:49:32,438 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:49:32,439 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:49:32,439 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:49:32,439 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:49:32,440 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:49:32,440 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:49:32,441 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:49:32,441 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:49:32,442 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:49:32,442 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:49:32,443 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:49:32,443 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:49:32,444 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:49:32,444 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:49:32,445 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:49:32,445 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:49:32,446 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:49:32,446 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:49:32,446 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:49:32,447 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:49:32,447 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:49:32,476 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 16:49:32,518 - map_utils - INFO - Mapa guardado en: data/processed/solar_sites_map_20241121_164932.html
+2024-11-21 16:52:17,554 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:52:17,555 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:52:17,555 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:52:17,555 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:52:17,556 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:52:17,556 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:52:17,557 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:52:17,557 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:52:17,558 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:52:17,558 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:52:17,559 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:52:17,559 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:52:17,559 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:52:17,560 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:52:17,560 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:52:17,561 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:52:17,561 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:52:17,561 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:52:17,562 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:52:17,562 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:52:17,563 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:52:17,593 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 16:52:17,635 - map_utils - INFO - Mapa guardado en: data/processed/solar_sites_map.html
+2024-11-21 16:57:07,262 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:57:07,263 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:57:07,263 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:57:07,264 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:57:07,264 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:57:07,265 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:57:07,265 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:57:07,265 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:57:07,265 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:57:07,266 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:57:07,266 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:57:07,266 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:57:07,267 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:57:07,267 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:57:07,267 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:57:07,268 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:57:07,268 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:57:07,268 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:57:07,268 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:57:07,269 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:57:07,269 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:57:07,269 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 16:57:07,269 - map_utils - ERROR - Error al agregar sitio solar Lurín Solar: 'MapCreator' object has no attribute 'solar_sites'
+2024-11-21 16:57:11,040 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:57:11,041 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:57:11,041 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:57:11,041 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:57:11,042 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:57:11,042 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:57:11,042 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:57:11,043 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:57:11,043 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:57:11,043 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:57:11,044 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:57:11,044 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:57:11,044 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:57:11,044 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:57:11,045 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:57:11,045 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:57:11,045 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:57:11,045 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:57:11,046 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:57:11,046 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:57:11,046 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:57:11,046 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 16:57:11,047 - map_utils - ERROR - Error al agregar sitio solar Lurín Solar: 'MapCreator' object has no attribute 'solar_sites'
+2024-11-21 16:59:09,474 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 16:59:09,475 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 16:59:09,475 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 16:59:09,476 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 16:59:09,476 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 16:59:09,476 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 16:59:09,477 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 16:59:09,477 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 16:59:09,477 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 16:59:09,478 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 16:59:09,478 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 16:59:09,478 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 16:59:09,479 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 16:59:09,479 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 16:59:09,480 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 16:59:09,480 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 16:59:09,480 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 16:59:09,481 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 16:59:09,481 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 16:59:09,481 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 16:59:09,482 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 16:59:09,482 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 16:59:09,482 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 16:59:09,482 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 16:59:09,483 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 16:59:09,483 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 16:59:09,483 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 16:59:09,483 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 16:59:09,483 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 16:59:09,484 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 16:59:09,484 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 16:59:09,484 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 16:59:09,484 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 16:59:09,484 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 16:59:09,485 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 16:59:09,485 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 16:59:09,485 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 16:59:09,485 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 16:59:09,486 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 16:59:09,486 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 16:59:09,486 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 16:59:09,486 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 16:59:09,487 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 16:59:09,487 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 16:59:09,487 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 16:59:09,488 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 16:59:09,488 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 16:59:09,488 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 16:59:09,488 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 16:59:09,489 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 16:59:09,489 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 16:59:09,489 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 16:59:09,489 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 16:59:09,490 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 16:59:09,490 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 16:59:09,490 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 16:59:09,490 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 16:59:09,491 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 16:59:09,491 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 16:59:09,491 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 16:59:09,491 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 16:59:09,491 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 16:59:09,492 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 16:59:09,492 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 16:59:09,492 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 16:59:09,493 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 16:59:09,493 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 16:59:09,615 - map_utils - INFO - Mapa guardado en: data/processed/solar_sites_map.html
+2024-11-21 17:05:50,086 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:05:50,087 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:05:50,088 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:05:50,088 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:05:50,089 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:05:50,089 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:05:50,090 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:05:50,090 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:05:50,090 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:05:50,090 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:05:50,091 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:05:50,091 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:05:50,091 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:05:50,092 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:05:50,092 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:05:50,093 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:05:50,093 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:05:50,094 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:05:50,094 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:05:50,095 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:05:50,095 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:05:50,096 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:05:50,096 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:05:50,097 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:05:50,097 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:05:50,097 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:05:50,098 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:05:50,098 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:05:50,098 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:05:50,099 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:05:50,099 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:05:50,099 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:05:50,100 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:05:50,100 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:05:50,100 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:05:50,100 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:05:50,101 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:05:50,101 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:05:50,102 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:05:50,102 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:05:50,102 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:05:50,103 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:05:50,103 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:05:50,103 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:05:50,104 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:05:50,104 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:05:50,104 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:05:50,104 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:05:50,105 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:05:50,105 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:05:50,105 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:05:50,106 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:05:50,106 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:05:50,106 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:05:50,106 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:05:50,107 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:05:50,107 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:05:50,107 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:05:50,108 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:05:50,108 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:05:50,108 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:05:50,109 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:05:50,109 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:05:50,109 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:05:50,110 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:05:50,110 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:05:50,110 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:05:50,235 - map_utils - ERROR - Error al guardar el mapa: 'Figure' object has no attribute 'scripts'
+2024-11-21 17:10:07,374 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:10:07,376 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:10:07,376 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:10:07,377 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:10:07,377 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:10:07,378 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:10:07,378 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:10:07,379 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:10:07,380 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:10:07,380 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:10:07,381 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:10:07,381 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:10:07,382 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:10:07,382 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:10:07,382 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:10:07,383 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:10:07,383 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:10:07,383 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:10:07,384 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:10:07,385 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:10:07,385 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:10:07,386 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:10:07,386 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:10:07,386 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:10:07,387 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:10:07,387 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:10:07,387 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:10:07,387 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:10:07,388 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:10:07,388 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:10:07,388 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:10:07,389 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:10:07,389 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:10:07,389 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:10:07,390 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:10:07,390 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:10:07,390 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:10:07,391 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:10:07,391 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:10:07,391 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:10:07,391 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:10:07,392 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:10:07,392 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:10:07,392 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:10:07,393 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:10:07,393 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:10:07,393 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:10:07,393 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:10:07,394 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:10:07,394 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:10:07,394 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:10:07,395 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:10:07,395 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:10:07,395 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:10:07,395 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:10:07,396 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:10:07,396 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:10:07,396 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:10:07,396 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:10:07,397 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:10:07,397 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:10:07,397 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:10:07,397 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:10:07,398 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:10:07,398 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:10:07,398 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:10:07,399 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:10:07,520 - map_utils - ERROR - Error al guardar el mapa: 'Figure' object has no attribute 'scripts'
+2024-11-21 17:12:27,726 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:12:27,727 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:12:27,727 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:12:27,728 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:12:27,728 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:12:27,728 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:12:27,729 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:12:27,729 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:12:27,729 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:12:27,730 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:12:27,730 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:12:27,731 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:12:27,731 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:12:27,731 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:12:27,732 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:12:27,732 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:12:27,732 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:12:27,733 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:12:27,733 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:12:27,734 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:12:27,734 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:12:27,734 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:12:27,734 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:12:27,735 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:12:27,735 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:12:27,735 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:12:27,736 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:12:27,736 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:12:27,736 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:12:27,736 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:12:27,737 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:12:27,737 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:12:27,737 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:12:27,738 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:12:27,738 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:12:27,738 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:12:27,738 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:12:27,739 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:12:27,739 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:12:27,739 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:12:27,740 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:12:27,740 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:12:27,740 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:12:27,741 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:12:27,741 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:12:27,741 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:12:27,741 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:12:27,742 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:12:27,742 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:12:27,742 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:12:27,742 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:12:27,743 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:12:27,743 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:12:27,743 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:12:27,744 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:12:27,744 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:12:27,744 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:12:27,744 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:12:27,745 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:12:27,745 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:12:27,745 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:12:27,746 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:12:27,746 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:12:27,746 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:12:27,747 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:12:27,747 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:12:27,747 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:12:27,749 - map_utils - ERROR - Error al guardar el mapa: 'Element' object has no attribute '_repr_html_'
+2024-11-21 17:13:19,779 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:13:19,780 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:13:19,781 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:13:19,781 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:13:19,782 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:13:19,783 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:13:19,784 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:13:19,784 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:13:19,785 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:13:19,785 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:13:19,786 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:13:19,786 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:13:19,787 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:13:19,787 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:13:19,788 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:13:19,788 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:13:19,789 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:13:19,789 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:13:19,790 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:13:19,790 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:13:19,791 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:13:19,791 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:13:19,792 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:13:19,792 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:13:19,793 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:13:19,793 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:13:19,793 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:13:19,793 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:13:19,794 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:13:19,794 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:13:19,794 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:13:19,795 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:13:19,795 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:13:19,796 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:13:19,796 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:13:19,796 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:13:19,796 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:13:19,797 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:13:19,797 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:13:19,797 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:13:19,798 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:13:19,798 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:13:19,799 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:13:19,799 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:13:19,799 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:13:19,800 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:13:19,800 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:13:19,800 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:13:19,801 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:13:19,801 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:13:19,801 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:13:19,801 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:13:19,802 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:13:19,802 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:13:19,802 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:13:19,802 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:13:19,803 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:13:19,803 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:13:19,803 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:13:19,803 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:13:19,804 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:13:19,804 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:13:19,804 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:13:19,805 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:13:19,805 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:13:19,805 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:13:19,805 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:13:19,807 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:15:31,665 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:15:31,666 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:15:31,667 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:15:31,667 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:15:31,668 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:15:31,669 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:15:31,669 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:15:31,670 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:15:31,670 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:15:31,671 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:15:31,671 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:15:31,672 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:15:31,672 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:15:31,673 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:15:31,673 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:15:31,674 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:15:31,674 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:15:31,675 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:15:31,675 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:15:31,676 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:15:31,676 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:15:31,676 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:15:31,677 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:15:31,677 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:15:31,678 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:15:31,678 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:15:31,679 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:15:31,679 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:15:31,680 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:15:31,680 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:15:31,681 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:15:31,681 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:15:31,681 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:15:31,682 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:15:31,682 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:15:31,683 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:15:31,683 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:15:31,683 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:15:31,684 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:15:31,684 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:15:31,685 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:15:31,685 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:15:31,686 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:15:31,686 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:15:31,687 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:15:31,687 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:15:31,687 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:15:31,688 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:15:31,688 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:15:31,689 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:15:31,689 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:15:31,689 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:15:31,690 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:15:31,690 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:15:31,691 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:15:31,691 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:15:31,692 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:15:31,692 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:15:31,692 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:15:31,693 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:15:31,693 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:15:31,693 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:15:31,694 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:15:31,694 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:15:31,695 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:15:31,695 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:15:31,695 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:15:31,696 - map_utils - INFO - Template HTML exists: True at /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/src/templates/index.html
+2024-11-21 17:15:31,696 - map_utils - INFO - CSS file exists: True at /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/src/static/css/styles.css
+2024-11-21 17:15:31,696 - map_utils - INFO - Map groups status:
+2024-11-21 17:15:31,696 - map_utils - INFO -   - SET 500 kV: ✓
+2024-11-21 17:15:31,696 - map_utils - INFO -   - SET 220 kV: ✓
+2024-11-21 17:15:31,696 - map_utils - INFO -   - SET 138 kV: ✓
+2024-11-21 17:15:31,696 - map_utils - INFO -   - Coverage: ✓
+2024-11-21 17:15:31,696 - map_utils - INFO -   - Solar Sites: ✓
+2024-11-21 17:15:31,699 - map_utils - INFO - Successfully extracted map components
+2024-11-21 17:15:31,700 - map_utils - INFO - Successfully rendered template
+2024-11-21 17:15:31,700 - map_utils - INFO - Map saved successfully at: data/processed/solar_sites_map.html
+2024-11-21 17:19:18,503 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:19:18,504 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:19:18,504 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:19:18,505 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:19:18,506 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:19:18,506 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:19:18,507 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:19:18,507 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:19:18,508 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:19:18,508 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:19:18,509 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:19:18,509 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:19:18,509 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:19:18,510 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:19:18,510 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:19:18,511 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:19:18,512 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:19:18,512 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:19:18,512 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:19:18,513 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:19:18,513 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:19:18,514 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:19:18,514 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:19:18,515 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:19:18,516 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:19:18,516 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:19:18,517 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:19:18,517 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:19:18,517 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:19:18,518 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:19:18,518 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:19:18,519 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:19:18,519 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:19:18,519 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:19:18,519 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:19:18,520 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:19:18,520 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:19:18,520 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:19:18,520 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:19:18,521 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:19:18,521 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:19:18,521 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:19:18,522 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:19:18,522 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:19:18,523 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:19:18,523 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:19:18,523 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:19:18,524 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:19:18,524 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:19:18,524 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:19:18,525 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:19:18,525 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:19:18,525 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:19:18,526 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:19:18,526 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:19:18,526 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:19:18,527 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:19:18,527 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:19:18,527 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:19:18,528 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:19:18,528 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:19:18,528 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:19:18,529 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:19:18,529 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:19:18,530 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:19:18,530 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:19:18,530 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:19:18,530 - map_utils - INFO - Template HTML exists: True at /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/src/templates/index.html
+2024-11-21 17:19:18,531 - map_utils - INFO - CSS file exists: True at /home/nq/Documentos/Peru_Solar_Sites/solar_sites_peru/src/static/css/styles.css
+2024-11-21 17:19:18,531 - map_utils - INFO - Map groups status:
+2024-11-21 17:19:18,531 - map_utils - INFO -   - SET 500 kV: ✓
+2024-11-21 17:19:18,531 - map_utils - INFO -   - SET 220 kV: ✓
+2024-11-21 17:19:18,531 - map_utils - INFO -   - SET 138 kV: ✓
+2024-11-21 17:19:18,531 - map_utils - INFO -   - Coverage: ✓
+2024-11-21 17:19:18,531 - map_utils - INFO -   - Solar Sites: ✓
+2024-11-21 17:19:18,533 - map_utils - INFO - Successfully extracted map components
+2024-11-21 17:19:18,533 - map_utils - INFO - Successfully rendered template
+2024-11-21 17:19:18,534 - map_utils - INFO - Map saved successfully at: data/processed/solar_sites_map.html
+2024-11-21 17:19:53,435 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:19:53,436 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:19:53,437 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:19:53,437 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:19:53,438 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:19:53,438 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:19:53,438 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:19:53,439 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:19:53,439 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:19:53,439 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:19:53,440 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:19:53,440 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:19:53,440 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:19:53,441 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:19:53,441 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:19:53,441 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:19:53,442 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:19:53,442 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:19:53,442 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:19:53,443 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:19:53,443 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:19:53,443 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:19:53,444 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:19:53,444 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:19:53,444 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:19:53,445 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:19:53,445 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:19:53,446 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:19:53,446 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:19:53,446 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:19:53,447 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:19:53,447 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:19:53,447 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:19:53,448 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:19:53,448 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:19:53,449 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:19:53,449 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:19:53,449 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:19:53,450 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:19:53,450 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:19:53,451 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:19:53,451 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:19:53,451 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:19:53,452 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:19:53,452 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:19:53,452 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:19:53,453 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:19:53,453 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:19:53,454 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:19:53,454 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:19:53,454 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:19:53,455 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:19:53,455 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:19:53,456 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:19:53,456 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:19:53,456 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:19:53,457 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:19:53,457 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:19:53,458 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:19:53,458 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:19:53,458 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:19:53,459 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:19:53,459 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:19:53,459 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:19:53,460 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:19:53,460 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:19:53,461 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:19:53,463 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:20:51,595 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:20:51,596 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:20:51,597 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:20:51,597 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:20:51,598 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:20:51,599 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:20:51,599 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:20:51,600 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:20:51,600 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:20:51,601 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:20:51,601 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:20:51,602 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:20:51,602 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:20:51,603 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:20:51,603 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:20:51,603 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:20:51,604 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:20:51,604 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:20:51,604 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:20:51,605 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:20:51,605 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:20:51,605 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:20:51,606 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:20:51,606 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:20:51,606 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:20:51,607 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:20:51,607 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:20:51,608 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:20:51,608 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:20:51,608 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:20:51,609 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:20:51,609 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:20:51,609 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:20:51,610 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:20:51,610 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:20:51,610 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:20:51,611 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:20:51,611 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:20:51,611 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:20:51,612 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:20:51,612 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:20:51,612 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:20:51,613 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:20:51,613 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:20:51,613 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:20:51,614 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:20:51,614 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:20:51,614 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:20:51,615 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:20:51,615 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:20:51,615 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:20:51,615 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:20:51,616 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:20:51,616 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:20:51,616 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:20:51,617 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:20:51,617 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:20:51,617 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:20:51,618 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:20:51,618 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:20:51,618 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:20:51,618 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:20:51,619 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:20:51,619 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:20:51,619 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:20:51,620 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:20:51,620 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:20:51,768 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:22:09,255 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:22:09,256 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:22:09,257 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:22:09,257 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:22:09,258 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:22:09,258 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:22:09,259 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:22:09,259 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:22:09,260 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:22:09,260 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:22:09,261 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:22:09,261 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:22:09,261 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:22:09,262 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:22:09,262 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:22:09,262 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:22:09,263 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:22:09,263 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:22:09,263 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:22:09,263 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:22:09,264 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:22:09,264 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:22:09,264 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:22:09,265 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:22:09,265 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:22:09,265 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:22:09,266 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:22:09,266 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:22:09,267 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:22:09,267 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:22:09,267 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:22:09,268 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:22:09,268 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:22:09,269 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:22:09,269 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:22:09,269 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:22:09,270 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:22:09,270 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:22:09,271 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:22:09,271 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:22:09,271 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:22:09,272 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:22:09,272 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:22:09,272 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:22:09,273 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:22:09,273 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:22:09,274 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:22:09,274 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:22:09,274 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:22:09,275 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:22:09,275 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:22:09,276 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:22:09,276 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:22:09,276 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:22:09,277 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:22:09,277 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:22:09,277 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:22:09,278 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:22:09,278 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:22:09,279 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:22:09,279 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:22:09,279 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:22:09,279 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:22:09,280 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:22:09,280 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:22:09,281 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:22:09,281 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:22:09,402 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:23:42,065 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:23:42,066 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:23:42,067 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:23:42,067 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:23:42,067 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:23:42,068 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:23:42,068 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:23:42,069 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:23:42,069 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:23:42,069 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:23:42,070 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:23:42,070 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:23:42,071 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:23:42,071 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:23:42,072 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:23:42,072 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:23:42,073 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:23:42,073 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:23:42,073 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:23:42,074 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:23:42,074 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:23:42,075 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:23:42,075 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:23:42,075 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:23:42,076 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:23:42,076 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:23:42,077 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:23:42,077 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:23:42,077 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:23:42,078 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:23:42,078 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:23:42,078 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:23:42,079 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:23:42,079 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:23:42,080 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:23:42,080 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:23:42,080 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:23:42,081 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:23:42,081 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:23:42,082 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:23:42,082 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:23:42,083 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:23:42,083 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:23:42,083 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:23:42,084 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:23:42,084 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:23:42,085 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:23:42,085 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:23:42,085 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:23:42,086 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:23:42,086 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:23:42,086 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:23:42,086 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:23:42,087 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:23:42,087 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:23:42,088 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:23:42,088 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:23:42,088 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:23:42,088 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:23:42,089 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:23:42,089 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:23:42,089 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:23:42,090 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:23:42,090 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:23:42,090 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:23:42,091 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:23:42,091 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:23:42,213 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:26:31,656 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:26:31,656 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:26:31,657 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:26:31,657 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:26:31,658 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:26:31,658 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:26:31,658 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:26:31,659 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:26:31,659 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:26:31,659 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:26:31,659 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:26:31,660 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:26:31,660 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:26:31,660 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:26:31,661 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:26:31,661 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:26:31,661 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:26:31,661 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:26:31,662 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:26:31,662 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:26:31,662 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:26:31,662 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:26:31,663 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:26:31,663 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:26:31,664 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:26:31,664 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:26:31,664 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:26:31,664 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:26:31,665 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:26:31,665 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:26:31,665 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:26:31,666 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:26:31,666 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:26:31,667 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:26:31,667 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:26:31,667 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:26:31,668 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:26:31,668 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:26:31,668 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:26:31,669 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:26:31,669 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:26:31,670 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:26:31,670 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:26:31,670 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:26:31,671 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:26:31,671 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:26:31,672 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:26:31,672 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:26:31,672 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:26:31,672 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:26:31,673 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:26:31,673 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:26:31,673 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:26:31,674 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:26:31,674 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:26:31,674 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:26:31,675 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:26:31,675 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:26:31,676 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:26:31,676 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:26:31,676 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:26:31,676 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:26:31,677 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:26:31,677 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:26:31,677 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:26:31,678 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:26:31,678 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:26:31,804 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:28:22,461 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:28:22,462 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:28:22,463 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:28:22,463 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:28:22,464 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:28:22,464 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:28:22,465 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:28:22,465 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:28:22,465 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:28:22,466 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:28:22,466 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:28:22,466 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:28:22,467 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:28:22,467 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:28:22,468 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:28:22,468 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:28:22,469 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:28:22,469 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:28:22,470 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:28:22,470 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:28:22,471 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:28:22,471 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:28:22,472 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:28:22,472 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:28:22,472 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:28:22,473 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:28:22,473 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:28:22,474 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:28:22,474 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:28:22,474 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:28:22,475 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:28:22,475 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:28:22,475 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:28:22,476 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:28:22,476 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:28:22,476 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:28:22,477 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:28:22,477 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:28:22,477 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:28:22,478 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:28:22,478 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:28:22,478 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:28:22,478 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:28:22,479 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:28:22,479 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:28:22,479 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:28:22,480 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:28:22,480 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:28:22,480 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:28:22,481 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:28:22,481 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:28:22,481 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:28:22,482 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:28:22,482 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:28:22,482 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:28:22,482 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:28:22,483 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:28:22,483 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:28:22,483 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:28:22,483 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:28:22,484 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:28:22,484 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:28:22,484 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:28:22,484 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:28:22,485 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:28:22,485 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:28:22,485 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:28:22,608 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:30:27,824 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:30:27,825 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:30:27,826 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:30:27,826 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:30:27,827 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:30:27,827 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:30:27,828 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:30:27,828 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:30:27,828 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:30:27,829 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:30:27,829 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:30:27,829 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:30:27,830 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:30:27,830 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:30:27,831 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:30:27,831 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:30:27,832 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:30:27,833 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:30:27,833 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:30:27,834 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:30:27,834 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:30:27,835 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:30:27,835 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:30:27,836 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:30:27,836 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:30:27,837 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:30:27,837 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:30:27,838 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:30:27,839 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:30:27,839 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:30:27,840 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:30:27,840 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:30:27,841 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:30:27,841 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:30:27,842 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:30:27,842 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:30:27,843 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:30:27,843 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:30:27,843 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:30:27,844 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:30:27,844 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:30:27,845 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:30:27,845 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:30:27,846 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:30:27,846 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:30:27,847 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:30:27,847 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:30:27,848 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:30:27,848 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:30:27,849 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:30:27,849 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:30:27,849 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:30:27,850 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:30:27,850 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:30:27,850 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:30:27,851 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:30:27,851 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:30:27,852 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:30:27,852 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:30:27,852 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:30:27,853 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:30:27,853 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:30:27,854 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:30:27,854 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:30:27,854 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:30:27,855 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:30:27,855 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:30:27,977 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html
+2024-11-21 17:32:40,023 - map_utils - INFO - Mapa base inicializado con todos los grupos
+2024-11-21 17:32:40,023 - map_utils - INFO - Heatmap agregado con 44 puntos de datos
+2024-11-21 17:32:40,024 - map_utils - INFO - Subestación agregada: Chilca 1 (500kV)
+2024-11-21 17:32:40,024 - map_utils - INFO - Subestación agregada: Chilca REP (220kV)
+2024-11-21 17:32:40,025 - map_utils - INFO - Subestación agregada: Independencia (220kV)
+2024-11-21 17:32:40,025 - map_utils - INFO - Subestación agregada: Marcona (220kV)
+2024-11-21 17:32:40,026 - map_utils - INFO - Subestación agregada: Montalvo (500kV)
+2024-11-21 17:32:40,026 - map_utils - INFO - Subestación agregada: Socabaya (220kV)
+2024-11-21 17:32:40,027 - map_utils - INFO - Subestación agregada: Cerro Verde 1 (220kV)
+2024-11-21 17:32:40,027 - map_utils - INFO - Subestación agregada: Cerro Verde 2 (138kV)
+2024-11-21 17:32:40,027 - map_utils - INFO - Subestación agregada: Moquegua (500kV)
+2024-11-21 17:32:40,028 - map_utils - INFO - Subestación agregada: Ilo 1 (220kV)
+2024-11-21 17:32:40,028 - map_utils - INFO - Subestación agregada: Ilo 2 (138kV)
+2024-11-21 17:32:40,029 - map_utils - INFO - Subestación agregada: Los Héroes (220kV)
+2024-11-21 17:32:40,029 - map_utils - INFO - Subestación agregada: Tacna (138kV)
+2024-11-21 17:32:40,030 - map_utils - INFO - Subestación agregada: Quencoro (220kV)
+2024-11-21 17:32:40,030 - map_utils - INFO - Subestación agregada: Tintaya (220kV)
+2024-11-21 17:32:40,030 - map_utils - INFO - Subestación agregada: Onocora (138kV)
+2024-11-21 17:32:40,031 - map_utils - INFO - Subestación agregada: Puno (220kV)
+2024-11-21 17:32:40,031 - map_utils - INFO - Subestación agregada: Juliaca (220kV)
+2024-11-21 17:32:40,031 - map_utils - INFO - Subestación agregada: Azángaro (138kV)
+2024-11-21 17:32:40,032 - map_utils - INFO - Subestación agregada: Abancay Nueva (220kV)
+2024-11-21 17:32:40,032 - map_utils - INFO - Subestación agregada: Cotaruse (220kV)
+2024-11-21 17:32:40,033 - map_utils - INFO - Subestación agregada: Paramonga Nueva (220kV)
+2024-11-21 17:32:40,033 - map_utils - INFO - Sitio solar agregado: Lurín Solar
+2024-11-21 17:32:40,033 - map_utils - INFO - Sitio solar agregado: Chilca Solar
+2024-11-21 17:32:40,033 - map_utils - INFO - Sitio solar agregado: Asia Solar
+2024-11-21 17:32:40,034 - map_utils - INFO - Sitio solar agregado: Ica Solar 1
+2024-11-21 17:32:40,034 - map_utils - INFO - Sitio solar agregado: Ica Solar 2
+2024-11-21 17:32:40,034 - map_utils - INFO - Sitio solar agregado: Nazca Solar
+2024-11-21 17:32:40,034 - map_utils - INFO - Sitio solar agregado: Marcona Solar
+2024-11-21 17:32:40,035 - map_utils - INFO - Sitio solar agregado: Paracas Solar
+2024-11-21 17:32:40,035 - map_utils - INFO - Sitio solar agregado: Pisco Solar
+2024-11-21 17:32:40,035 - map_utils - INFO - Sitio solar agregado: La Joya Solar
+2024-11-21 17:32:40,036 - map_utils - INFO - Sitio solar agregado: Majes Solar
+2024-11-21 17:32:40,036 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 1
+2024-11-21 17:32:40,036 - map_utils - INFO - Sitio solar agregado: Arequipa Solar 2
+2024-11-21 17:32:40,037 - map_utils - INFO - Sitio solar agregado: Camaná Solar
+2024-11-21 17:32:40,037 - map_utils - INFO - Sitio solar agregado: Mollendo Solar
+2024-11-21 17:32:40,037 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 1
+2024-11-21 17:32:40,037 - map_utils - INFO - Sitio solar agregado: Moquegua Solar 2
+2024-11-21 17:32:40,038 - map_utils - INFO - Sitio solar agregado: Ilo Solar
+2024-11-21 17:32:40,038 - map_utils - INFO - Sitio solar agregado: Torata Solar
+2024-11-21 17:32:40,038 - map_utils - INFO - Sitio solar agregado: Tacna Solar 1
+2024-11-21 17:32:40,039 - map_utils - INFO - Sitio solar agregado: Tacna Solar 2
+2024-11-21 17:32:40,039 - map_utils - INFO - Sitio solar agregado: Locumba Solar
+2024-11-21 17:32:40,039 - map_utils - INFO - Sitio solar agregado: Sama Solar
+2024-11-21 17:32:40,040 - map_utils - INFO - Sitio solar agregado: Puno Solar
+2024-11-21 17:32:40,040 - map_utils - INFO - Sitio solar agregado: Juliaca Solar
+2024-11-21 17:32:40,040 - map_utils - INFO - Sitio solar agregado: Azángaro Solar
+2024-11-21 17:32:40,040 - map_utils - INFO - Sitio solar agregado: Ayaviri Solar
+2024-11-21 17:32:40,041 - map_utils - INFO - Sitio solar agregado: Lampa Solar
+2024-11-21 17:32:40,041 - map_utils - INFO - Sitio solar agregado: Cusco Solar 1
+2024-11-21 17:32:40,041 - map_utils - INFO - Sitio solar agregado: Cusco Solar 2
+2024-11-21 17:32:40,042 - map_utils - INFO - Sitio solar agregado: Espinar Solar
+2024-11-21 17:32:40,042 - map_utils - INFO - Sitio solar agregado: Sicuani Solar
+2024-11-21 17:32:40,042 - map_utils - INFO - Sitio solar agregado: Urubamba Solar
+2024-11-21 17:32:40,043 - map_utils - INFO - Sitio solar agregado: Abancay Solar
+2024-11-21 17:32:40,043 - map_utils - INFO - Sitio solar agregado: Andahuaylas Solar
+2024-11-21 17:32:40,043 - map_utils - INFO - Sitio solar agregado: Chalhuanca Solar
+2024-11-21 17:32:40,043 - map_utils - INFO - Sitio solar agregado: Tambobamba Solar
+2024-11-21 17:32:40,044 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 1
+2024-11-21 17:32:40,044 - map_utils - INFO - Sitio solar agregado: Ayacucho Solar 2
+2024-11-21 17:32:40,044 - map_utils - INFO - Sitio solar agregado: Huanta Solar
+2024-11-21 17:32:40,045 - map_utils - INFO - Sitio solar agregado: Cangallo Solar
+2024-11-21 17:32:40,045 - map_utils - INFO - Sitio solar agregado: Huancavelica Solar
+2024-11-21 17:32:40,045 - map_utils - INFO - Sitio solar agregado: Pampas Solar
+2024-11-21 17:32:40,045 - map_utils - INFO - Sitio solar agregado: Lircay Solar
+2024-11-21 17:32:40,171 - map_utils - INFO - Mapa guardado exitosamente en: data/processed/solar_sites_map.html

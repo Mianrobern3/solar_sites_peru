@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a1252745464598a78a7c5adb310ab3f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    top: 10px; 
+                    left: 50px; 
+                    z-index: 1000; 
+                    background-color: white; 
+                    padding: 15px; 
+                    border: 2px solid grey; 
+                    border-radius: 5px;
+                    max-width: 300px;">
+            <h2 style="color: #2c3e50; margin-bottom: 10px;">
+                ANÁLISIS DEL SECTOR ELÉCTRICO DE PERÚ
+            </h2>
+            <p style="color: #34495e; margin-bottom: 5px;">
+                <b>DATOS:</b>
+            </p>
+            <ul style="color: #34495e; margin-left: 20px;">
+                <li>Subestaciones Eléctricas</li>
+                <li>Áreas de Cobertura</li>
+                <li>Sitios Solares Potenciales</li>
+            </ul>
+        </div>
+        
+    
+        <div style="position: fixed; 
+                    bottom: 50px; 
+                    left: 50px; 
+                    z-index: 1000; 
+                    background-color: white; 
+                    padding: 10px; 
+                    border: 2px solid grey; 
+                    border-radius: 5px;">
+            <h4 style="margin-bottom: 10px;">Leyenda</h4>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: red;"></i>
+                <span style="margin-left: 5px;">SET 500 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: blue;"></i>
+                <span style="margin-left: 5px;">SET 220 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-bolt" style="color: green;"></i>
+                <span style="margin-left: 5px;">SET 138 kV</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-circle" style="color: rgba(0,0,0,0.3);"></i>
+                <span style="margin-left: 5px;">Área de Cobertura 10km</span>
+            </div>
+            <div style="margin-bottom: 5px;">
+                <i class="fa fa-circle" style="color: #d35400;"></i>
+                <span style="margin-left: 5px;">Sitios Solares</span>
+            </div>
+        </div>
+        
+    
+            <div class="folium-map" id="map_a1252745464598a78a7c5adb310ab3f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a1252745464598a78a7c5adb310ab3f7 = L.map(
+                "map_a1252745464598a78a7c5adb310ab3f7",
+                {
+                    center: [-14.0678, -75.7286],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a675ef30b06809a85a74e97e8fbd8ed4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_a675ef30b06809a85a74e97e8fbd8ed4.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var feature_group_7f629173df634174c8744e91c02b7106 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_ab21d91ba5e418815a5e2217cdf0bef4 = L.marker(
+                [-12.5167, -76.7333],
+                {}
+            ).addTo(feature_group_7f629173df634174c8744e91c02b7106);
+        
+    
+            var icon_837b323493b40b92037b7247963d02de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ab21d91ba5e418815a5e2217cdf0bef4.setIcon(icon_837b323493b40b92037b7247963d02de);
+        
+    
+        var popup_46a63b9573ac53cfdbfdc690b444e1be = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_90108a9184b238cef263b0fc475fdcd9 = $(`<div id="html_90108a9184b238cef263b0fc475fdcd9" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: red;">SE Chilca 1</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Lima<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -12.5167<br>                     Lon: -76.7333                 </div>             </div>`)[0];
+                popup_46a63b9573ac53cfdbfdc690b444e1be.setContent(html_90108a9184b238cef263b0fc475fdcd9);
+            
+        
+
+        marker_ab21d91ba5e418815a5e2217cdf0bef4.bindPopup(popup_46a63b9573ac53cfdbfdc690b444e1be)
+        ;
+
+        
+    
+    
+            var marker_7261944f723bdfa688037a71f9532090 = L.marker(
+                [-17.1333, -70.8333],
+                {}
+            ).addTo(feature_group_7f629173df634174c8744e91c02b7106);
+        
+    
+            var icon_596abd1dbf331d8e9f7a1be126408cf3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_7261944f723bdfa688037a71f9532090.setIcon(icon_596abd1dbf331d8e9f7a1be126408cf3);
+        
+    
+        var popup_4f5cedcea3d78533b585b165fc55f44b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9cffeab599aab40e2eb5a1b2149ab7f7 = $(`<div id="html_9cffeab599aab40e2eb5a1b2149ab7f7" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: red;">SE Montalvo</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -17.1333<br>                     Lon: -70.8333                 </div>             </div>`)[0];
+                popup_4f5cedcea3d78533b585b165fc55f44b.setContent(html_9cffeab599aab40e2eb5a1b2149ab7f7);
+            
+        
+
+        marker_7261944f723bdfa688037a71f9532090.bindPopup(popup_4f5cedcea3d78533b585b165fc55f44b)
+        ;
+
+        
+    
+    
+            var marker_6857af5d6cedc885872fc18bf53ebe24 = L.marker(
+                [-17.1917, -70.9306],
+                {}
+            ).addTo(feature_group_7f629173df634174c8744e91c02b7106);
+        
+    
+            var icon_0369d364a47115fdd910caf813752d1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_6857af5d6cedc885872fc18bf53ebe24.setIcon(icon_0369d364a47115fdd910caf813752d1f);
+        
+    
+        var popup_c24309d9a44a4e2c0af0924624d7fba5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_663ec30803861d94c95558a3d934fddc = $(`<div id="html_663ec30803861d94c95558a3d934fddc" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: red;">SE Moquegua</h4>                     <b>Voltaje:</b> 500 kV<br>                     <b>Región:</b> Moquegua<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -17.1917<br>                     Lon: -70.9306                 </div>             </div>`)[0];
+                popup_c24309d9a44a4e2c0af0924624d7fba5.setContent(html_663ec30803861d94c95558a3d934fddc);
+            
+        
+
+        marker_6857af5d6cedc885872fc18bf53ebe24.bindPopup(popup_c24309d9a44a4e2c0af0924624d7fba5)
+        ;
+
+        
+    
+    
+            feature_group_7f629173df634174c8744e91c02b7106.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_fc76625c4493943288aa234455cf18fc = L.marker(
+                [-12.52, -76.7367],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_78ecc3fd8635d005abd1a7fcdc715f79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fc76625c4493943288aa234455cf18fc.setIcon(icon_78ecc3fd8635d005abd1a7fcdc715f79);
+        
+    
+        var popup_57cd3836f9468dda0e7f7d2f85e29b99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_049de64aab50f6c7dbc110881734d9f5 = $(`<div id="html_049de64aab50f6c7dbc110881734d9f5" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Chilca REP</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Lima<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -12.5200<br>                     Lon: -76.7367                 </div>             </div>`)[0];
+                popup_57cd3836f9468dda0e7f7d2f85e29b99.setContent(html_049de64aab50f6c7dbc110881734d9f5);
+            
+        
+
+        marker_fc76625c4493943288aa234455cf18fc.bindPopup(popup_57cd3836f9468dda0e7f7d2f85e29b99)
+        ;
+
+        
+    
+    
+            var marker_32be253c978b0247c38dc515b83f5674 = L.marker(
+                [-13.7167, -76.0167],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_30edb8e79c254b3a926f285205d82ddf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_32be253c978b0247c38dc515b83f5674.setIcon(icon_30edb8e79c254b3a926f285205d82ddf);
+        
+    
+        var popup_e3d8b7a1b93b214401fc3dacc97a9bdc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9a32cb5efd13ddc45c2f11f7ee774b62 = $(`<div id="html_9a32cb5efd13ddc45c2f11f7ee774b62" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Independencia</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Ica<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -13.7167<br>                     Lon: -76.0167                 </div>             </div>`)[0];
+                popup_e3d8b7a1b93b214401fc3dacc97a9bdc.setContent(html_9a32cb5efd13ddc45c2f11f7ee774b62);
+            
+        
+
+        marker_32be253c978b0247c38dc515b83f5674.bindPopup(popup_e3d8b7a1b93b214401fc3dacc97a9bdc)
+        ;
+
+        
+    
+    
+            var marker_bb086b33663abcf836a72a50c26ec932 = L.marker(
+                [-15.3667, -75.0833],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_25d42bc95039c455da5c451ea9020fe2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_bb086b33663abcf836a72a50c26ec932.setIcon(icon_25d42bc95039c455da5c451ea9020fe2);
+        
+    
+        var popup_2b4c1ba5688e56b1cc95b74d5550d437 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c96d9aa7dd9c12fbf84790e3ec2d0626 = $(`<div id="html_c96d9aa7dd9c12fbf84790e3ec2d0626" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Marcona</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Ica<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -15.3667<br>                     Lon: -75.0833                 </div>             </div>`)[0];
+                popup_2b4c1ba5688e56b1cc95b74d5550d437.setContent(html_c96d9aa7dd9c12fbf84790e3ec2d0626);
+            
+        
+
+        marker_bb086b33663abcf836a72a50c26ec932.bindPopup(popup_2b4c1ba5688e56b1cc95b74d5550d437)
+        ;
+
+        
+    
+    
+            var marker_d47f7ff0e7d1bcc1da22a030b8f07dbf = L.marker(
+                [-16.4333, -71.5333],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_8dd658c0705f07c6e6632934d45a9fbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d47f7ff0e7d1bcc1da22a030b8f07dbf.setIcon(icon_8dd658c0705f07c6e6632934d45a9fbd);
+        
+    
+        var popup_726f16bc981799af4a05346a89e4574b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_504a1d0f63261cf6f45fb47fb4cd4259 = $(`<div id="html_504a1d0f63261cf6f45fb47fb4cd4259" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Socabaya</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -16.4333<br>                     Lon: -71.5333                 </div>             </div>`)[0];
+                popup_726f16bc981799af4a05346a89e4574b.setContent(html_504a1d0f63261cf6f45fb47fb4cd4259);
+            
+        
+
+        marker_d47f7ff0e7d1bcc1da22a030b8f07dbf.bindPopup(popup_726f16bc981799af4a05346a89e4574b)
+        ;
+
+        
+    
+    
+            var marker_c2c3bbd5be3e0b7599ec48e05a35f9cc = L.marker(
+                [-16.5167, -71.5833],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_def9df59844417e88afc892b7617c6ac = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c2c3bbd5be3e0b7599ec48e05a35f9cc.setIcon(icon_def9df59844417e88afc892b7617c6ac);
+        
+    
+        var popup_5320738564bd100d76b85ce024394a0f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af26455c19315b5c18991054ef81e10c = $(`<div id="html_af26455c19315b5c18991054ef81e10c" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Cerro Verde 1</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Operador:</b> CERRO VERDE<br>                     <b>Tipo:</b> Cliente Libre<br>                     <b>Coordenadas:</b><br>                     Lat: -16.5167<br>                     Lon: -71.5833                 </div>             </div>`)[0];
+                popup_5320738564bd100d76b85ce024394a0f.setContent(html_af26455c19315b5c18991054ef81e10c);
+            
+        
+
+        marker_c2c3bbd5be3e0b7599ec48e05a35f9cc.bindPopup(popup_5320738564bd100d76b85ce024394a0f)
+        ;
+
+        
+    
+    
+            var marker_ddfe3bd6030d4791c85e56b68215d2be = L.marker(
+                [-17.65, -71.3333],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_907edc760e72e312169eaaf18d916b5c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ddfe3bd6030d4791c85e56b68215d2be.setIcon(icon_907edc760e72e312169eaaf18d916b5c);
+        
+    
+        var popup_106db7ff659a660c865b66d12b3e6733 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b65e254565d03f0120c2c1eea2874824 = $(`<div id="html_b65e254565d03f0120c2c1eea2874824" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Ilo 1</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Moquegua<br>                     <b>Operador:</b> ENERSUR<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -17.6500<br>                     Lon: -71.3333                 </div>             </div>`)[0];
+                popup_106db7ff659a660c865b66d12b3e6733.setContent(html_b65e254565d03f0120c2c1eea2874824);
+            
+        
+
+        marker_ddfe3bd6030d4791c85e56b68215d2be.bindPopup(popup_106db7ff659a660c865b66d12b3e6733)
+        ;
+
+        
+    
+    
+            var marker_618ac24f7782220aa78c108857b83dfe = L.marker(
+                [-18.0167, -70.25],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_90744c1ab06874af427fb19f9b39447c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_618ac24f7782220aa78c108857b83dfe.setIcon(icon_90744c1ab06874af427fb19f9b39447c);
+        
+    
+        var popup_3fc368bc360e78ce02219a5f84f375f7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_52c486fa253b86b07549bb5c0f39d13b = $(`<div id="html_52c486fa253b86b07549bb5c0f39d13b" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Los Héroes</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Tacna<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -18.0167<br>                     Lon: -70.2500                 </div>             </div>`)[0];
+                popup_3fc368bc360e78ce02219a5f84f375f7.setContent(html_52c486fa253b86b07549bb5c0f39d13b);
+            
+        
+
+        marker_618ac24f7782220aa78c108857b83dfe.bindPopup(popup_3fc368bc360e78ce02219a5f84f375f7)
+        ;
+
+        
+    
+    
+            var marker_c7cc1bb264137eaae6098df43e58eece = L.marker(
+                [-13.5333, -71.9333],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_6356c172da2023079d3f6b35ac7b0c86 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c7cc1bb264137eaae6098df43e58eece.setIcon(icon_6356c172da2023079d3f6b35ac7b0c86);
+        
+    
+        var popup_c31c79b23d101d8f3dc511aa6803a526 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a3812374047485182e02e64be358ea53 = $(`<div id="html_a3812374047485182e02e64be358ea53" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Quencoro</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Cusco<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -13.5333<br>                     Lon: -71.9333                 </div>             </div>`)[0];
+                popup_c31c79b23d101d8f3dc511aa6803a526.setContent(html_a3812374047485182e02e64be358ea53);
+            
+        
+
+        marker_c7cc1bb264137eaae6098df43e58eece.bindPopup(popup_c31c79b23d101d8f3dc511aa6803a526)
+        ;
+
+        
+    
+    
+            var marker_2464ac53a69487bc1809a54337df7f94 = L.marker(
+                [-14.9167, -71.3],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_c22ce2abf5097200b4e6924cae95bcdc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2464ac53a69487bc1809a54337df7f94.setIcon(icon_c22ce2abf5097200b4e6924cae95bcdc);
+        
+    
+        var popup_7d034a8336f1286f997030a8bff19ced = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1ed548c4e01897d7b203474344d8da1c = $(`<div id="html_1ed548c4e01897d7b203474344d8da1c" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Tintaya</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Cusco<br>                     <b>Operador:</b> ANTAPACCAY<br>                     <b>Tipo:</b> Cliente Libre<br>                     <b>Coordenadas:</b><br>                     Lat: -14.9167<br>                     Lon: -71.3000                 </div>             </div>`)[0];
+                popup_7d034a8336f1286f997030a8bff19ced.setContent(html_1ed548c4e01897d7b203474344d8da1c);
+            
+        
+
+        marker_2464ac53a69487bc1809a54337df7f94.bindPopup(popup_7d034a8336f1286f997030a8bff19ced)
+        ;
+
+        
+    
+    
+            var marker_ace8938689ee018b01757cb409822342 = L.marker(
+                [-15.8333, -70.0167],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_126134ba392a508cd8eece99a1849baa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ace8938689ee018b01757cb409822342.setIcon(icon_126134ba392a508cd8eece99a1849baa);
+        
+    
+        var popup_7bfa3aaf42cf0f30719336b18ec35b0b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d3e709e4c0cb9494e911b100dc2e759a = $(`<div id="html_d3e709e4c0cb9494e911b100dc2e759a" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Puno</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Puno<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -15.8333<br>                     Lon: -70.0167                 </div>             </div>`)[0];
+                popup_7bfa3aaf42cf0f30719336b18ec35b0b.setContent(html_d3e709e4c0cb9494e911b100dc2e759a);
+            
+        
+
+        marker_ace8938689ee018b01757cb409822342.bindPopup(popup_7bfa3aaf42cf0f30719336b18ec35b0b)
+        ;
+
+        
+    
+    
+            var marker_40542a475a015dd8f6db4cacf040365e = L.marker(
+                [-15.5, -70.1333],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_e887585a779b437a9bf6f6447329df70 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_40542a475a015dd8f6db4cacf040365e.setIcon(icon_e887585a779b437a9bf6f6447329df70);
+        
+    
+        var popup_e3f22e2293509ad0583345eba0a9bbc2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ade4f814caa684bc4eb4cef7fd6f67f3 = $(`<div id="html_ade4f814caa684bc4eb4cef7fd6f67f3" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Juliaca</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Puno<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -15.5000<br>                     Lon: -70.1333                 </div>             </div>`)[0];
+                popup_e3f22e2293509ad0583345eba0a9bbc2.setContent(html_ade4f814caa684bc4eb4cef7fd6f67f3);
+            
+        
+
+        marker_40542a475a015dd8f6db4cacf040365e.bindPopup(popup_e3f22e2293509ad0583345eba0a9bbc2)
+        ;
+
+        
+    
+    
+            var marker_fdb3dcdd5ce3a43c60242378f73de5ba = L.marker(
+                [-13.6333, -72.8833],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_696828af2c12eef73501b6f8fc04f70e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fdb3dcdd5ce3a43c60242378f73de5ba.setIcon(icon_696828af2c12eef73501b6f8fc04f70e);
+        
+    
+        var popup_c500ae195c0d52a27d4deda3f41560f5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_95e13c230872e154d7a90194b61881a5 = $(`<div id="html_95e13c230872e154d7a90194b61881a5" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Abancay Nueva</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Apurímac<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -13.6333<br>                     Lon: -72.8833                 </div>             </div>`)[0];
+                popup_c500ae195c0d52a27d4deda3f41560f5.setContent(html_95e13c230872e154d7a90194b61881a5);
+            
+        
+
+        marker_fdb3dcdd5ce3a43c60242378f73de5ba.bindPopup(popup_c500ae195c0d52a27d4deda3f41560f5)
+        ;
+
+        
+    
+    
+            var marker_a118ed2055c448bd863668a437d1fe8b = L.marker(
+                [-14.3167, -73.2],
+                {}
+            ).addTo(feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe);
+        
+    
+            var icon_e89e06a9577a6e89b10557c5894e2e7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a118ed2055c448bd863668a437d1fe8b.setIcon(icon_e89e06a9577a6e89b10557c5894e2e7d);
+        
+    
+        var popup_c7ec20e37aa45e80c1e6b6fa5f5c14dc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c4bfae7c420dd67dae315f1d1459077a = $(`<div id="html_c4bfae7c420dd67dae315f1d1459077a" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: blue;">SE Cotaruse</h4>                     <b>Voltaje:</b> 220 kV<br>                     <b>Región:</b> Apurímac<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Compensación<br>                     <b>Coordenadas:</b><br>                     Lat: -14.3167<br>                     Lon: -73.2000                 </div>             </div>`)[0];
+                popup_c7ec20e37aa45e80c1e6b6fa5f5c14dc.setContent(html_c4bfae7c420dd67dae315f1d1459077a);
+            
+        
+
+        marker_a118ed2055c448bd863668a437d1fe8b.bindPopup(popup_c7ec20e37aa45e80c1e6b6fa5f5c14dc)
+        ;
+
+        
+    
+    
+            feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var feature_group_e98f77f91063c8a1a0b9c64757095d0f = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_93a44e0d6f0fa74888aafacde96189b6 = L.marker(
+                [-16.52, -71.5867],
+                {}
+            ).addTo(feature_group_e98f77f91063c8a1a0b9c64757095d0f);
+        
+    
+            var icon_7837f84b6b7464e0f4b66342e4d18cf7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_93a44e0d6f0fa74888aafacde96189b6.setIcon(icon_7837f84b6b7464e0f4b66342e4d18cf7);
+        
+    
+        var popup_27b01a8516aff2bc7a6f277bbe14d81c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_988fb45512a5b2360e79d416461502a4 = $(`<div id="html_988fb45512a5b2360e79d416461502a4" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: green;">SE Cerro Verde 2</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Arequipa<br>                     <b>Operador:</b> CERRO VERDE<br>                     <b>Tipo:</b> Cliente Libre<br>                     <b>Coordenadas:</b><br>                     Lat: -16.5200<br>                     Lon: -71.5867                 </div>             </div>`)[0];
+                popup_27b01a8516aff2bc7a6f277bbe14d81c.setContent(html_988fb45512a5b2360e79d416461502a4);
+            
+        
+
+        marker_93a44e0d6f0fa74888aafacde96189b6.bindPopup(popup_27b01a8516aff2bc7a6f277bbe14d81c)
+        ;
+
+        
+    
+    
+            var marker_e86125192e0167e68e1300d07cc68f58 = L.marker(
+                [-17.6533, -71.3367],
+                {}
+            ).addTo(feature_group_e98f77f91063c8a1a0b9c64757095d0f);
+        
+    
+            var icon_561724614114273ed03b4256d83680a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e86125192e0167e68e1300d07cc68f58.setIcon(icon_561724614114273ed03b4256d83680a5);
+        
+    
+        var popup_f09e075c2e980d8c8b3310326bd9661c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d937900b7cbe2006d16533bcb04bc3b4 = $(`<div id="html_d937900b7cbe2006d16533bcb04bc3b4" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: green;">SE Ilo 2</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Moquegua<br>                     <b>Operador:</b> ENERSUR<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -17.6533<br>                     Lon: -71.3367                 </div>             </div>`)[0];
+                popup_f09e075c2e980d8c8b3310326bd9661c.setContent(html_d937900b7cbe2006d16533bcb04bc3b4);
+            
+        
+
+        marker_e86125192e0167e68e1300d07cc68f58.bindPopup(popup_f09e075c2e980d8c8b3310326bd9661c)
+        ;
+
+        
+    
+    
+            var marker_6cf36f95d6c4bf5c47c5b9cfac1d3ea9 = L.marker(
+                [-18.05, -70.2333],
+                {}
+            ).addTo(feature_group_e98f77f91063c8a1a0b9c64757095d0f);
+        
+    
+            var icon_409873e0d09dbb9d655a6c5987cc2ac3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6cf36f95d6c4bf5c47c5b9cfac1d3ea9.setIcon(icon_409873e0d09dbb9d655a6c5987cc2ac3);
+        
+    
+        var popup_b5d37458bfced8b3236d4b64c98c36ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42524c2818a41c41c721594b4b37e74e = $(`<div id="html_42524c2818a41c41c721594b4b37e74e" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: green;">SE Tacna</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Tacna<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -18.0500<br>                     Lon: -70.2333                 </div>             </div>`)[0];
+                popup_b5d37458bfced8b3236d4b64c98c36ff.setContent(html_42524c2818a41c41c721594b4b37e74e);
+            
+        
+
+        marker_6cf36f95d6c4bf5c47c5b9cfac1d3ea9.bindPopup(popup_b5d37458bfced8b3236d4b64c98c36ff)
+        ;
+
+        
+    
+    
+            var marker_d800f02f56b239110e32afec633e0ff9 = L.marker(
+                [-14.25, -71.75],
+                {}
+            ).addTo(feature_group_e98f77f91063c8a1a0b9c64757095d0f);
+        
+    
+            var icon_f43b3e9fcd2f932d6bb060e6eb8ca197 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d800f02f56b239110e32afec633e0ff9.setIcon(icon_f43b3e9fcd2f932d6bb060e6eb8ca197);
+        
+    
+        var popup_4063e3ad30e0ae5fd260d327c26e7aa6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e69197a74aa71fdec9fd299a8a2d4364 = $(`<div id="html_e69197a74aa71fdec9fd299a8a2d4364" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: green;">SE Onocora</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Cusco<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -14.2500<br>                     Lon: -71.7500                 </div>             </div>`)[0];
+                popup_4063e3ad30e0ae5fd260d327c26e7aa6.setContent(html_e69197a74aa71fdec9fd299a8a2d4364);
+            
+        
+
+        marker_d800f02f56b239110e32afec633e0ff9.bindPopup(popup_4063e3ad30e0ae5fd260d327c26e7aa6)
+        ;
+
+        
+    
+    
+            var marker_fe720a2c9929b03089f4762d27da2377 = L.marker(
+                [-14.9167, -70.1917],
+                {}
+            ).addTo(feature_group_e98f77f91063c8a1a0b9c64757095d0f);
+        
+    
+            var icon_4cd6c73ca2aa07d8f9ab2320f6199f0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bolt", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fe720a2c9929b03089f4762d27da2377.setIcon(icon_4cd6c73ca2aa07d8f9ab2320f6199f0d);
+        
+    
+        var popup_c3cb38543732fe9532ea9b1543a954c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2ff1a41a5d5722767d71a3db59e9eb1e = $(`<div id="html_2ff1a41a5d5722767d71a3db59e9eb1e" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: green;">SE Azángaro</h4>                     <b>Voltaje:</b> 138 kV<br>                     <b>Región:</b> Puno<br>                     <b>Operador:</b> REP<br>                     <b>Tipo:</b> Transformación<br>                     <b>Coordenadas:</b><br>                     Lat: -14.9167<br>                     Lon: -70.1917                 </div>             </div>`)[0];
+                popup_c3cb38543732fe9532ea9b1543a954c4.setContent(html_2ff1a41a5d5722767d71a3db59e9eb1e);
+            
+        
+
+        marker_fe720a2c9929b03089f4762d27da2377.bindPopup(popup_c3cb38543732fe9532ea9b1543a954c4)
+        ;
+
+        
+    
+    
+            feature_group_e98f77f91063c8a1a0b9c64757095d0f.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_963a10c15a7f3a08af368fd4ff7ff5a9 = L.circle(
+                [-12.5167, -76.7333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_f10117848c41f0d98bfeda4c5c9a423c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d353dd39804a3f024062288865bb8f75 = $(`<div id="html_d353dd39804a3f024062288865bb8f75" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Chilca 1</div>`)[0];
+                popup_f10117848c41f0d98bfeda4c5c9a423c.setContent(html_d353dd39804a3f024062288865bb8f75);
+            
+        
+
+        circle_963a10c15a7f3a08af368fd4ff7ff5a9.bindPopup(popup_f10117848c41f0d98bfeda4c5c9a423c)
+        ;
+
+        
+    
+    
+            var circle_7ff75b9eb3e64018341692f7968eafd6 = L.circle(
+                [-12.52, -76.7367],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_f4a348e3790b6876667a8b9e8ce5d407 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b853f9de96fc0343e56ec48c3e361e10 = $(`<div id="html_b853f9de96fc0343e56ec48c3e361e10" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Chilca REP</div>`)[0];
+                popup_f4a348e3790b6876667a8b9e8ce5d407.setContent(html_b853f9de96fc0343e56ec48c3e361e10);
+            
+        
+
+        circle_7ff75b9eb3e64018341692f7968eafd6.bindPopup(popup_f4a348e3790b6876667a8b9e8ce5d407)
+        ;
+
+        
+    
+    
+            var circle_ea176883b18a90b99e9da9e9edb16b07 = L.circle(
+                [-13.7167, -76.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_e2baa938f23b6c71c7cb5fc3ed3235d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_959bea9d3429069ed25aee2ea38cabdc = $(`<div id="html_959bea9d3429069ed25aee2ea38cabdc" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Independencia</div>`)[0];
+                popup_e2baa938f23b6c71c7cb5fc3ed3235d0.setContent(html_959bea9d3429069ed25aee2ea38cabdc);
+            
+        
+
+        circle_ea176883b18a90b99e9da9e9edb16b07.bindPopup(popup_e2baa938f23b6c71c7cb5fc3ed3235d0)
+        ;
+
+        
+    
+    
+            var circle_c26a4dbc54383adfb54fce30ace474a5 = L.circle(
+                [-15.3667, -75.0833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_fccf8b453bedaeeb9428dfec6a5882db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7f26bdfbeba80f7813ea65b9b2a71274 = $(`<div id="html_7f26bdfbeba80f7813ea65b9b2a71274" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Marcona</div>`)[0];
+                popup_fccf8b453bedaeeb9428dfec6a5882db.setContent(html_7f26bdfbeba80f7813ea65b9b2a71274);
+            
+        
+
+        circle_c26a4dbc54383adfb54fce30ace474a5.bindPopup(popup_fccf8b453bedaeeb9428dfec6a5882db)
+        ;
+
+        
+    
+    
+            var circle_653329b6e8c2b4ebab0d3c725f0bfc1d = L.circle(
+                [-17.1333, -70.8333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_b41c9fbb2b81ebd8a7611bb06fa1a2c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dbb17db383eafd1fc43030ff777382a8 = $(`<div id="html_dbb17db383eafd1fc43030ff777382a8" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Montalvo</div>`)[0];
+                popup_b41c9fbb2b81ebd8a7611bb06fa1a2c7.setContent(html_dbb17db383eafd1fc43030ff777382a8);
+            
+        
+
+        circle_653329b6e8c2b4ebab0d3c725f0bfc1d.bindPopup(popup_b41c9fbb2b81ebd8a7611bb06fa1a2c7)
+        ;
+
+        
+    
+    
+            var circle_d96adca4109b3025b03660b179239af8 = L.circle(
+                [-16.4333, -71.5333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_31fb3b18cc96f3f22e7816f60e57a9dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b37fb4da29703cbd3fee02c2da443305 = $(`<div id="html_b37fb4da29703cbd3fee02c2da443305" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Socabaya</div>`)[0];
+                popup_31fb3b18cc96f3f22e7816f60e57a9dd.setContent(html_b37fb4da29703cbd3fee02c2da443305);
+            
+        
+
+        circle_d96adca4109b3025b03660b179239af8.bindPopup(popup_31fb3b18cc96f3f22e7816f60e57a9dd)
+        ;
+
+        
+    
+    
+            var circle_43c246a67f8ce30dc9d4f0654ee88d17 = L.circle(
+                [-16.5167, -71.5833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_a7fd1a5ace4c3052a36eba996e42104b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b5241c4e18b3b5fd7ab5b6ec7b7f707 = $(`<div id="html_5b5241c4e18b3b5fd7ab5b6ec7b7f707" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cerro Verde 1</div>`)[0];
+                popup_a7fd1a5ace4c3052a36eba996e42104b.setContent(html_5b5241c4e18b3b5fd7ab5b6ec7b7f707);
+            
+        
+
+        circle_43c246a67f8ce30dc9d4f0654ee88d17.bindPopup(popup_a7fd1a5ace4c3052a36eba996e42104b)
+        ;
+
+        
+    
+    
+            var circle_bb43185dfd3fa9446a76d782be2063bd = L.circle(
+                [-16.52, -71.5867],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_fd631e27e0f19e0b219244f8e3302689 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d514fe58622d8b52f7c24d66f91f9677 = $(`<div id="html_d514fe58622d8b52f7c24d66f91f9677" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cerro Verde 2</div>`)[0];
+                popup_fd631e27e0f19e0b219244f8e3302689.setContent(html_d514fe58622d8b52f7c24d66f91f9677);
+            
+        
+
+        circle_bb43185dfd3fa9446a76d782be2063bd.bindPopup(popup_fd631e27e0f19e0b219244f8e3302689)
+        ;
+
+        
+    
+    
+            var circle_c8f67a7f2727d24ceba06de8749d7404 = L.circle(
+                [-17.1917, -70.9306],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_43c8f974c66c5145083f472634775b53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c36789ac64b2d101f2b241af86a8bbb0 = $(`<div id="html_c36789ac64b2d101f2b241af86a8bbb0" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Moquegua</div>`)[0];
+                popup_43c8f974c66c5145083f472634775b53.setContent(html_c36789ac64b2d101f2b241af86a8bbb0);
+            
+        
+
+        circle_c8f67a7f2727d24ceba06de8749d7404.bindPopup(popup_43c8f974c66c5145083f472634775b53)
+        ;
+
+        
+    
+    
+            var circle_7e207dc28adc58899eaeeb98c9bc112f = L.circle(
+                [-17.65, -71.3333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_79526b1f91aecdf5a507890c5b21e0ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49ab6a409ce18ca649d0bbd773fc0239 = $(`<div id="html_49ab6a409ce18ca649d0bbd773fc0239" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Ilo 1</div>`)[0];
+                popup_79526b1f91aecdf5a507890c5b21e0ec.setContent(html_49ab6a409ce18ca649d0bbd773fc0239);
+            
+        
+
+        circle_7e207dc28adc58899eaeeb98c9bc112f.bindPopup(popup_79526b1f91aecdf5a507890c5b21e0ec)
+        ;
+
+        
+    
+    
+            var circle_8ad848d49fccd84eee0d92b16a15b822 = L.circle(
+                [-17.6533, -71.3367],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_e364652680e887ccf8f2d25870188617 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0ff3df5e0727993bbf0fdf496aeee2f = $(`<div id="html_e0ff3df5e0727993bbf0fdf496aeee2f" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Ilo 2</div>`)[0];
+                popup_e364652680e887ccf8f2d25870188617.setContent(html_e0ff3df5e0727993bbf0fdf496aeee2f);
+            
+        
+
+        circle_8ad848d49fccd84eee0d92b16a15b822.bindPopup(popup_e364652680e887ccf8f2d25870188617)
+        ;
+
+        
+    
+    
+            var circle_d28d13d3e7944a74288e06ce6d4e71a0 = L.circle(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_8cba0c3c406be16cff77949ee99691b8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ff566167e227dc2bfd2109c8f3c9a6d = $(`<div id="html_1ff566167e227dc2bfd2109c8f3c9a6d" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Los Héroes</div>`)[0];
+                popup_8cba0c3c406be16cff77949ee99691b8.setContent(html_1ff566167e227dc2bfd2109c8f3c9a6d);
+            
+        
+
+        circle_d28d13d3e7944a74288e06ce6d4e71a0.bindPopup(popup_8cba0c3c406be16cff77949ee99691b8)
+        ;
+
+        
+    
+    
+            var circle_e4eb88d1ee58db812e1486a99a1cade0 = L.circle(
+                [-18.05, -70.2333],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_6295c229169541d991b4c959117c930d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37a1281fd169f5884c97e0bf56b2c1d5 = $(`<div id="html_37a1281fd169f5884c97e0bf56b2c1d5" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Tacna</div>`)[0];
+                popup_6295c229169541d991b4c959117c930d.setContent(html_37a1281fd169f5884c97e0bf56b2c1d5);
+            
+        
+
+        circle_e4eb88d1ee58db812e1486a99a1cade0.bindPopup(popup_6295c229169541d991b4c959117c930d)
+        ;
+
+        
+    
+    
+            var circle_60143e4ae20a5b997b7ad35dacf8d05e = L.circle(
+                [-13.5333, -71.9333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_9fec3f6785e843c7021e528d181b4979 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bfd69d2f988115e3ee8ba43a6f95fd9 = $(`<div id="html_2bfd69d2f988115e3ee8ba43a6f95fd9" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Quencoro</div>`)[0];
+                popup_9fec3f6785e843c7021e528d181b4979.setContent(html_2bfd69d2f988115e3ee8ba43a6f95fd9);
+            
+        
+
+        circle_60143e4ae20a5b997b7ad35dacf8d05e.bindPopup(popup_9fec3f6785e843c7021e528d181b4979)
+        ;
+
+        
+    
+    
+            var circle_f930a4fd1f52ed60f3f7581672c20eec = L.circle(
+                [-14.9167, -71.3],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_543d1dabec327f1c8542c7c4131bf11f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ce6ca865c57f31195e4940a9f0cb1e2 = $(`<div id="html_4ce6ca865c57f31195e4940a9f0cb1e2" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Tintaya</div>`)[0];
+                popup_543d1dabec327f1c8542c7c4131bf11f.setContent(html_4ce6ca865c57f31195e4940a9f0cb1e2);
+            
+        
+
+        circle_f930a4fd1f52ed60f3f7581672c20eec.bindPopup(popup_543d1dabec327f1c8542c7c4131bf11f)
+        ;
+
+        
+    
+    
+            var circle_f900f5dcc38047437333b2c0d4861208 = L.circle(
+                [-14.25, -71.75],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_603f29dda58335ecbe99fd83f24e40ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b576e2fb9ec672c218ef2b16cfce297 = $(`<div id="html_8b576e2fb9ec672c218ef2b16cfce297" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Onocora</div>`)[0];
+                popup_603f29dda58335ecbe99fd83f24e40ff.setContent(html_8b576e2fb9ec672c218ef2b16cfce297);
+            
+        
+
+        circle_f900f5dcc38047437333b2c0d4861208.bindPopup(popup_603f29dda58335ecbe99fd83f24e40ff)
+        ;
+
+        
+    
+    
+            var circle_db0215842554c5b3406dcacfc9eb72b6 = L.circle(
+                [-15.8333, -70.0167],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_e2649ab744abf02365a270f630d8bd30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdcda9d09ada27b38335d4e01339be86 = $(`<div id="html_fdcda9d09ada27b38335d4e01339be86" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Puno</div>`)[0];
+                popup_e2649ab744abf02365a270f630d8bd30.setContent(html_fdcda9d09ada27b38335d4e01339be86);
+            
+        
+
+        circle_db0215842554c5b3406dcacfc9eb72b6.bindPopup(popup_e2649ab744abf02365a270f630d8bd30)
+        ;
+
+        
+    
+    
+            var circle_eabe7f554fd00af1fd0d38e51451ef5d = L.circle(
+                [-15.5, -70.1333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_2ac9ed590c77b6bac3955c7b1e5a6bb0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1005217e881544026043fbdf67c3dcc9 = $(`<div id="html_1005217e881544026043fbdf67c3dcc9" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Juliaca</div>`)[0];
+                popup_2ac9ed590c77b6bac3955c7b1e5a6bb0.setContent(html_1005217e881544026043fbdf67c3dcc9);
+            
+        
+
+        circle_eabe7f554fd00af1fd0d38e51451ef5d.bindPopup(popup_2ac9ed590c77b6bac3955c7b1e5a6bb0)
+        ;
+
+        
+    
+    
+            var circle_445e33085a3f696e6de358fa7bcac389 = L.circle(
+                [-14.9167, -70.1917],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_82b8ba04e805d6be44037015c2031428 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbac66324c463c7b138ca46fc1a77290 = $(`<div id="html_bbac66324c463c7b138ca46fc1a77290" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Azángaro</div>`)[0];
+                popup_82b8ba04e805d6be44037015c2031428.setContent(html_bbac66324c463c7b138ca46fc1a77290);
+            
+        
+
+        circle_445e33085a3f696e6de358fa7bcac389.bindPopup(popup_82b8ba04e805d6be44037015c2031428)
+        ;
+
+        
+    
+    
+            var circle_cb902760fa53a6430b27090eb74520f2 = L.circle(
+                [-13.6333, -72.8833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_8728c6d2a0861945ef927e548b63e17a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3f98066077287c86e3e88c6c7733494 = $(`<div id="html_b3f98066077287c86e3e88c6c7733494" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Abancay Nueva</div>`)[0];
+                popup_8728c6d2a0861945ef927e548b63e17a.setContent(html_b3f98066077287c86e3e88c6c7733494);
+            
+        
+
+        circle_cb902760fa53a6430b27090eb74520f2.bindPopup(popup_8728c6d2a0861945ef927e548b63e17a)
+        ;
+
+        
+    
+    
+            var circle_aeca2262fc7370558c38d1a196962382 = L.circle(
+                [-14.3167, -73.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 2}
+            ).addTo(feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5);
+        
+    
+        var popup_bf31abd81944231ec3f6dc087247c67b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4199705c7c3c3437e146523a3a459346 = $(`<div id="html_4199705c7c3c3437e146523a3a459346" style="width: 100.0%; height: 100.0%;">Área de cobertura 10km - SE Cotaruse</div>`)[0];
+                popup_bf31abd81944231ec3f6dc087247c67b.setContent(html_4199705c7c3c3437e146523a3a459346);
+            
+        
+
+        circle_aeca2262fc7370558c38d1a196962382.bindPopup(popup_bf31abd81944231ec3f6dc087247c67b)
+        ;
+
+        
+    
+    
+            feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var feature_group_53281a9bb5031673074999e8968c1b25 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_c32b3dac259dd54984ccb3c0a3fdca32 = L.circleMarker(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(feature_group_53281a9bb5031673074999e8968c1b25);
+        
+    
+        var popup_aa729bc5c4a4d12c288339a51011e2d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51f4264f609573a85b193300fdca2894 = $(`<div id="html_51f4264f609573a85b193300fdca2894" style="width: 100.0%; height: 100.0%;">                 <div style="font-family: Arial; width: 250px;">                     <h4 style="color: #d35400;">Tacna Solar</h4>                     <b>Radiación Solar:</b> 6.60 kWh/m²/día<br>                     <b>Coordenadas:</b><br>                     Lat: -18.0167<br>                     Lon: -70.2500                                                           </div>             </div>`)[0];
+                popup_aa729bc5c4a4d12c288339a51011e2d5.setContent(html_51f4264f609573a85b193300fdca2894);
+            
+        
+
+        circle_marker_c32b3dac259dd54984ccb3c0a3fdca32.bindPopup(popup_aa729bc5c4a4d12c288339a51011e2d5)
+        ;
+
+        
+    
+    
+            var circle_ea2a51f63fb83c95f1e30e9c76f2c83f = L.circle(
+                [-18.0167, -70.25],
+                {"bubblingMouseEvents": true, "color": "#d35400", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d35400", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 1}
+            ).addTo(feature_group_53281a9bb5031673074999e8968c1b25);
+        
+    
+        var popup_780f7555fc24c7e6012dbaccb0d8bd67 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16aba3467e8ac95a1fedbcd346164052 = $(`<div id="html_16aba3467e8ac95a1fedbcd346164052" style="width: 100.0%; height: 100.0%;">Área de análisis - Tacna Solar</div>`)[0];
+                popup_780f7555fc24c7e6012dbaccb0d8bd67.setContent(html_16aba3467e8ac95a1fedbcd346164052);
+            
+        
+
+        circle_ea2a51f63fb83c95f1e30e9c76f2c83f.bindPopup(popup_780f7555fc24c7e6012dbaccb0d8bd67)
+        ;
+
+        
+    
+    
+            feature_group_53281a9bb5031673074999e8968c1b25.addTo(map_a1252745464598a78a7c5adb310ab3f7);
+        
+    
+            var layer_control_1f32f781bea7fb96b63c8f7cc9572b4f_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_a675ef30b06809a85a74e97e8fbd8ed4,
+                },
+                overlays :  {
+                    "SET 500 kV" : feature_group_7f629173df634174c8744e91c02b7106,
+                    "SET 220 kV" : feature_group_bfc17554abefb5ce18f7e3e38cb4f2fe,
+                    "SET 138 kV" : feature_group_e98f77f91063c8a1a0b9c64757095d0f,
+                    "\u00c1reas de Cobertura 10km" : feature_group_b2f4acbd5a327ac796a7f0ac5c3d15b5,
+                    "Sitios Solares" : feature_group_53281a9bb5031673074999e8968c1b25,
+                },
+            };
+            let layer_control_1f32f781bea7fb96b63c8f7cc9572b4f = L.control.layers(
+                layer_control_1f32f781bea7fb96b63c8f7cc9572b4f_layers.base_layers,
+                layer_control_1f32f781bea7fb96b63c8f7cc9572b4f_layers.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_a1252745464598a78a7c5adb310ab3f7);
+
+        
+</script>
+</html>
